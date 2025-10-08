@@ -7,7 +7,7 @@ services:
     container_name: mysql-db
     restart: unless-stopped
     ports:
-      - "3306:3306"
+      - '3306:3306'
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
@@ -22,14 +22,14 @@ services:
     healthcheck:
       test:
         [
-          "CMD",
-          "mysqladmin",
-          "ping",
-          "-h",
-          "localhost",
-          "-u",
-          "root",
-          "-p${DB_ROOT_PASSWORD}",
+          'CMD',
+          'mysqladmin',
+          'ping',
+          '-h',
+          'localhost',
+          '-u',
+          'root',
+          '-p${DB_ROOT_PASSWORD}',
         ]
       interval: 10s
       timeout: 5s
@@ -38,7 +38,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: '0.50'
           memory: 512M
 
   db-administering:
@@ -57,14 +57,14 @@ services:
       APACHE_SERVER_NAME: ${DB_HOST}
       TZ: ${TZ:-Europe/Chisinau}
     ports:
-      - "8080:80"
+      - '8080:80'
     networks:
       - backend-net
     # Aloc resurse phpMyAdmin pentru aplicația mea
     deploy:
       resources:
         limits:
-          cpus: "0.25"
+          cpus: '0.25'
           memory: 256M
 # Volum pentru asigurarea persistenței datelor MySQL
 volumes:

@@ -1,0 +1,76 @@
+# Docker Compose (MySQL & phpMyAdmin)
+# Verifică .env pentru configurare
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-db
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      TZ: ${TZ:-Europe/Chisinau}
+    volumes:
+      - db-data:/var/lib/mysql
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - backend-net
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-p${DB_ROOT_PASSWORD}",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # Aloc resurse MySQL pentru aplicația mea
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 512M
+
+  db-administering:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy # Pornește doar după ce MySQL e operațional
+    environment:
+      PMA_HOST: ${PMA_HOST}
+      PMA_PORT: ${DB_PORT}
+      PMA_USER: ${DB_USER}
+      PMA_PASSWORD: ${DB_PASSWORD}
+      UPLOAD_LIMIT: 64M
+      APACHE_SERVER_NAME: ${DB_HOST}
+      TZ: ${TZ:-Europe/Chisinau}
+    ports:
+      - "8080:80"
+    networks:
+      - backend-net
+    # Aloc resurse phpMyAdmin pentru aplicația mea
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: 256M
+# Volum pentru asigurarea persistenței datelor MySQL
+volumes:
+  db-data:
+    driver: local
+# Rețea bridge - dedicată pentru comunicare între servicii
+networks:
+  backend-net:
+    driver: bridge

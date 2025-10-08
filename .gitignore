@@ -47,3 +47,7 @@ Thumbs.db
 rd-app-arch
 .env
 .env.example
+
+# Next.js
+.next
+out

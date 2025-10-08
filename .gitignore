@@ -51,3 +51,5 @@ rd-app-arch
 # Next.js
 .next
 out
+
+test-output

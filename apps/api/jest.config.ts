@@ -1,12 +1,27 @@
 /* eslint-disable */
-import { readFileSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
+import { resolve } from 'path';
 
-// Reading the SWC compilation config for the spec files
-const swcJestConfig = JSON.parse(
-  readFileSync(`${__dirname}/.spec.swcrc`, 'utf-8')
+const swcConfigPathCandidates = [
+  resolve(process.cwd(), '.spec.swcrc'),
+  resolve(process.cwd(), 'apps/api/.spec.swcrc'),
+  resolve(process.cwd(), '../../apps/api/.spec.swcrc'),
+];
+
+const swcConfigPath = swcConfigPathCandidates.find((candidate) =>
+  existsSync(candidate)
 );
 
-// Disable .swcrc look-up by SWC core because we're passing in swcJestConfig ourselves
+if (!swcConfigPath) {
+  throw new Error('Unable to locate .spec.swcrc for api Jest configuration');
+}
+
+// Citirea configurației de compilare SWC pentru fișierele de test (spec)
+const swcJestConfig = JSON.parse(
+  readFileSync(swcConfigPath, 'utf-8')
+);
+
+// Dezactivează căutarea fișierului .swcrc de către SWC core deoarece transmitem deja swcJestConfig manual
 swcJestConfig.swcrc = false;
 
 export default {

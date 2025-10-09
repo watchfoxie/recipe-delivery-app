@@ -1,5 +1,12 @@
+import { config as loadEnv } from 'dotenv';
 import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
 import { defineConfig } from 'cypress';
+import { resolve } from 'path';
+
+loadEnv({
+  path: resolve(__dirname, '../../.env'),
+  override: true,
+});
 
 export default defineConfig({
   e2e: {

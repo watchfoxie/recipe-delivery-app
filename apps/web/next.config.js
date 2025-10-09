@@ -1,7 +1,16 @@
 //@ts-check
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { config: loadEnv } = require('dotenv');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
+
+loadEnv({
+  path: path.resolve(__dirname, '../../.env'),
+  override: true,
+});
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}

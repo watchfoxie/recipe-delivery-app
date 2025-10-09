@@ -1,5 +1,11 @@
+import { config as loadEnv } from 'dotenv';
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
+import { resolve } from 'path';
+loadEnv({
+  path: resolve(process.cwd(), '.env'),
+  override: true,
+});
 
 const createJestConfig = nextJest({
   dir: './',
@@ -14,6 +20,7 @@ const config: Config = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/web',
   testEnvironment: 'jsdom',
+  forceExit: true,
 };
 
 export default createJestConfig(config);

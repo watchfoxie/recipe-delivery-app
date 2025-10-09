@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "nx": {
+    "sourceRoot": "apps/web/src",
+    "projectType": "application",
     "targets": {
       "serve": {
         "continuous": true,
@@ -23,6 +25,26 @@
             "dev": false,
             "buildTarget": "@recipe-delivery-app/web:build:production",
             "port": 3000
+          }
+        }
+      },
+      "typecheck": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "apps/web",
+          "command": "npx tsc --noEmit"
+        },
+        "cache": true,
+        "inputs": ["default", "^production"],
+        "metadata": {
+          "description": "Runs TypeScript type checking for the web app",
+          "help": {
+            "command": "npx tsc --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
           }
         }
       }

@@ -3,22 +3,34 @@
   "version": "0.0.1",
   "private": true,
   "nx": {
+    "targets": {
+      "serve": {
+        "continuous": true,
+        "executor": "@nx/next:server",
+        "defaultConfiguration": "development",
+        "options": {
+          "buildTarget": "@recipe-delivery-app/web:build",
+          "dev": true,
+          "port": 3000
+        },
+        "configurations": {
+          "development": {
+            "dev": true,
+            "buildTarget": "@recipe-delivery-app/web:build",
+            "port": 3000
+          },
+          "production": {
+            "dev": false,
+            "buildTarget": "@recipe-delivery-app/web:build:production",
+            "port": 3000
+          }
+        }
+      }
+    },
     "tags": [
       "type:web",
       "scope:core"
-    ],
-    "sourceRoot": "apps/web/src",
-    "projectType": "application",
-    "targets": {
-      "serve": {
-        "executor": "nx:run-commands",
-        "options": {
-          "command": "next dev --port 3000",
-          "cwd": "apps/web"
-        },
-        "configurations": {}
-      }
-    }
+    ]
   },
   "dependencies": {
     "next": "~15.2.4",

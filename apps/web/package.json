@@ -6,7 +6,19 @@
     "tags": [
       "type:web",
       "scope:core"
-    ]
+    ],
+    "sourceRoot": "apps/web/src",
+    "projectType": "application",
+    "targets": {
+      "serve": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "next dev --port 3000",
+          "cwd": "apps/web"
+        },
+        "configurations": {}
+      }
+    }
   },
   "dependencies": {
     "next": "~15.2.4",

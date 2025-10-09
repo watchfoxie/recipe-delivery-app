@@ -25,6 +25,15 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@web/*": [
+        "./src/*"
+      ],
+      "@api/*": [
+        "../api/src/*"
+      ],
+      "@shared/*": [
+        "../../libs/shared/src/*"
       ]
     },
     "types": [

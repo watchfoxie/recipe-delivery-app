@@ -19,6 +19,17 @@ const nextConfig = {
   // Use this to set Nx-specific options
   // See: https://nx.dev/recipes/next/next-config-setup
   nx: {},
+  webpack: (config) => {
+    // Provide Webpack aliases so runtime resolution matches tsconfig paths
+    config.resolve = config.resolve ?? {};
+    config.resolve.alias = {
+      ...(config.resolve.alias ?? {}),
+      '@web': path.resolve(__dirname, './src'),
+      '@api': path.resolve(__dirname, '../api/src'),
+      '@shared': path.resolve(__dirname, '../../libs/shared/src'),
+    };
+    return config;
+  },
 };
 
 const plugins = [

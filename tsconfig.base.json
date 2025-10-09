@@ -16,6 +16,12 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@recipe-delivery-app/source"]
+    "baseUrl": ".",
+    "customConditions": ["@recipe-delivery-app/source"],
+    "paths": {
+      "@api/*": ["apps/api/src/*"],
+      "@web/*": ["apps/web/src/*"],
+      "@shared/*": ["libs/shared/src/*"]
+    }
   }
 }

@@ -1,12 +1,13 @@
 /* eslint-disable */
 import { readFileSync } from 'fs';
+import { join } from 'path';
 
-// Reading the SWC compilation config for the spec files
+// Citirea configurației de compilare SWC pentru fișierele de test (spec)
 const swcJestConfig = JSON.parse(
-  readFileSync(`${__dirname}/.spec.swcrc`, 'utf-8')
+  readFileSync(join(process.cwd(), 'apps', 'api-e2e', '.spec.swcrc'), 'utf-8')
 );
 
-// Disable .swcrc look-up by SWC core because we're passing in swcJestConfig ourselves
+// Dezactivează căutarea fișierului .swcrc de către SWC core deoarece transmitem deja swcJestConfig manual
 swcJestConfig.swcrc = false;
 
 export default {

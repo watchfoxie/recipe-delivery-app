@@ -4,7 +4,7 @@
 services:
   db:
     image: mysql:latest
-    container_name: mysql-db
+    container_name: mysql-db-rd
     restart: unless-stopped
     ports:
       - '3306:3306'
@@ -43,7 +43,7 @@ services:
 
   db-administering:
     image: phpmyadmin:latest
-    container_name: phpmyadmin
+    container_name: phpmyadmin-rd
     restart: unless-stopped
     depends_on:
       db:

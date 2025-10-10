@@ -43,7 +43,8 @@ Thumbs.db
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
 
-# Misc
+# Custom misc
+AGENTS.md
 rd-app-arch
 .env
 .env.example

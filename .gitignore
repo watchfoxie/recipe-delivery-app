@@ -48,6 +48,7 @@ AGENTS.md
 rd-app-arch
 .env
 .env.example
+nestjs-sample
 
 # Next.js
 .next

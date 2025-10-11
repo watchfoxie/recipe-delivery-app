@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "nx": {
+    "projectType": "application",
+    "type": "e2e",
     "implicitDependencies": [
       "@recipe-delivery-app/api"
     ],

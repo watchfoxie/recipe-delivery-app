@@ -13,6 +13,49 @@ export type I18nTranslations = {
             "ERROR": {
                 "VALIDATION_FAILED": string;
                 "JSON_SYNTAX_ERROR": string;
+                "NOT_FOUND": string;
+                "CONFLICT": string;
+                "UNPROCESSABLE": string;
+            };
+            "USERS": {
+                "SUCCESS": {
+                    "CREATED": string;
+                    "UPDATED": string;
+                    "DELETED": string;
+                    "FETCHED": string;
+                    "LISTED": string;
+                };
+                "ERROR": {
+                    "NOT_FOUND": string;
+                    "EMAIL_EXISTS": string;
+                };
+            };
+            "INGREDIENTS": {
+                "SUCCESS": {
+                    "CREATED": string;
+                    "UPDATED": string;
+                    "DELETED": string;
+                    "FETCHED": string;
+                    "LISTED": string;
+                };
+                "ERROR": {
+                    "NOT_FOUND": string;
+                    "NAME_EXISTS": string;
+                };
+            };
+            "RECIPES": {
+                "SUCCESS": {
+                    "CREATED": string;
+                    "UPDATED": string;
+                    "DELETED": string;
+                    "FETCHED": string;
+                    "LISTED": string;
+                };
+                "ERROR": {
+                    "NOT_FOUND": string;
+                    "SLUG_EXISTS": string;
+                    "INGREDIENT_CONFLICT": string;
+                };
             };
         };
     };

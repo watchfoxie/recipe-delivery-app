@@ -5,7 +5,50 @@
     },
     "ERROR": {
       "VALIDATION_FAILED": "Validarea a eșuat",
-      "JSON_SYNTAX_ERROR": "Corpul cererii conține JSON invalid"
+      "JSON_SYNTAX_ERROR": "Corpul cererii conține JSON invalid",
+      "NOT_FOUND": "Resursa nu a fost găsită",
+      "CONFLICT": "Resursa există deja",
+      "UNPROCESSABLE": "Solicitarea nu poate fi procesată"
+    },
+    "USERS": {
+      "SUCCESS": {
+        "CREATED": "Utilizator creat cu succes",
+        "UPDATED": "Utilizator actualizat cu succes",
+        "DELETED": "Utilizator șters cu succes",
+        "FETCHED": "Utilizator obținut cu succes",
+        "LISTED": "Utilizatori listați cu succes"
+      },
+      "ERROR": {
+        "NOT_FOUND": "Utilizatorul solicitat nu există",
+        "EMAIL_EXISTS": "Există deja un utilizator cu acest email"
+      }
+    },
+    "INGREDIENTS": {
+      "SUCCESS": {
+        "CREATED": "Ingredient creat cu succes",
+        "UPDATED": "Ingredient actualizat cu succes",
+        "DELETED": "Ingredient șters cu succes",
+        "FETCHED": "Ingredient obținut cu succes",
+        "LISTED": "Ingrediente listate cu succes"
+      },
+      "ERROR": {
+        "NOT_FOUND": "Ingredientul solicitat nu există",
+        "NAME_EXISTS": "Există deja un ingredient cu acest nume"
+      }
+    },
+    "RECIPES": {
+      "SUCCESS": {
+        "CREATED": "Rețetă creată cu succes",
+        "UPDATED": "Rețetă actualizată cu succes",
+        "DELETED": "Rețetă ștearsă cu succes",
+        "FETCHED": "Rețetă obținută cu succes",
+        "LISTED": "Rețete listate cu succes"
+      },
+      "ERROR": {
+        "NOT_FOUND": "Rețeta solicitată nu există",
+        "SLUG_EXISTS": "Există deja o rețetă cu acest identificator",
+        "INGREDIENT_CONFLICT": "Rețeta conține deja acest ingredient"
+      }
     }
   }
 }

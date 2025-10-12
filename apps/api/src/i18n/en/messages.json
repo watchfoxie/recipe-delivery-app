@@ -5,7 +5,50 @@
     },
     "ERROR": {
       "VALIDATION_FAILED": "Validation failed",
-      "JSON_SYNTAX_ERROR": "Request body contains invalid JSON"
+      "JSON_SYNTAX_ERROR": "Request body contains invalid JSON",
+      "NOT_FOUND": "Resource not found",
+      "CONFLICT": "Resource already exists",
+      "UNPROCESSABLE": "Unable to process request"
+    },
+    "USERS": {
+      "SUCCESS": {
+        "CREATED": "User created successfully",
+        "UPDATED": "User updated successfully",
+        "DELETED": "User deleted successfully",
+        "FETCHED": "User retrieved successfully",
+        "LISTED": "Users listed successfully"
+      },
+      "ERROR": {
+        "NOT_FOUND": "Requested user does not exist",
+        "EMAIL_EXISTS": "A user with this email already exists"
+      }
+    },
+    "INGREDIENTS": {
+      "SUCCESS": {
+        "CREATED": "Ingredient created successfully",
+        "UPDATED": "Ingredient updated successfully",
+        "DELETED": "Ingredient deleted successfully",
+        "FETCHED": "Ingredient retrieved successfully",
+        "LISTED": "Ingredients listed successfully"
+      },
+      "ERROR": {
+        "NOT_FOUND": "Requested ingredient does not exist",
+        "NAME_EXISTS": "An ingredient with this name already exists"
+      }
+    },
+    "RECIPES": {
+      "SUCCESS": {
+        "CREATED": "Recipe created successfully",
+        "UPDATED": "Recipe updated successfully",
+        "DELETED": "Recipe deleted successfully",
+        "FETCHED": "Recipe retrieved successfully",
+        "LISTED": "Recipes listed successfully"
+      },
+      "ERROR": {
+        "NOT_FOUND": "Requested recipe does not exist",
+        "SLUG_EXISTS": "A recipe with this slug already exists",
+        "INGREDIENT_CONFLICT": "Recipe already contains this ingredient"
+      }
     }
   }
 }

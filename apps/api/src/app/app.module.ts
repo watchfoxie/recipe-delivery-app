@@ -13,6 +13,9 @@ import * as path from 'path';
 import { TypeOrmConfigService } from '../database/typeorm.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { UsersModule } from '../modules/users/users.module';
+import { IngredientsModule } from '../modules/ingredients/ingredients.module';
+import { RecipesModule } from '../modules/recipes/recipes.module';
 
 @Module({
   imports: [
@@ -34,6 +37,9 @@ import { AppService } from './app.service';
     TypeOrmModule.forRootAsync({
       useClass: TypeOrmConfigService,
     }),
+    UsersModule,
+    IngredientsModule,
+    RecipesModule,
   ],
   controllers: [AppController],
   providers: [AppService, TypeOrmConfigService],

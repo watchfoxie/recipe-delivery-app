@@ -49,6 +49,8 @@ rd-app-arch
 .env
 .env.example
 nestjs-sample
+app-porting-to-do-list.md
+dto-structure.md
 
 # Next.js
 .next

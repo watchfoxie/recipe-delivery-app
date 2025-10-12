@@ -1,0 +1,11 @@
+{
+  "messages": {
+    "SUCCESS": {
+      "GENERIC": "Operațiune finalizată cu succes"
+    },
+    "ERROR": {
+      "VALIDATION_FAILED": "Validarea a eșuat",
+      "JSON_SYNTAX_ERROR": "Corpul cererii conține JSON invalid"
+    }
+  }
+}

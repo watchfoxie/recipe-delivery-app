@@ -1,0 +1,11 @@
+{
+  "messages": {
+    "SUCCESS": {
+      "GENERIC": "Operation completed successfully"
+    },
+    "ERROR": {
+      "VALIDATION_FAILED": "Validation failed",
+      "JSON_SYNTAX_ERROR": "Request body contains invalid JSON"
+    }
+  }
+}

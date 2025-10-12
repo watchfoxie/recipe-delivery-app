@@ -60,7 +60,8 @@
         "executor": "@nx/js:node",
         "defaultConfiguration": "development",
         "dependsOn": [
-          "build"
+          "build",
+          "db:migration:run"
         ],
         "options": {
           "buildTarget": "@recipe-delivery-app/api:build",
@@ -79,6 +80,46 @@
         "options": {
           "passWithNoTests": true
         }
+      },
+      "db:migration:generate": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "apps/api",
+          "command": "node -r ts-node/register ../../node_modules/typeorm/cli.js -d ./src/database/typeorm.datasource.ts migration:generate"
+        },
+        "cache": false
+      },
+      "db:migration:run": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "apps/api",
+          "command": "node -r ts-node/register ../../node_modules/typeorm/cli.js -d ./src/database/typeorm.datasource.ts migration:run"
+        },
+        "cache": false
+      },
+      "db:migration:revert": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "apps/api",
+          "command": "node -r ts-node/register ../../node_modules/typeorm/cli.js -d ./src/database/typeorm.datasource.ts migration:revert"
+        },
+        "cache": false
+      },
+      "db:seed": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "apps/api",
+          "command": "node -r ts-node/register ./src/database/seed.ts"
+        },
+        "cache": false
+      },
+      "prepare:e2e": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "apps/api",
+          "command": "npx nx run @recipe-delivery-app/api:db:migration:run --skip-nx-cache && npx nx run @recipe-delivery-app/api:db:seed --skip-nx-cache"
+        },
+        "cache": false
       }
     },
     "tags": [

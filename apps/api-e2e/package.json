@@ -20,7 +20,8 @@
         },
         "dependsOn": [
           "@recipe-delivery-app/api:build",
-          "@recipe-delivery-app/api:serve"
+          "@recipe-delivery-app/api:serve",
+          "@recipe-delivery-app/api:prepare:e2e"
         ]
       }
     }

@@ -29,7 +29,7 @@ export class IngredientsService {
       try {
         return await manager.save(Ingredient, entity);
       } catch (error) {
-        await this.handleUniqueConstraint(error, 'messages.INGREDIENTS.ERROR.NAME_EXISTS');
+        await this.handleUniqueConstraint(error, 'messages.ERROR.INGREDIENT_NAME_EXISTS');
         throw error;
       }
     });
@@ -41,8 +41,8 @@ export class IngredientsService {
 
   async findOne(id: number): Promise<Ingredient> {
     const entity = await this.ingredientsRepository.findOne({ where: { id } });
-    if (!entity) {
-      throw new NotFoundException(await this.translate('messages.INGREDIENTS.ERROR.NOT_FOUND'));
+      if (!entity) {
+        throw new NotFoundException(await this.translate('messages.ERROR.INGREDIENT_NOT_FOUND'));
     }
     return entity;
   }
@@ -50,8 +50,8 @@ export class IngredientsService {
   async update(id: number, dto: UpdateIngredientDto): Promise<Ingredient> {
     return this.executeInTransaction(async (manager) => {
       const existing = await manager.findOne(Ingredient, { where: { id } });
-      if (!existing) {
-        throw new NotFoundException(await this.translate('messages.INGREDIENTS.ERROR.NOT_FOUND'));
+        if (!existing) {
+          throw new NotFoundException(await this.translate('messages.ERROR.INGREDIENT_NOT_FOUND'));
       }
 
       manager.merge(Ingredient, existing, {
@@ -62,7 +62,7 @@ export class IngredientsService {
       try {
         return await manager.save(Ingredient, existing);
       } catch (error) {
-        await this.handleUniqueConstraint(error, 'messages.INGREDIENTS.ERROR.NAME_EXISTS');
+          await this.handleUniqueConstraint(error, 'messages.ERROR.INGREDIENT_NAME_EXISTS');
         throw error;
       }
     });
@@ -71,8 +71,8 @@ export class IngredientsService {
   async remove(id: number): Promise<void> {
     await this.executeInTransaction(async (manager) => {
       const existing = await manager.findOne(Ingredient, { where: { id } });
-      if (!existing) {
-        throw new NotFoundException(await this.translate('messages.INGREDIENTS.ERROR.NOT_FOUND'));
+        if (!existing) {
+          throw new NotFoundException(await this.translate('messages.ERROR.INGREDIENT_NOT_FOUND'));
       }
 
       await manager.softRemove(Ingredient, existing);

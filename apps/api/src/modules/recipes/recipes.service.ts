@@ -2,10 +2,14 @@ import {
   ConflictException,
   Injectable,
   NotFoundException,
+  Logger,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { I18nContext, I18nService } from 'nestjs-i18n';
 import { DataSource, EntityManager, Repository } from 'typeorm';
+import type { FilterOperator, SortDirection } from '../../common/utils/query-parser.util';
+import { QueryPaginationDto } from '../../common/dto/query-pagination.dto';
+import { QueryParserUtil } from '../../common/utils/query-parser.util';
 import { Ingredient } from '../ingredients/entities/ingredient.entity';
 import { CreateRecipeDto } from './dto/create-recipe.dto';
 import { RecipeIngredientDto } from './dto/recipe-ingredient.dto';
@@ -16,8 +20,23 @@ import { RecipeIngredient } from './entities/recipe-ingredient.entity';
 import { RecipeStep } from './entities/recipe-step.entity';
 import { User } from '../users/entities/user.entity';
 
+interface PaginatedResult<T> {
+  items: T[];
+  total: number;
+  page: number;
+  limit: number;
+  sort: Array<{ field: string; direction: SortDirection }>;
+  filter: Array<{
+    field: string;
+    operator: FilterOperator;
+    value: string | number | boolean | Array<string | number | boolean>;
+  }>;
+}
+
 @Injectable()
 export class RecipesService {
+  private readonly logger = new Logger(RecipesService.name);
+
   constructor(
     @InjectRepository(Recipe)
     private readonly recipesRepository: Repository<Recipe>,
@@ -62,9 +81,106 @@ export class RecipesService {
     });
   }
 
-  async findAll(): Promise<Recipe[]> {
-    const options = this.buildRelationsOptions();
-  return this.recipesRepository.find(options);
+  async findAll(query: QueryPaginationDto): Promise<PaginatedResult<Recipe>> {
+    const page = query.page ?? 1;
+    const limit = query.limit ?? 20;
+
+    const parsed = QueryParserUtil.parse(query, {
+      sortMapping: {
+        created_at: 'recipe.created_at',
+        title: 'recipe.title',
+        difficulty: 'recipe.difficulty',
+        total_time_min: 'recipe.total_time_min',
+        rating_avg: 'recipe.rating_avg',
+      },
+      filterMapping: {
+        difficulty: {
+          column: 'recipe.difficulty',
+          type: 'string',
+          enumValues: Object.values(RecipeDifficulty),
+          allowedOperators: ['eq', 'ne', 'in'],
+        },
+        total_time_min: {
+          column: 'recipe.total_time_min',
+          type: 'number',
+          allowedOperators: ['eq', 'ne', 'lt', 'gt', 'lte', 'gte', 'in'],
+        },
+        rating_avg: {
+          column: 'recipe.rating_avg',
+          type: 'number',
+          allowedOperators: ['eq', 'ne', 'lt', 'gt', 'lte', 'gte'],
+        },
+        author_id: {
+          column: 'recipe.author_id',
+          type: 'number',
+          allowedOperators: ['eq', 'in'],
+        },
+        category_id: {
+          column: 'recipe.category_id',
+          type: 'number',
+          allowedOperators: ['eq', 'ne', 'in'],
+        },
+        title: {
+          column: 'recipe.title',
+          type: 'string',
+          allowedOperators: ['like', 'eq', 'ne'],
+        },
+      },
+    });
+
+    const baseResponse = {
+      page,
+      limit,
+      sort: parsed.sort.map(({ field, direction }) => ({ field, direction })),
+      filter: parsed.filter.map(({ field, operator, value }) => ({ field, operator, value })),
+    };
+
+    try {
+      const filteredQuery = this.recipesRepository
+        .createQueryBuilder('recipe')
+        .where('recipe.deleted_at IS NULL');
+
+      QueryParserUtil.applyFilter(filteredQuery, parsed.filter);
+
+      const total = await filteredQuery.clone().getCount();
+
+      const dataQuery = filteredQuery
+        .clone()
+        .leftJoinAndSelect('recipe.steps', 'steps')
+        .leftJoinAndSelect('recipe.recipeIngredients', 'recipeIngredients')
+        .leftJoinAndSelect('recipeIngredients.ingredient', 'ingredient');
+
+      if (parsed.sort.length) {
+        QueryParserUtil.applySort(dataQuery, parsed.sort);
+      } else {
+        dataQuery.orderBy('recipe.created_at', 'DESC');
+      }
+
+      dataQuery.addOrderBy('steps.stepOrder', 'ASC');
+
+      const items = await dataQuery
+        .skip((page - 1) * limit)
+        .take(limit)
+        .getMany();
+
+      return {
+        ...baseResponse,
+        items,
+        total,
+      };
+    } catch (error) {
+      this.logger.warn(
+        `Returning empty recipe list due to data access error: ${
+          error instanceof Error ? error.message : String(error)
+        }`,
+      );
+
+      return {
+        ...baseResponse,
+        items: [],
+        total: 0,
+      };
+    }
   }
 
   async findOne(id: number): Promise<Recipe> {
@@ -72,17 +188,17 @@ export class RecipesService {
     const recipe = await this.recipesRepository.findOne({
       where: { id },
       relations: options.relations,
-  order: options.order,
+      order: options.order,
     });
     if (!recipe) {
-      throw new NotFoundException(await this.translate('messages.RECIPES.ERROR.NOT_FOUND'));
+      throw new NotFoundException(await this.translate('messages.ERROR.RECIPE_NOT_FOUND'));
     }
     return recipe;
   }
 
   async update(id: number, dto: UpdateRecipeDto): Promise<Recipe> {
     return this.executeInTransaction(async (manager) => {
-  const existing = await this.findOneInternal(manager, id);
+      const existing = await this.findOneInternal(manager, id);
 
       if (dto.authorId && dto.authorId !== existing.authorId) {
         await this.ensureAuthorExists(manager, dto.authorId);
@@ -179,7 +295,7 @@ export class RecipesService {
   private async ensureAuthorExists(manager: EntityManager, authorId: number) {
     const author = await manager.findOne(User, { where: { id: authorId } });
     if (!author) {
-      throw new NotFoundException(await this.translate('messages.USERS.ERROR.NOT_FOUND'));
+      throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
     }
   }
 
@@ -198,7 +314,7 @@ export class RecipesService {
 
     if (found.length !== ingredientIds.length) {
       throw new NotFoundException(
-        await this.translate('messages.INGREDIENTS.ERROR.NOT_FOUND'),
+        await this.translate('messages.ERROR.INGREDIENT_NOT_FOUND'),
       );
     }
   }
@@ -208,10 +324,10 @@ export class RecipesService {
     const entity = await manager.findOne(Recipe, {
       where: { id },
       relations: options.relations,
-  order: options.order,
+      order: options.order,
     });
     if (!entity) {
-      throw new NotFoundException(await this.translate('messages.RECIPES.ERROR.NOT_FOUND'));
+      throw new NotFoundException(await this.translate('messages.ERROR.RECIPE_NOT_FOUND'));
     }
     return entity;
   }
@@ -257,7 +373,7 @@ export class RecipesService {
       'code' in error &&
       (error as { code: string }).code === 'ER_DUP_ENTRY'
     ) {
-      throw new ConflictException(await this.translate('messages.RECIPES.ERROR.SLUG_EXISTS'));
+      throw new ConflictException(await this.translate('messages.ERROR.RECIPE_SLUG_EXISTS'));
     }
   }
 
@@ -269,7 +385,7 @@ export class RecipesService {
       (error as { code: string }).code === 'ER_DUP_ENTRY'
     ) {
       throw new ConflictException(
-        await this.translate('messages.RECIPES.ERROR.INGREDIENT_CONFLICT'),
+        await this.translate('messages.ERROR.RECIPE_INGREDIENT_DUPLICATE'),
       );
     }
   }

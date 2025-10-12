@@ -22,6 +22,10 @@ import { RecipesModule } from '../modules/recipes/recipes.module';
     ConfigModule.forRoot({ isGlobal: true }),
     I18nModule.forRoot({
       fallbackLanguage: 'ro',
+      fallbacks: {
+        'ro-*': 'ro',
+        'en-*': 'en',
+      },
       loaderOptions: {
         path: resolveI18nPath(__dirname),
         watch: process.env.NODE_ENV !== 'production',
@@ -67,19 +71,31 @@ function resolveI18nPath(currentDir: string): string {
 }
 
 function resolveI18nTypesPath(): string {
+  const envPath = process.env.I18N_TYPES_PATH;
   const candidates = [
-    path.join(process.cwd(), 'apps', 'api', 'src', 'i18n-types.d.ts'),
-    path.join(process.cwd(), 'apps', 'api', 'i18n-types.d.ts'),
-    path.join(__dirname, '../i18n-types.d.ts'),
-  ];
+    envPath,
+    path.join(process.cwd(), 'dist', 'apps', 'api', 'generated', 'i18n-types.d.ts'),
+    path.join(process.cwd(), 'tmp', 'i18n', 'i18n-types.d.ts'),
+  ].filter((candidate): candidate is string => Boolean(candidate));
 
   for (const candidate of candidates) {
     const dir = path.dirname(candidate);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    return candidate;
+
+    try {
+      fs.accessSync(dir, fs.constants.W_OK);
+      return candidate;
+    } catch (error) {
+      continue;
+    }
   }
 
-  return path.join(process.cwd(), 'apps', 'api', 'src', 'i18n-types.d.ts');
+  const fallback = path.join(process.cwd(), 'dist', 'apps', 'api', 'i18n-types.d.ts');
+  const fallbackDir = path.dirname(fallback);
+  if (!fs.existsSync(fallbackDir)) {
+    fs.mkdirSync(fallbackDir, { recursive: true });
+  }
+  return fallback;
 }

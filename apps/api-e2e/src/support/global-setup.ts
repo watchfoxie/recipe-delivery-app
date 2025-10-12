@@ -11,7 +11,11 @@ module.exports = async function () {
   // Pornește serviciile de care aplicația are nevoie pentru a rula (de exemplu, baza de date, docker-compose, etc.).
   console.log('\nSetting up...\n');
 
-  const host = process.env.DB_HOST ?? 'localhost';
+  const host =
+    process.env.API_HOST ??
+    process.env.APP_HOST ??
+    process.env.DB_HOST ??
+    '127.0.0.1';
   const port = process.env.NEST_PORT ? Number(process.env.NEST_PORT) : 3001;
   await waitForPortOpen(port, { host });
 

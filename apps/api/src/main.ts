@@ -2,15 +2,23 @@ import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { I18nValidationPipe } from 'nestjs-i18n';
+import { DataSource } from 'typeorm';
 import { AppModule } from './app/app.module';
 import { APP_CONFIG } from './common/config/app.config';
 import { JsonParseExceptionFilter } from './common/filters/json-parse-exception.filter';
+import { I18nValidationExceptionFilter } from './common/filters/i18n-validation-exception.filter';
+import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
+
+  const dataSource = app.get(DataSource);
+  if (!dataSource.isInitialized) {
+    await dataSource.initialize();
+  }
 
   app.useGlobalPipes(
     new I18nValidationPipe({
@@ -19,7 +27,11 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: false },
     }),
   );
-  app.useGlobalFilters(new JsonParseExceptionFilter());
+  app.useGlobalFilters(
+    new HttpExceptionFilter(),
+    new I18nValidationExceptionFilter(),
+    new JsonParseExceptionFilter(),
+  );
   app.useGlobalInterceptors(new LoggingInterceptor());
 
   if (APP_CONFIG.server.environment !== 'production') {

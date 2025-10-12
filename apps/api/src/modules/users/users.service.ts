@@ -26,7 +26,7 @@ export class UsersService {
       try {
         return await manager.save(User, entity);
       } catch (error) {
-        await this.handleUniqueConstraint(error, 'messages.USERS.ERROR.EMAIL_EXISTS');
+        await this.handleUniqueConstraint(error, 'messages.ERROR.USER_EMAIL_EXISTS');
         throw error;
       }
     });
@@ -39,7 +39,7 @@ export class UsersService {
   async findOne(id: number): Promise<User> {
     const user = await this.usersRepository.findOne({ where: { id } });
     if (!user) {
-      throw new NotFoundException(await this.translate('messages.USERS.ERROR.NOT_FOUND'));
+      throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
     }
     return user;
   }
@@ -48,7 +48,7 @@ export class UsersService {
     return this.executeInTransaction(async (manager) => {
       const existing = await manager.findOne(User, { where: { id } });
       if (!existing) {
-        throw new NotFoundException(await this.translate('messages.USERS.ERROR.NOT_FOUND'));
+        throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
       }
 
       manager.merge(User, existing, dto);
@@ -56,7 +56,7 @@ export class UsersService {
       try {
         return await manager.save(User, existing);
       } catch (error) {
-        await this.handleUniqueConstraint(error, 'messages.USERS.ERROR.EMAIL_EXISTS');
+        await this.handleUniqueConstraint(error, 'messages.ERROR.USER_EMAIL_EXISTS');
         throw error;
       }
     });
@@ -66,7 +66,7 @@ export class UsersService {
     await this.executeInTransaction(async (manager) => {
       const existing = await manager.findOne(User, { where: { id } });
       if (!existing) {
-        throw new NotFoundException(await this.translate('messages.USERS.ERROR.NOT_FOUND'));
+        throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
       }
 
       await manager.softRemove(User, existing);

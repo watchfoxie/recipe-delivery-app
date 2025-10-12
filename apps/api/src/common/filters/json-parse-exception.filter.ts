@@ -37,8 +37,8 @@ export class JsonParseExceptionFilter implements ExceptionFilter {
             i18n?.t('messages.ERROR.VALIDATION_FAILED', { lang }) ??
             ERROR_MESSAGES.VALIDATION_FAILED
           }: ${
-            i18n?.t('messages.ERROR.JSON_SYNTAX_ERROR', { lang }) ??
-            ERROR_MESSAGES.JSON_SYNTAX_ERROR
+              i18n?.t('messages.ERROR.JSON_PARSE_ERROR', { lang }) ??
+              ERROR_MESSAGES.JSON_PARSE_ERROR
           }`,
         },
       ],

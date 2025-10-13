@@ -43,7 +43,18 @@ Thumbs.db
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
 
-# Misc
+# Custom misc
+AGENTS.md
 rd-app-arch
 .env
 .env.example
+nestjs-sample
+app-porting-to-do-list.md
+dto-structure.md
+docs
+
+# Next.js
+.next
+out
+
+test-output

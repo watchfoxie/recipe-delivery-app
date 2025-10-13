@@ -19,10 +19,18 @@
           "passWithNoTests": true
         },
         "dependsOn": [
-          "@recipe-delivery-app/api:build",
           "@recipe-delivery-app/api:serve",
           "@recipe-delivery-app/api:prepare:e2e"
         ]
+      },
+      "e2e:ci": {
+        "executor": "nx:noop",
+        "dependsOn": [
+          "@recipe-delivery-app/api:build",
+          "@recipe-delivery-app/api:prepare:e2e",
+          "e2e"
+        ],
+        "cache": false
       }
     }
   }

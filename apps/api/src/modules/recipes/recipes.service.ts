@@ -2,7 +2,6 @@ import {
   ConflictException,
   Injectable,
   NotFoundException,
-  Logger,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { I18nContext, I18nService } from 'nestjs-i18n';
@@ -32,10 +31,8 @@ interface PaginatedResult<T> {
     value: string | number | boolean | Array<string | number | boolean>;
   }>;
 }
-
 @Injectable()
 export class RecipesService {
-  private readonly logger = new Logger(RecipesService.name);
 
   constructor(
     @InjectRepository(Recipe)
@@ -135,52 +132,53 @@ export class RecipesService {
       filter: parsed.filter.map(({ field, operator, value }) => ({ field, operator, value })),
     };
 
-    try {
-      const filteredQuery = this.recipesRepository
+    const buildBaseQuery = () =>
+      this.recipesRepository
         .createQueryBuilder('recipe')
         .where('recipe.deleted_at IS NULL');
 
-      QueryParserUtil.applyFilter(filteredQuery, parsed.filter);
+    const totalQuery = buildBaseQuery();
+    QueryParserUtil.applyFilter(totalQuery, parsed.filter);
+    const total = await totalQuery.getCount();
 
-      const total = await filteredQuery.clone().getCount();
+    const idQuery = buildBaseQuery().select('recipe.id', 'id');
+    QueryParserUtil.applyFilter(idQuery, parsed.filter);
 
-      const dataQuery = filteredQuery
-        .clone()
-        .leftJoinAndSelect('recipe.steps', 'steps')
-        .leftJoinAndSelect('recipe.recipeIngredients', 'recipeIngredients')
-        .leftJoinAndSelect('recipeIngredients.ingredient', 'ingredient');
-
-      if (parsed.sort.length) {
-        QueryParserUtil.applySort(dataQuery, parsed.sort);
-      } else {
-        dataQuery.orderBy('recipe.created_at', 'DESC');
-      }
-
-      dataQuery.addOrderBy('steps.stepOrder', 'ASC');
-
-      const items = await dataQuery
-        .skip((page - 1) * limit)
-        .take(limit)
-        .getMany();
-
-      return {
-        ...baseResponse,
-        items,
-        total,
-      };
-    } catch (error) {
-      this.logger.warn(
-        `Returning empty recipe list due to data access error: ${
-          error instanceof Error ? error.message : String(error)
-        }`,
-      );
-
-      return {
-        ...baseResponse,
-        items: [],
-        total: 0,
-      };
+    if (parsed.sort.length) {
+      QueryParserUtil.applySort(idQuery, parsed.sort);
+    } else {
+      idQuery.orderBy('recipe.created_at', 'DESC');
     }
+
+    const rows = await idQuery
+      .skip((page - 1) * limit)
+      .take(limit)
+      .getRawMany<{ id: number }>();
+
+    const recipeIds = rows
+      .map((row) => (typeof row.id === 'string' ? Number(row.id) : row.id))
+      .filter((value): value is number => Number.isFinite(value));
+
+    let items: Recipe[] = [];
+    if (recipeIds.length) {
+      const options = this.buildRelationsOptions();
+      const found = await this.recipesRepository.find({
+        where: recipeIds.map((id) => ({ id })),
+        relations: options.relations,
+        order: options.order,
+      });
+
+      const lookup = new Map(found.map((recipe) => [recipe.id, recipe]));
+      items = recipeIds
+        .map((id) => lookup.get(id))
+        .filter((recipe): recipe is Recipe => Boolean(recipe));
+    }
+
+    return {
+      ...baseResponse,
+      items,
+      total,
+    };
   }
 
   async findOne(id: number): Promise<Recipe> {

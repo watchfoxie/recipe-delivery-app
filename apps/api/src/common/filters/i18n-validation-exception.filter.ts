@@ -240,7 +240,7 @@ export class I18nValidationExceptionFilter implements ExceptionFilter {
       queryLang ??
       headerLang ??
       acceptPrimary ??
-      'en'
+      'ro'
     );
   }
 

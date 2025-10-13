@@ -27,9 +27,9 @@ export async function translateMessage(
   const resolvedLang =
     lang ??
     ctx?.lang ??
-  serviceWithDefaults.getDefaultLanguage?.() ??
-  serviceWithDefaults.fallbackLanguage ??
-  'en';
+    serviceWithDefaults.getDefaultLanguage?.() ??
+    serviceWithDefaults.fallbackLanguage ??
+    'ro';
 
   const result = await i18n.translate<string>(
     key as Parameters<I18nService['translate']>[0],

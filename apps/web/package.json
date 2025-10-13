@@ -1,0 +1,62 @@
+{
+  "name": "@recipe-delivery-app/web",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "sourceRoot": "apps/web/src",
+    "projectType": "application",
+    "targets": {
+      "serve": {
+        "continuous": true,
+        "executor": "@nx/next:server",
+        "defaultConfiguration": "development",
+        "options": {
+          "buildTarget": "@recipe-delivery-app/web:build",
+          "dev": true,
+          "port": 3000
+        },
+        "configurations": {
+          "development": {
+            "dev": true,
+            "buildTarget": "@recipe-delivery-app/web:build",
+            "port": 3000
+          },
+          "production": {
+            "dev": false,
+            "buildTarget": "@recipe-delivery-app/web:build:production",
+            "port": 3000
+          }
+        }
+      },
+      "typecheck": {
+        "executor": "nx:run-commands",
+        "options": {
+          "cwd": "apps/web",
+          "command": "npx tsc --noEmit"
+        },
+        "cache": true,
+        "inputs": ["default", "^production"],
+        "metadata": {
+          "description": "Runs TypeScript type checking for the web app",
+          "help": {
+            "command": "npx tsc --help",
+            "example": {
+              "options": {
+                "noEmit": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "type:web",
+      "scope:core"
+    ]
+  },
+  "dependencies": {
+    "next": "~15.2.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}

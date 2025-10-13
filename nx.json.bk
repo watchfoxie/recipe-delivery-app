@@ -86,34 +86,8 @@
     }
   ],
   "targetDefaults": {
-    "build": {
-      "cache": true,
-      "inputs": ["production", "^production"],
-      "outputs": ["{projectRoot}/dist", "{workspaceRoot}/dist", "{projectRoot}/.next"]
-    },
     "test": {
-      "cache": true,
-      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
-      "outputs": ["{workspaceRoot}/coverage", "{projectRoot}/coverage"],
       "dependsOn": ["^build"]
-    },
-    "lint": {
-      "cache": true,
-      "inputs": [
-        "default",
-        "{workspaceRoot}/eslint.config.mjs",
-        "{workspaceRoot}/.eslintrc.json",
-        "{workspaceRoot}/.eslintignore"
-      ]
-    },
-    "typecheck": {
-      "cache": true,
-      "inputs": ["production", "^production"]
-    },
-    "e2e": {
-      "cache": true,
-      "inputs": ["default", "^production", "{projectRoot}/cypress.config.ts"],
-      "outputs": []
     }
   },
   "generators": {

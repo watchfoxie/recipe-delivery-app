@@ -1,0 +1,12 @@
+{
+  "name": "@recipe-delivery-app/web-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "projectType": "application",
+    "type": "e2e",
+    "implicitDependencies": [
+      "@recipe-delivery-app/web"
+    ]
+  }
+}

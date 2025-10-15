@@ -12,20 +12,20 @@ import {
 const VALIDATION_MESSAGE_KEY = 'messages.ERROR.VALIDATION_FAILED';
 
 export class CreateUserDto {
-  @ApiProperty({ example: 'ana@example.com' })
+  @ApiProperty({ example: 'username@example.com' })
   @Transform(({ value }) => (typeof value === 'string' ? value.trim() : value))
   @IsEmail({}, { message: i18nValidationMessage(VALIDATION_MESSAGE_KEY) })
   @MaxLength(191, { message: i18nValidationMessage(VALIDATION_MESSAGE_KEY) })
   email!: string;
 
-  @ApiProperty({ example: 'Str0ngPass!' })
+  @ApiProperty({ example: 'enter-password' })
   @Transform(({ value }) => (typeof value === 'string' ? value.trim() : value))
   @IsString({ message: i18nValidationMessage(VALIDATION_MESSAGE_KEY) })
   @MinLength(8, { message: i18nValidationMessage(VALIDATION_MESSAGE_KEY) })
   @MaxLength(255, { message: i18nValidationMessage(VALIDATION_MESSAGE_KEY) })
   password!: string;
 
-  @ApiProperty({ example: 'Ana' })
+  @ApiProperty({ example: 'Username' })
   @IsString({ message: i18nValidationMessage(VALIDATION_MESSAGE_KEY) })
   @MinLength(2, { message: i18nValidationMessage(VALIDATION_MESSAGE_KEY) })
   @MaxLength(191, { message: i18nValidationMessage(VALIDATION_MESSAGE_KEY) })

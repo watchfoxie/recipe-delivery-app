@@ -8,7 +8,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { Recipe } from '../../recipes/entities/recipe.entity';
+import type { Recipe } from '../../recipes/entities/recipe.entity';
 
 @Entity('user')
 @Index('uq_user_email', ['email'], { unique: true })
@@ -37,6 +37,6 @@ export class User {
   @DeleteDateColumn({ name: 'deleted_at', nullable: true })
   deletedAt?: Date | null;
 
-  @OneToMany(() => Recipe, (recipe) => recipe.author)
+  @OneToMany('Recipe', 'author')
   recipes?: Recipe[];
 }

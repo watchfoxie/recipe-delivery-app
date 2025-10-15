@@ -144,7 +144,9 @@ describe('UsersService', () => {
   const managerCreate = jest.fn();
   const managerSave = jest.fn();
   const managerFindOne = jest.fn().mockResolvedValue(existingUser);
-  const managerMerge = jest.fn();
+  const managerMerge = jest.fn((entityClass, destination, source) => {
+    Object.assign(destination, source);
+  });
       const commitTransaction = jest.fn();
       const rollbackTransaction = jest.fn();
       const connect = jest.fn();

@@ -20,8 +20,8 @@
     "customConditions": ["@recipe-delivery-app/source"],
     "paths": {
       "@api/*": ["apps/api/src/*"],
-      "@web/*": ["apps/web/src/*"],
-      "@shared/*": ["libs/shared/src/*"]
+      "@shared/*": ["libs/shared/src/*"],
+      "@web/*": ["apps/web/src/*"]
     }
   }
 }

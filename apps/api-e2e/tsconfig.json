@@ -9,7 +9,7 @@
   "include": ["jest.config.ts", "src/**/*.ts"],
   "references": [
     {
-      "path": "../api/tsconfig.app.json"
+      "path": "../api"
     }
   ]
 }

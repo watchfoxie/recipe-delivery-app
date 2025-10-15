@@ -13,6 +13,7 @@ import { RecipeStep } from '@api/modules/recipes/entities/recipe-step.entity';
 import { RecipeIngredient } from '@api/modules/recipes/entities/recipe-ingredient.entity';
 import { Ingredient } from '@api/modules/ingredients/entities/ingredient.entity';
 import { User } from '@api/modules/users/entities/user.entity';
+import * as bcrypt from 'bcrypt';
 
 export interface TestingAppContext {
   app: INestApplication;
@@ -23,6 +24,7 @@ export interface SeededData {
   user: User;
   ingredients: Ingredient[];
   recipe: Recipe;
+  userPlainPassword: string;
 }
 
 export async function createTestingApp(): Promise<TestingAppContext> {
@@ -87,10 +89,13 @@ export async function seedTestData(dataSource: DataSource): Promise<SeededData> 
   const stepRepository = dataSource.getRepository(RecipeStep);
   const recipeIngredientRepository = dataSource.getRepository(RecipeIngredient);
 
+  const userPlainPassword = 'Str0ngPassw0rd!';
+  const passwordHash = await bcrypt.hash(userPlainPassword, 10);
+
   const user = await userRepository.save(
     userRepository.create({
       email: 'e2e.user@example.com',
-      passwordHash: 'hashed-password',
+      passwordHash,
       displayName: 'E2E User',
     }),
   );
@@ -148,5 +153,10 @@ export async function seedTestData(dataSource: DataSource): Promise<SeededData> 
     ],
   );
 
-  return { user, ingredients: [primaryIngredient, secondaryIngredient], recipe };
+  return {
+    user,
+    ingredients: [primaryIngredient, secondaryIngredient],
+    recipe,
+    userPlainPassword,
+  };
 }

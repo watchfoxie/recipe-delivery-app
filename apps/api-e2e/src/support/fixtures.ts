@@ -17,7 +17,7 @@ export function buildCreateUserPayload(
 ): CreateUserDto {
   const base: CreateUserDto = {
     email: `e2e-user-${uniqueSuffix()}@example.com`,
-    passwordHash: 'hashed-password',
+    password: 'Str0ngPassw0rd!',
     displayName: 'E2E User',
   };
 

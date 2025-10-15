@@ -1,27 +1,41 @@
 import {
   ConflictException,
   Injectable,
+  Logger,
   NotFoundException,
+  UnauthorizedException,
 } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { I18nContext, I18nService } from 'nestjs-i18n';
 import { DataSource, EntityManager, Repository } from 'typeorm';
+import * as bcrypt from 'bcrypt';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
 
 @Injectable()
 export class UsersService {
+  private readonly logger = new Logger(UsersService.name);
+  private readonly passwordSaltRounds = 12;
+
   constructor(
     @InjectRepository(User)
     private readonly usersRepository: Repository<User>,
     private readonly dataSource: DataSource,
     private readonly i18n: I18nService,
+    private readonly jwtService: JwtService,
   ) {}
 
   async create(dto: CreateUserDto): Promise<User> {
     return this.executeInTransaction(async (manager) => {
-      const entity = manager.create(User, dto);
+      const passwordHash = await this.hashPassword(dto.password);
+      const entity = manager.create(User, {
+        email: this.normalizeEmail(dto.email),
+        passwordHash,
+        displayName: dto.displayName,
+        preferencesJson: dto.preferencesJson ?? null,
+      });
 
       try {
         return await manager.save(User, entity);
@@ -51,7 +65,26 @@ export class UsersService {
         throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
       }
 
-      manager.merge(User, existing, dto);
+      const { password, ...rest } = dto;
+      const normalizedPayload: Partial<User> = {};
+
+      if (rest.email !== undefined) {
+        normalizedPayload.email = this.normalizeEmail(rest.email);
+      }
+
+      if (rest.displayName !== undefined) {
+        normalizedPayload.displayName = rest.displayName;
+      }
+
+      if (rest.preferencesJson !== undefined) {
+        normalizedPayload.preferencesJson = rest.preferencesJson ?? null;
+      }
+
+      manager.merge(User, existing, normalizedPayload);
+
+      if (password !== undefined) {
+        existing.passwordHash = await this.hashPassword(password);
+      }
 
       try {
         return await manager.save(User, existing);
@@ -71,6 +104,28 @@ export class UsersService {
 
       await manager.softRemove(User, existing);
     });
+  }
+
+  async login(email: string, password: string) {
+    const normalizedEmail = this.normalizeEmail(email);
+    const user = await this.usersRepository.findOne({ where: { email: normalizedEmail } });
+
+    if (!user) {
+      this.logger.warn(`Failed login attempt for unknown account: ${normalizedEmail}`);
+      throw new UnauthorizedException(await this.translate('auth.ERROR.LOGIN_FAILED'));
+    }
+
+    const isPasswordValid = await bcrypt.compare(password, user.passwordHash);
+    if (!isPasswordValid) {
+      this.logger.warn(`Failed login attempt for account: ${normalizedEmail}`);
+      throw new UnauthorizedException(await this.translate('auth.ERROR.LOGIN_FAILED'));
+    }
+
+    const token = await this.jwtService.signAsync({ sub: user.id, email: user.email });
+
+    this.logger.log(`User ${normalizedEmail} authenticated successfully`);
+
+    return { token, user };
   }
 
   private async executeInTransaction<T>(work: (manager: EntityManager) => Promise<T>): Promise<T> {
@@ -99,6 +154,14 @@ export class UsersService {
     ) {
       throw new ConflictException(await this.translate(messageKey));
     }
+  }
+
+  private normalizeEmail(email: string): string {
+    return email.trim().toLowerCase();
+  }
+
+  private hashPassword(password: string): Promise<string> {
+    return bcrypt.hash(password, this.passwordSaltRounds);
   }
 
   private async translate(key: string): Promise<string> {

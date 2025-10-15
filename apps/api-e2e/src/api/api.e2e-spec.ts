@@ -94,6 +94,60 @@ describe('Recipe Delivery API e2e', () => {
     });
   });
 
+  describe('Authentication', () => {
+    it('authenticates a user and returns a JWT token', async () => {
+      const response = await request(server)
+        .post('/api/users/login')
+        .set('Accept-Language', 'en')
+        .send({ email: fixtures.user.email, password: fixtures.userPlainPassword });
+
+      expect(response.status).toBe(200);
+      expect(response.body.message).toBe('Successful login');
+      expect(response.body.data).toMatchObject({
+        token: expect.any(String),
+        user: expect.objectContaining({
+          id: fixtures.user.id,
+          email: fixtures.user.email,
+        }),
+      });
+    });
+
+    it('rejects invalid credentials with localized message', async () => {
+      const response = await request(server)
+        .post('/api/users/login')
+        .set('Accept-Language', 'ro')
+        .send({ email: fixtures.user.email, password: 'ParolaGresita!' });
+
+      expect(response.status).toBe(401);
+      expect(Array.isArray(response.body.message)).toBe(true);
+      expect(response.body.message[0]).toMatchObject({
+        field: 'general',
+        message: 'Autentificare nereușită, încercați din nou',
+      });
+    });
+
+    it('authenticates immediately after user registration', async () => {
+      const payload = buildCreateUserPayload();
+
+      const createResponse = await request(server)
+        .post('/api/users')
+        .set('Accept-Language', 'en')
+        .send(payload);
+
+      expect(createResponse.status).toBe(201);
+
+      const loginResponse = await request(server)
+        .post('/api/users/login')
+        .set('Accept-Language', 'en')
+        .send({ email: payload.email, password: payload.password });
+
+      expect(loginResponse.status).toBe(200);
+      expect(loginResponse.body.message).toBe('Successful login');
+      expect(loginResponse.body.data.user.email).toBe(payload.email);
+      expect(loginResponse.body.data.token).toEqual(expect.any(String));
+    });
+  });
+
   describe('Pagination, sorting and filtering', () => {
     it('returns paginated response structure for recipes', async () => {
       const response = await request(server)

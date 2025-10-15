@@ -11,9 +11,12 @@ import {
 import { ApiTags } from '@nestjs/swagger';
 import { I18nService } from 'nestjs-i18n';
 import { plainToInstance } from 'class-transformer';
+import { Throttle } from '@nestjs/throttler';
 import { ApiStandardResponses } from '../../common/swagger/swagger-responses.util';
 import { translateMessage } from '../../common/utils/i18n.util';
 import { CreateUserDto } from './dto/create-user.dto';
+import { LoginDto } from './dto/login.dto';
+import { LoginResponseDto } from './dto/login-response.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserResponseDto } from './dto/user-response.dto';
 import { UsersService } from './users.service';
@@ -22,6 +25,29 @@ import { UsersService } from './users.service';
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService, private readonly i18n: I18nService) {}
+
+  @Post('login')
+  @Throttle({ default: { limit: 5, ttl: 60 } })
+  @ApiStandardResponses(LoginResponseDto)
+  async login(@Body() dto: LoginDto) {
+    const result = await this.usersService.login(dto.email, dto.password);
+
+    const response = plainToInstance(
+      LoginResponseDto,
+      {
+        token: result.token,
+        user: plainToInstance(UserResponseDto, result.user, {
+          excludeExtraneousValues: true,
+        }),
+      },
+      { excludeExtraneousValues: true },
+    );
+
+    return {
+      message: await this.translate('auth.SUCCESS.LOGIN'),
+      data: response,
+    };
+  }
 
   @Post()
   @ApiStandardResponses(UserResponseDto)

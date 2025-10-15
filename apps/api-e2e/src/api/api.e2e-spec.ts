@@ -1,0 +1,232 @@
+import request from 'supertest';
+import { INestApplication } from '@nestjs/common';
+import { DataSource } from 'typeorm';
+import {
+  createTestingApp,
+  resetDatabase,
+  seedTestData,
+  SeededData,
+} from '../support/testing-app';
+import {
+  buildCreateIngredientPayload,
+  buildCreateRecipePayload,
+  buildCreateUserPayload,
+  buildRecipeListQuery,
+} from '../support/fixtures';
+
+describe('Recipe Delivery API e2e', () => {
+  let app: INestApplication;
+  let dataSource: DataSource;
+  let server: ReturnType<INestApplication['getHttpServer']>;
+  let fixtures: SeededData;
+
+  beforeAll(async () => {
+    const context = await createTestingApp();
+    app = context.app;
+    dataSource = context.dataSource;
+    server = app.getHttpServer();
+  });
+
+  afterAll(async () => {
+    await app.close();
+    if (dataSource.isInitialized) {
+      await dataSource.destroy();
+    }
+  });
+
+  beforeEach(async () => {
+    await resetDatabase(dataSource);
+    fixtures = await seedTestData(dataSource);
+  });
+
+  describe('GET /api', () => {
+    it('returns localized welcome message in English', async () => {
+      const response = await request(server).get('/api').query({ lang: 'en' });
+
+      expect(response.status).toBe(200);
+      expect(response.body.message).toBe('Welcome to the Recipe Delivery API');
+      expect(response.body.data).toMatchObject({
+        status: 'ok',
+        environment: expect.any(String),
+        host: expect.any(String),
+        port: expect.any(Number),
+        timestamp: expect.any(String),
+      });
+    });
+
+    it('returns localized welcome message in Romanian', async () => {
+      const response = await request(server).get('/api').query({ lang: 'ro' });
+
+      expect(response.status).toBe(200);
+      expect(response.body.message).toBe('Bine ai venit la API-ul Recipe Delivery');
+    });
+  });
+
+  describe('Error formatting', () => {
+    it('normalizes validation errors with i18n messages', async () => {
+      const response = await request(server)
+        .post('/api/users')
+        .query({ lang: 'en' })
+        .send({ email: 'invalid@email' });
+
+      expect(response.status).toBe(400);
+      expect(response.body).toHaveProperty('statusCode', 400);
+      expect(Array.isArray(response.body.message)).toBe(true);
+      expect(response.body.message[0]).toMatchObject({
+        field: expect.any(String),
+        message: expect.stringContaining('Validation failed'),
+      });
+    });
+
+    it('normalizes JSON parse errors', async () => {
+      const response = await request(server)
+        .post('/api/users')
+        .query({ lang: 'en' })
+        .set('Content-Type', 'application/json')
+        .send('{');
+
+      expect(response.status).toBe(400);
+      expect(response.body).toHaveProperty('statusCode', 400);
+      expect(response.body.message[0]).toMatchObject({
+        field: 'json_body',
+        message: expect.stringContaining('invalid JSON'),
+      });
+    });
+  });
+
+  describe('Pagination, sorting and filtering', () => {
+    it('returns paginated response structure for recipes', async () => {
+      const response = await request(server)
+        .get('/api/recipes')
+        .query(buildRecipeListQuery());
+
+      expect(response.status).toBe(200);
+      expect(response.body.message).toBe('Recipes retrieved successfully');
+
+      const payload = response.body.data;
+      expect(payload).toMatchObject({
+        page: 1,
+        limit: 5,
+        total: expect.any(Number),
+        sort: expect.any(Array),
+        filter: expect.any(Array),
+      });
+      expect(Array.isArray(payload.items)).toBe(true);
+      expect(payload.items.length).toBeGreaterThanOrEqual(1);
+      expect(payload.items[0]).toHaveProperty('id', fixtures.recipe.id);
+
+      if (payload.sort.length) {
+        expect(payload.sort).toEqual(
+          expect.arrayContaining([
+            expect.objectContaining({ field: 'created_at', direction: 'DESC' }),
+          ]),
+        );
+      }
+
+      if (payload.filter.length) {
+        expect(payload.filter).toEqual(
+          expect.arrayContaining([
+            expect.objectContaining({ field: 'difficulty', operator: 'eq' }),
+          ]),
+        );
+      }
+    });
+  });
+
+  describe('CRUD flows and domain invariants', () => {
+    it('creates users and prevents duplicates', async () => {
+      const payload = buildCreateUserPayload();
+
+      const createResponse = await request(server)
+        .post('/api/users')
+        .query({ lang: 'en' })
+        .send(payload);
+
+      expect(createResponse.status).toBe(201);
+      expect(createResponse.body.message).toBe('User created successfully');
+      expect(createResponse.body.data).toMatchObject({
+        email: payload.email,
+        displayName: payload.displayName,
+      });
+
+      const duplicateResponse = await request(server)
+        .post('/api/users')
+        .query({ lang: 'en' })
+        .send(payload);
+
+      expect(duplicateResponse.status).toBe(409);
+      expect(duplicateResponse.body.message).toBe('A user with this email already exists');
+    });
+
+    it('creates ingredients and reports conflicts', async () => {
+      const payload = buildCreateIngredientPayload();
+
+      const createResponse = await request(server)
+        .post('/api/ingredients')
+        .query({ lang: 'en' })
+        .send(payload);
+
+      expect(createResponse.status).toBe(201);
+      expect(createResponse.body.message).toBe('Ingredient created successfully');
+      expect(createResponse.body.data).toMatchObject({
+        name: payload.name,
+      });
+
+      const conflictResponse = await request(server)
+        .post('/api/ingredients')
+        .query({ lang: 'en' })
+        .send({ ...payload, synonyms: ['duplicate'] });
+
+      expect(conflictResponse.status).toBe(409);
+      expect(conflictResponse.body.message).toBe('An ingredient with this name already exists');
+    });
+
+    it('creates a recipe with steps and ingredients', async () => {
+      const payload = buildCreateRecipePayload({
+        authorId: fixtures.user.id,
+        ingredientIds: fixtures.ingredients.map((ingredient) => ingredient.id),
+      });
+
+      const response = await request(server)
+        .post('/api/recipes')
+        .query({ lang: 'en' })
+        .send(payload);
+
+      expect(response.status).toBe(201);
+      expect(response.body.message).toBe('Recipe created successfully');
+      expect(response.body.data).toMatchObject({
+        slug: payload.slug,
+        title: payload.title,
+        difficulty: payload.difficulty,
+        servings: payload.servings,
+      });
+      expect(response.body.data.steps).toHaveLength(payload.steps?.length ?? 0);
+      expect(response.body.data.recipeIngredients).toHaveLength(
+        payload.ingredients?.length ?? 0,
+      );
+
+  const listQuery = buildRecipeListQuery();
+  delete listQuery['filter'];
+
+      const listResponse = await request(server)
+        .get('/api/recipes')
+        .query(listQuery);
+
+      expect(listResponse.status).toBe(200);
+
+      const slugs = listResponse.body.data.items.map((item: { slug: string }) => item.slug);
+      expect(slugs).toContain(payload.slug);
+    });
+  });
+
+  describe('Domain error responses', () => {
+    it('returns 404 when recipe is missing', async () => {
+      const response = await request(server)
+        .get('/api/recipes/9999')
+        .query({ lang: 'en' });
+
+      expect(response.status).toBe(404);
+      expect(response.body.message).toBe('The requested recipe does not exist');
+    });
+  });
+});

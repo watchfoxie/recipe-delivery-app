@@ -10,7 +10,7 @@
           "error",
           {
             "enforceBuildableLibDependency": true,
-            "allow": [],
+            "allow": ["@api/.*", "@web/.*", "@shared/.*"],
             "depConstraints": [
               {
                 "sourceTag": "*",

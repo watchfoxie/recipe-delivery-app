@@ -48,6 +48,7 @@ AGENTS.md
 rd-app-arch
 .env
 .env.example
+.env.test
 nestjs-sample
 app-porting-to-do-list.md
 dto-structure.md

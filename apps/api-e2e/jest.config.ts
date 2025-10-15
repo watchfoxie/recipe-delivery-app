@@ -13,13 +13,12 @@ swcJestConfig.swcrc = false;
 export default {
   displayName: '@recipe-delivery-app/api-e2e',
   preset: '../../jest.preset.js',
-  globalSetup: '<rootDir>/src/support/global-setup.ts',
-  globalTeardown: '<rootDir>/src/support/global-teardown.ts',
-  setupFiles: ['<rootDir>/src/support/test-setup.ts'],
+  setupFiles: ['<rootDir>/src/support/load-env.ts'],
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: 'test-output/jest/coverage',
+  testTimeout: 30000,
 };

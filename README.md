@@ -1,6 +1,6 @@
 # Recipe Delivery App
 
-![Fluxul rețetelor culinare](https://i.imgur.com/qtUPnav.png "Rețete culinare")
+![Fluxul rețetelor culinare](https://i.imgur.com/vJIv7Tk.png "Rețete culinare")
 
 **Recipe Delivery App** este o aplicație web full-stack pentru livrarea rețetelor adaptate unei game largi de gusturi culinare, preferințe alimentare și niveluri de experiență. Aplicația va oferi utilizatorilor instrucțiuni pas cu pas pentru gătit. De asemenea, va include conturi de utilizator, evaluarea rețetelor și funcționalitate de partajare socială.
 

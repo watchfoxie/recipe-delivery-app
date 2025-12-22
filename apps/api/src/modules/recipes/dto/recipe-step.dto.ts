@@ -8,7 +8,7 @@ export class RecipeStepDto {
   @Min(1, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   stepOrder!: number;
 
-  @ApiProperty({ example: 'Mix ingredients thoroughly.' })
+  @ApiProperty({ example: 'mix ingredients thoroughly' })
   @IsNotEmpty({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MinLength(5, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   text!: string;

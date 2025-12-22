@@ -28,7 +28,7 @@ export class RecipeIngredientDto {
   @MaxLength(32, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   unit?: string | null;
 
-  @ApiProperty({ required: false, example: 'optional' })
+  @ApiProperty({ required: false, example: 'remark' })
   @IsOptional()
   @IsString({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MaxLength(191, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })

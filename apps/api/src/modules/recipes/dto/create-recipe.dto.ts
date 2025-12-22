@@ -18,13 +18,13 @@ import { RecipeIngredientDto } from './recipe-ingredient.dto';
 import { RecipeStepDto } from './recipe-step.dto';
 
 export class CreateRecipeDto {
-  @ApiProperty({ example: 'chocolate-cake' })
+  @ApiProperty({ example: 'recipe-name-identifier' })
   @IsString({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MinLength(3, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MaxLength(191, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   slug!: string;
 
-  @ApiProperty({ example: 'Chocolate Cake' })
+  @ApiProperty({ example: 'recipe' })
   @IsString({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MinLength(3, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MaxLength(191, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
@@ -34,12 +34,12 @@ export class CreateRecipeDto {
   @IsEnum(RecipeDifficulty, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   difficulty!: RecipeDifficulty;
 
-  @ApiProperty({ example: 45 })
+  @ApiProperty({ example: 5 })
   @IsInt({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @Min(1, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   totalTimeMin!: number;
 
-  @ApiProperty({ example: 4 })
+  @ApiProperty({ example: 2 })
   @IsInt({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @Min(1, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   servings!: number;
@@ -49,13 +49,13 @@ export class CreateRecipeDto {
   @IsNumber({ maxDecimalPlaces: 2 }, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   ratingAvg?: number;
 
-  @ApiProperty({ required: false, type: [String] })
+  @ApiProperty({ required: false, type: [String], example: ['tag'] })
   @IsOptional()
   @IsArray({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @IsString({ each: true, message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   dietaryTags?: string[];
 
-  @ApiProperty({ required: false, type: String })
+  @ApiProperty({ required: false, type: String, example: 'depiction' })
   @IsOptional()
   @IsString({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   description?: string | null;

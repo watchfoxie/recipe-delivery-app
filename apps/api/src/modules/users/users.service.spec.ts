@@ -199,7 +199,7 @@ describe('UsersService', () => {
       expect(existingUser.email).toBe('updated@example.com');
       expect(existingUser.passwordHash).toBe(hashedPassword);
       expect(existingUser.displayName).toBe('Updated');
-  expect(existingUser.preferencesJson).toEqual(preferences);
+      expect(existingUser.preferencesJson).toEqual(preferences);
       expect(result).toBe(resultUser);
       expect(commitTransaction).toHaveBeenCalled();
       expect(rollbackTransaction).not.toHaveBeenCalled();

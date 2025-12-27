@@ -7,7 +7,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { I18nContext, I18nService } from 'nestjs-i18n';
 import { DataSource, EntityManager, Repository } from 'typeorm';
 import type { FilterOperator, SortDirection } from '../../common/utils/query-parser.util';
-import { QueryPaginationDto } from '../../common/dto/query-pagination.dto';
 import { QueryParserUtil } from '../../common/utils/query-parser.util';
 import { Ingredient } from '../ingredients/entities/ingredient.entity';
 import { CreateRecipeDto } from './dto/create-recipe.dto';
@@ -18,6 +17,8 @@ import { Recipe, RecipeDifficulty } from './entities/recipe.entity';
 import { RecipeIngredient } from './entities/recipe-ingredient.entity';
 import { RecipeStep } from './entities/recipe-step.entity';
 import { User } from '../users/entities/user.entity';
+import { ListRecipesQueryDto } from './dto/list-recipes-query.dto';
+import { RECIPES_FILTER_MAPPING, RECIPES_SORT_MAPPING } from './recipes-query.config';
 
 interface PaginatedResult<T> {
   items: T[];
@@ -79,51 +80,13 @@ export class RecipesService {
     });
   }
 
-  async findAll(query: QueryPaginationDto): Promise<PaginatedResult<Recipe>> {
+  async findAll(query: ListRecipesQueryDto): Promise<PaginatedResult<Recipe>> {
     const page = query.page ?? 1;
     const limit = query.limit ?? 10;
 
     const parsed = QueryParserUtil.parse(query, {
-      sortMapping: {
-        created_at: 'recipe.created_at',
-        title: 'recipe.title',
-        difficulty: 'recipe.difficulty',
-        total_time_min: 'recipe.total_time_min',
-        rating_avg: 'recipe.rating_avg',
-      },
-      filterMapping: {
-        difficulty: {
-          column: 'recipe.difficulty',
-          type: 'string',
-          enumValues: Object.values(RecipeDifficulty),
-          allowedOperators: ['eq', 'ne', 'in'],
-        },
-        total_time_min: {
-          column: 'recipe.total_time_min',
-          type: 'number',
-          allowedOperators: ['eq', 'ne', 'lt', 'gt', 'lte', 'gte', 'in'],
-        },
-        rating_avg: {
-          column: 'recipe.rating_avg',
-          type: 'number',
-          allowedOperators: ['eq', 'ne', 'lt', 'gt', 'lte', 'gte'],
-        },
-        author_id: {
-          column: 'recipe.author_id',
-          type: 'number',
-          allowedOperators: ['eq', 'in'],
-        },
-        category_id: {
-          column: 'recipe.category_id',
-          type: 'number',
-          allowedOperators: ['eq', 'ne', 'in'],
-        },
-        title: {
-          column: 'recipe.title',
-          type: 'string',
-          allowedOperators: ['like', 'eq', 'ne'],
-        },
-      },
+      sortMapping: RECIPES_SORT_MAPPING,
+      filterMapping: RECIPES_FILTER_MAPPING,
     });
 
     const baseResponse = {

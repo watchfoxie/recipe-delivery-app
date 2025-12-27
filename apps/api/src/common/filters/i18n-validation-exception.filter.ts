@@ -62,6 +62,10 @@ export class I18nValidationExceptionFilter implements ExceptionFilter {
   }
 
   private extractStatus(exception: unknown): number {
+    if (exception instanceof I18nValidationException) {
+      return this.statusFromValidationErrors(exception.errors) ?? HttpStatus.BAD_REQUEST;
+    }
+
     if (exception instanceof HttpException) {
       return exception.getStatus();
     }
@@ -153,9 +157,13 @@ export class I18nValidationExceptionFilter implements ExceptionFilter {
       const constraints = error.constraints ?? {};
       const children = error.children ?? [];
 
+      const fieldMessages = new Set<string>();
       for (const text of Object.values(constraints)) {
         const message = await this.resolveConstraint(text, lang, i18n);
-        messages.push({ field: fieldPath, message });
+        if (!fieldMessages.has(message)) {
+          fieldMessages.add(message);
+          messages.push({ field: fieldPath, message });
+        }
       }
 
       if (!Object.keys(constraints).length && !children.length) {
@@ -252,5 +260,74 @@ export class I18nValidationExceptionFilter implements ExceptionFilter {
       return value;
     }
     return undefined;
+  }
+
+  private statusFromValidationErrors(errors?: ValidationError[]): number | undefined {
+    if (!errors?.length) {
+      return undefined;
+    }
+
+    let resolved: number | undefined;
+
+    for (const error of errors) {
+      resolved = this.pickHigherPriorityStatus(resolved, this.extractStatusFromContexts(error));
+      resolved = this.pickHigherPriorityStatus(resolved, this.statusFromValidationErrors(error.children));
+    }
+
+    return resolved;
+  }
+
+  private extractStatusFromContexts(error: ValidationError): number | undefined {
+    const contexts = error.contexts;
+    if (!contexts) {
+      return undefined;
+    }
+
+    let resolved: number | undefined;
+    for (const contextValue of Object.values(contexts)) {
+      if (contextValue && typeof contextValue === 'object') {
+        const normalized = this.normalizeStatus(
+          (contextValue as { httpStatus?: unknown }).httpStatus ??
+            (contextValue as { statusCode?: unknown }).statusCode,
+        );
+        resolved = this.pickHigherPriorityStatus(resolved, normalized);
+      }
+    }
+
+    return resolved;
+  }
+
+  private normalizeStatus(value: unknown): number | undefined {
+    if (typeof value === 'number' && Number.isInteger(value)) {
+      return value;
+    }
+    if (typeof value === 'string' && /^\d+$/.test(value)) {
+      return Number(value);
+    }
+    return undefined;
+  }
+
+  private pickHigherPriorityStatus(current?: number, candidate?: number): number | undefined {
+    if (candidate === undefined) {
+      return current;
+    }
+    if (current === undefined) {
+      return candidate;
+    }
+
+    const priority = this.statusPriority(candidate);
+    const currentPriority = this.statusPriority(current);
+
+    return priority >= currentPriority ? candidate : current;
+  }
+
+  private statusPriority(status: number): number {
+    if (status === HttpStatus.UNPROCESSABLE_ENTITY) {
+      return 2;
+    }
+    if (status === HttpStatus.BAD_REQUEST) {
+      return 1;
+    }
+    return 0;
   }
 }

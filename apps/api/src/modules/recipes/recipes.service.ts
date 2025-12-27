@@ -43,6 +43,7 @@ export class RecipesService {
 
   async create(dto: CreateRecipeDto): Promise<Recipe> {
     return this.executeInTransaction(async (manager) => {
+      await this.ensureSlugUniqueness(manager, dto.slug);
       await this.ensureAuthorExists(manager, dto.authorId);
       await this.ensureIngredientReferences(manager, dto.ingredients ?? []);
 
@@ -80,7 +81,7 @@ export class RecipesService {
 
   async findAll(query: QueryPaginationDto): Promise<PaginatedResult<Recipe>> {
     const page = query.page ?? 1;
-    const limit = query.limit ?? 20;
+    const limit = query.limit ?? 10;
 
     const parsed = QueryParserUtil.parse(query, {
       sortMapping: {
@@ -198,6 +199,10 @@ export class RecipesService {
     return this.executeInTransaction(async (manager) => {
       const existing = await this.findOneInternal(manager, id);
 
+      if (dto.slug && dto.slug !== existing.slug) {
+        await this.ensureSlugUniqueness(manager, dto.slug, existing.id);
+      }
+
       if (dto.authorId && dto.authorId !== existing.authorId) {
         await this.ensureAuthorExists(manager, dto.authorId);
       }
@@ -228,6 +233,28 @@ export class RecipesService {
         throw error;
       }
     });
+  }
+
+  private async ensureSlugUniqueness(
+    manager: EntityManager,
+    slug: string,
+    excludeId?: number,
+  ) {
+    const query = manager
+      .getRepository(Recipe)
+      .createQueryBuilder('recipe')
+      .withDeleted()
+      .setLock('pessimistic_write')
+      .where('recipe.slug = :slug', { slug });
+
+    if (excludeId) {
+      query.andWhere('recipe.id <> :excludeId', { excludeId });
+    }
+
+    const existing = await query.getOne();
+    if (existing) {
+      throw new ConflictException(await this.translate('messages.ERROR.RECIPE_SLUG_EXISTS'));
+    }
   }
 
   async remove(id: number): Promise<void> {

@@ -15,9 +15,9 @@ import { RecipeIngredient } from './recipe-ingredient.entity';
 import { RecipeStep } from './recipe-step.entity';
 
 export enum RecipeDifficulty {
-  EASY = 'easy',
-  MEDIUM = 'medium',
-  HARD = 'hard',
+  EASY = 'usor',
+  MEDIUM = 'mediu',
+  HARD = 'greu',
 }
 
 @Entity('recipe')

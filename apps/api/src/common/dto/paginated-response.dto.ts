@@ -40,7 +40,7 @@ export function createPaginatedResponseDto<TModel extends Type<unknown>>(model: 
     @ApiProperty({ example: 1 })
     page!: number;
 
-    @ApiProperty({ example: 20 })
+    @ApiProperty({ example: 10 })
     limit!: number;
 
     @ApiProperty({ example: 125 })

@@ -96,7 +96,7 @@ export function buildRecipeListQuery(
     page: 1,
     limit: 5,
     sort: 'created_at:desc',
-    filter: 'difficulty:eq:easy',
+    filter: 'difficulty:eq:usor',
     ...overrides,
   };
 }

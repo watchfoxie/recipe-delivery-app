@@ -125,8 +125,8 @@ export class InitCoreTables20251012190000 implements MigrationInterface {
           {
             name: 'difficulty',
             type: "enum",
-            enum: ['easy', 'medium', 'hard'],
-            default: "'easy'",
+            enum: ['usor', 'mediu', 'greu'],
+            default: "'usor'",
           },
           {
             name: 'total_time_min',

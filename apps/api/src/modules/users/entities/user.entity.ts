@@ -9,6 +9,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import type { Recipe } from '../../recipes/entities/recipe.entity';
+import type { UserFavoriteRecipe } from '../../favorites/entities/user-favorite-recipe.entity';
 
 @Entity('user')
 @Index('uq_user_email', ['email'], { unique: true })
@@ -39,4 +40,7 @@ export class User {
 
   @OneToMany('Recipe', 'author')
   recipes?: Recipe[];
+
+  @OneToMany('UserFavoriteRecipe', 'user')
+  favorites?: UserFavoriteRecipe[];
 }

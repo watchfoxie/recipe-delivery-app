@@ -14,6 +14,16 @@ import {
   buildRecipeListQuery,
 } from '../support/fixtures';
 
+async function authenticateUser(server: ReturnType<INestApplication['getHttpServer']>, fixtures: SeededData) {
+  const response = await request(server)
+    .post('/api/users/login')
+    .set('Accept-Language', 'en')
+    .send({ email: fixtures.user.email, password: fixtures.userPlainPassword });
+
+  expect(response.status).toBe(200);
+  return response.body.data.token as string;
+}
+
 describe('Recipe Delivery API e2e', () => {
   let app: INestApplication;
   let dataSource: DataSource;
@@ -145,6 +155,91 @@ describe('Recipe Delivery API e2e', () => {
       expect(loginResponse.body.message).toBe('Successful login');
       expect(loginResponse.body.data.user.email).toBe(payload.email);
       expect(loginResponse.body.data.token).toEqual(expect.any(String));
+    });
+  });
+
+  describe('Favorites', () => {
+    it('rejects access without a JWT', async () => {
+      const response = await request(server)
+        .post(`/api/favorites/${fixtures.recipe.id}`)
+        .set('Accept-Language', 'en');
+
+      expect(response.status).toBe(401);
+      expect(response.body.message[0]).toMatchObject({
+        field: 'general',
+        message: 'Authentication required',
+      });
+    });
+
+    it('adds a favorite and lists it', async () => {
+      const token = await authenticateUser(server, fixtures);
+
+      const addResponse = await request(server)
+        .post(`/api/favorites/${fixtures.recipe.id}`)
+        .set('Authorization', `Bearer ${token}`)
+        .set('Accept-Language', 'en');
+
+      expect(addResponse.status).toBe(201);
+      expect(addResponse.body.message).toBe('Recipe added to favorites');
+      expect(addResponse.body.data).toMatchObject({ id: fixtures.recipe.id });
+
+      const listResponse = await request(server)
+        .get('/api/favorites')
+        .set('Authorization', `Bearer ${token}`)
+        .query({ page: 1, limit: 5, sort: 'created_at:desc' });
+
+      expect(listResponse.status).toBe(200);
+      expect(listResponse.body.message).toBe('Favorite recipes retrieved successfully');
+      const ids = listResponse.body.data.items.map((item: { id: number }) => item.id);
+      expect(ids).toContain(fixtures.recipe.id);
+    });
+
+    it('removes a favorite idempotently', async () => {
+      const token = await authenticateUser(server, fixtures);
+
+      await request(server)
+        .post(`/api/favorites/${fixtures.recipe.id}`)
+        .set('Authorization', `Bearer ${token}`);
+
+      const removeResponse = await request(server)
+        .delete(`/api/favorites/${fixtures.recipe.id}`)
+        .set('Authorization', `Bearer ${token}`)
+        .set('Accept-Language', 'en');
+
+      expect(removeResponse.status).toBe(200);
+      expect(removeResponse.body.message).toBe('Recipe removed from favorites');
+
+      const removeAgain = await request(server)
+        .delete(`/api/favorites/${fixtures.recipe.id}`)
+        .set('Authorization', `Bearer ${token}`)
+        .set('Accept-Language', 'en');
+
+      expect(removeAgain.status).toBe(200);
+      expect(removeAgain.body.message).toBe('Recipe removed from favorites');
+    });
+
+    it('returns favorite status for a recipe', async () => {
+      const token = await authenticateUser(server, fixtures);
+
+      const statusBefore = await request(server)
+        .get(`/api/favorites/${fixtures.recipe.id}/status`)
+        .set('Authorization', `Bearer ${token}`)
+        .set('Accept-Language', 'en');
+
+      expect(statusBefore.status).toBe(200);
+      expect(statusBefore.body.data.isFavorite).toBe(false);
+
+      await request(server)
+        .post(`/api/favorites/${fixtures.recipe.id}`)
+        .set('Authorization', `Bearer ${token}`);
+
+      const statusAfter = await request(server)
+        .get(`/api/favorites/${fixtures.recipe.id}/status`)
+        .set('Authorization', `Bearer ${token}`)
+        .set('Accept-Language', 'en');
+
+      expect(statusAfter.status).toBe(200);
+      expect(statusAfter.body.data).toMatchObject({ recipeId: fixtures.recipe.id, isFavorite: true });
     });
   });
 

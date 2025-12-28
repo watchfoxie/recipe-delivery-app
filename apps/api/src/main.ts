@@ -39,6 +39,16 @@ async function bootstrap() {
       .setTitle(APP_CONFIG.swagger.title)
       .setDescription(APP_CONFIG.swagger.description)
       .setVersion(APP_CONFIG.swagger.version)
+      .addBearerAuth(
+        {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+          description: 'Include the JWT returned by /api/users/login.',
+        },
+        'bearer',
+      )
+      .addSecurityRequirements('bearer')
       .build();
     const document = SwaggerModule.createDocument(app, swaggerConfig);
     SwaggerModule.setup(APP_CONFIG.swagger.path, app, document);

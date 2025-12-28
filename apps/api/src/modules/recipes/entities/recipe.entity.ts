@@ -13,6 +13,7 @@ import {
 import { User } from '../../users/entities/user.entity';
 import { RecipeIngredient } from './recipe-ingredient.entity';
 import { RecipeStep } from './recipe-step.entity';
+import { UserFavoriteRecipe } from '../../favorites/entities/user-favorite-recipe.entity';
 
 export enum RecipeDifficulty {
   EASY = 'usor',
@@ -69,6 +70,9 @@ export class Recipe {
 
   @OneToMany(() => RecipeIngredient, (ri) => ri.recipe, { cascade: false })
   recipeIngredients?: RecipeIngredient[];
+
+  @OneToMany(() => UserFavoriteRecipe, (favorite) => favorite.recipe, { cascade: false })
+  favorites?: UserFavoriteRecipe[];
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt!: Date;

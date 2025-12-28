@@ -18,6 +18,8 @@ import { AppService } from './app.service';
 import { UsersModule } from '../modules/users/users.module';
 import { IngredientsModule } from '../modules/ingredients/ingredients.module';
 import { RecipesModule } from '../modules/recipes/recipes.module';
+import { AuthModule } from '../modules/auth/auth.module';
+import { FavoritesModule } from '../modules/favorites/favorites.module';
 
 @Module({
   imports: [
@@ -49,9 +51,11 @@ import { RecipesModule } from '../modules/recipes/recipes.module';
         limit: 60,
       },
     ]),
+    AuthModule,
     UsersModule,
     IngredientsModule,
     RecipesModule,
+    FavoritesModule,
   ],
   controllers: [AppController],
   providers: [

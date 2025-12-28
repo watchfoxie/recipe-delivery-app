@@ -3,3 +3,5 @@
 /coverage
 /.nx/cache
 /.nx/workspace-data
+dist/**/i18n-types.d.ts
+tmp/**/i18n-types.d.ts

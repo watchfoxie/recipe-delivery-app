@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
 import { APP_GUARD } from '@nestjs/core';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { ConfigModule } from '@nestjs/config';
@@ -9,6 +9,7 @@ import {
   I18nModule,
   QueryResolver,
 } from 'nestjs-i18n';
+import { I18nMiddleware } from 'nestjs-i18n';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -25,6 +26,7 @@ import { FavoritesModule } from '../modules/favorites/favorites.module';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     I18nModule.forRoot({
+      disableMiddleware: false,
       fallbackLanguage: 'ro',
       fallbacks: {
         'ro-*': 'ro',
@@ -67,7 +69,13 @@ import { FavoritesModule } from '../modules/favorites/favorites.module';
     },
   ],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer): void {
+    consumer
+      .apply(I18nMiddleware)
+      .forRoutes({ path: '/*path', method: RequestMethod.ALL });
+  }
+}
 
 function resolveI18nPath(currentDir: string): string {
   const candidates = [

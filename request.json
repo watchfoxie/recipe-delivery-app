@@ -1,29 +1,7 @@
 {
-  "slug": "recipe-name-identifier",
-  "title": "recipe",
-  "difficulty": "usor",
-  "totalTimeMin": 5,
-  "servings": 2,
-  "ratingAvg": 4.5,
-  "dietaryTags": [
-    "tag"
-  ],
-  "description": "depiction",
-  "authorId": 1,
-  "categoryId": 2,
-  "steps": [
-    {
-      "stepOrder": 1,
-      "text": "mix ingredients thoroughly",
-      "timerSec": 60
-    }
-  ],
-  "ingredients": [
-    {
-      "ingredientId": 1,
-      "quantity": 200.5,
-      "unit": "g",
-      "note": "remark"
-    }
+  "name": "apa",
+  "synonyms": [
+    "lichid",
+    "plata"
   ]
 }

@@ -27,6 +27,8 @@
       "RECIPE_CREATED": "Recipe created successfully",
       "RECIPE_UPDATED": "Recipe updated successfully",
       "RECIPE_DELETED": "Recipe deleted successfully",
+      "COMMENT_LIST": "Comments retrieved successfully",
+      "COMMENT_CREATED": "Comment created successfully",
       "RECIPE_STEP_LIST": "Recipe steps retrieved successfully",
       "RECIPE_STEP_FOUND": "Recipe step retrieved successfully",
       "RECIPE_STEP_CREATED": "Recipe step created successfully",

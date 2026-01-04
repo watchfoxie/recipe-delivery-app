@@ -125,7 +125,7 @@ export class RecipesService {
 
     let items: Recipe[] = [];
     if (recipeIds.length) {
-      const options = this.buildRelationsOptions();
+      const options = this.buildRelationsOptions({ includeComments: false });
       const found = await this.recipesRepository.find({
         where: recipeIds.map((id) => ({ id })),
         relations: options.relations,
@@ -146,7 +146,7 @@ export class RecipesService {
   }
 
   async findOne(id: number): Promise<Recipe> {
-    const options = this.buildRelationsOptions();
+    const options = this.buildRelationsOptions({ includeComments: true });
     const recipe = await this.recipesRepository.findOne({
       where: { id },
       relations: options.relations,
@@ -308,7 +308,7 @@ export class RecipesService {
   }
 
   private async findOneInternal(manager: EntityManager, id: number): Promise<Recipe> {
-    const options = this.buildRelationsOptions();
+    const options = this.buildRelationsOptions({ includeComments: true });
     const entity = await manager.findOne(Recipe, {
       where: { id },
       relations: options.relations,
@@ -320,20 +320,32 @@ export class RecipesService {
     return entity;
   }
 
-  private buildRelationsOptions() {
+  private buildRelationsOptions(options?: { includeComments?: boolean }) {
+    const relations: Record<string, unknown> = {
+      steps: true,
+      recipeIngredients: {
+        ingredient: true,
+      },
+    };
+
+    if (options?.includeComments) {
+      relations.comments = { author: true };
+    }
+
+    const order: Record<string, unknown> = {
+      createdAt: 'DESC' as const,
+      steps: {
+        stepOrder: 'ASC' as const,
+      },
+    };
+
+    if (options?.includeComments) {
+      order.comments = { createdAt: 'DESC' as const };
+    }
+
     return {
-      relations: {
-        steps: true,
-        recipeIngredients: {
-          ingredient: true,
-        },
-      },
-      order: {
-        createdAt: 'DESC' as const,
-        steps: {
-          stepOrder: 'ASC' as const,
-        },
-      },
+      relations,
+      order,
     };
   }
 

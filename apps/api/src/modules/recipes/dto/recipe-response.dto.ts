@@ -2,6 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Expose, Type } from 'class-transformer';
 import { IngredientResponseDto } from '../../ingredients/dto/ingredient-response.dto';
 import { RecipeDifficulty } from '../entities/recipe.entity';
+import { CommentResponseDto } from './comment-response.dto';
 
 export class RecipeStepResponseDto {
   @ApiProperty()
@@ -102,6 +103,11 @@ export class RecipeResponseDto {
   @Expose()
   @Type(() => RecipeIngredientResponseDto)
   recipeIngredients?: RecipeIngredientResponseDto[];
+
+  @ApiProperty({ type: [CommentResponseDto], required: false })
+  @Expose()
+  @Type(() => CommentResponseDto)
+  comments?: CommentResponseDto[];
 
   @ApiProperty()
   @Expose()

@@ -7,14 +7,17 @@ import { RecipeIngredient } from './entities/recipe-ingredient.entity';
 import { RecipeStep } from './entities/recipe-step.entity';
 import { RecipesController } from './recipes.controller';
 import { RecipesService } from './recipes.service';
+import { Comment } from './entities/recipe-comment.entity';
+import { CommentsService } from './comments.service';
+import { RecipeCommentsController } from './recipe-comments.controller';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Recipe, RecipeStep, RecipeIngredient]),
+    TypeOrmModule.forFeature([Recipe, RecipeStep, RecipeIngredient, Comment]),
     UsersModule,
     IngredientsModule,
   ],
-  controllers: [RecipesController],
-  providers: [RecipesService],
+  controllers: [RecipesController, RecipeCommentsController],
+  providers: [RecipesService, CommentsService],
 })
 export class RecipesModule {}

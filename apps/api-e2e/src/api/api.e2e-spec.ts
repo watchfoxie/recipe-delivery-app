@@ -243,6 +243,59 @@ describe('Recipe Delivery API e2e', () => {
     });
   });
 
+  describe('Comments', () => {
+    it('rejects creating a comment without authentication', async () => {
+      const response = await request(server)
+        .post(`/api/recipes/${fixtures.recipe.id}/comments`)
+        .set('Accept-Language', 'en')
+        .send({ text: 'Nice recipe!' });
+
+      expect(response.status).toBe(401);
+      expect(Array.isArray(response.body.message)).toBe(true);
+      expect(response.body.message[0]).toMatchObject({
+        field: 'general',
+        message: 'Authentication required',
+      });
+    });
+
+    it('creates and lists comments for a recipe', async () => {
+      const token = await authenticateUser(server, fixtures);
+
+      const createResponse = await request(server)
+        .post(`/api/recipes/${fixtures.recipe.id}/comments`)
+        .set('Authorization', `Bearer ${token}`)
+        .set('Accept-Language', 'en')
+        .send({ text: 'Excellent!' });
+
+      expect(createResponse.status).toBe(201);
+      expect(createResponse.body.message).toBe('Comment created successfully');
+      expect(createResponse.body.data).toMatchObject({
+        recipeId: fixtures.recipe.id,
+        authorId: fixtures.user.id,
+        text: 'Excellent!',
+      });
+
+      const listResponse = await request(server)
+        .get(`/api/recipes/${fixtures.recipe.id}/comments`)
+        .set('Accept-Language', 'en');
+
+      expect(listResponse.status).toBe(200);
+      expect(listResponse.body.message).toBe('Comments retrieved successfully');
+      expect(Array.isArray(listResponse.body.data)).toBe(true);
+      expect(listResponse.body.data.length).toBeGreaterThanOrEqual(1);
+      expect(listResponse.body.data[0]).toMatchObject({ text: 'Excellent!' });
+
+      const recipeDetail = await request(server)
+        .get(`/api/recipes/${fixtures.recipe.id}`)
+        .set('Accept-Language', 'en');
+
+      expect(recipeDetail.status).toBe(200);
+      expect(Array.isArray(recipeDetail.body.data.comments)).toBe(true);
+      expect(recipeDetail.body.data.comments.length).toBeGreaterThanOrEqual(1);
+      expect(recipeDetail.body.data.comments[0]).toMatchObject({ text: 'Excellent!' });
+    });
+  });
+
   describe('Pagination, sorting and filtering', () => {
     it('returns paginated response structure for recipes', async () => {
       const response = await request(server)

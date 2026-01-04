@@ -10,6 +10,7 @@ import {
 } from 'typeorm';
 import type { Recipe } from '../../recipes/entities/recipe.entity';
 import type { UserFavoriteRecipe } from '../../favorites/entities/user-favorite-recipe.entity';
+import type { Comment } from '../../recipes/entities/recipe-comment.entity';
 
 @Entity('user')
 @Index('uq_user_email', ['email'], { unique: true })
@@ -43,4 +44,7 @@ export class User {
 
   @OneToMany('UserFavoriteRecipe', 'user')
   favorites?: UserFavoriteRecipe[];
+
+  @OneToMany('Comment', 'author')
+  comments?: Comment[];
 }

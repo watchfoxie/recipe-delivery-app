@@ -27,6 +27,8 @@
       "RECIPE_CREATED": "Rețeta a fost creată cu succes",
       "RECIPE_UPDATED": "Rețeta a fost actualizată cu succes",
       "RECIPE_DELETED": "Rețeta a fost ștearsă cu succes",
+      "COMMENT_LIST": "Comentariile au fost obținute cu succes",
+      "COMMENT_CREATED": "Comentariul a fost creat cu succes",
       "RECIPE_STEP_LIST": "Pașii rețetei au fost obținuți cu succes",
       "RECIPE_STEP_FOUND": "Pasul de rețetă a fost găsit",
       "RECIPE_STEP_CREATED": "Pasul de rețetă a fost creat cu succes",

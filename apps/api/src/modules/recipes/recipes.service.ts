@@ -58,7 +58,7 @@ export class RecipesService {
         dietaryTagsJson: dto.dietaryTags ?? null,
         description: dto.description ?? null,
         authorId: dto.authorId,
-        categoryId: dto.categoryId ?? null,
+        recipeCategoryId: dto.recipeCategoryId ?? null,
       });
 
       try {

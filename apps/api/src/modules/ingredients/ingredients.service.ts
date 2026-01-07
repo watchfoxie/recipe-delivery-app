@@ -22,6 +22,7 @@ export class IngredientsService {
   async create(dto: CreateIngredientDto): Promise<Ingredient> {
     return this.executeInTransaction(async (manager) => {
       const entity = manager.create(Ingredient, {
+        ingredientCategoryId: dto.ingredientCategoryId ?? null,
         name: dto.name,
         synonymsJson: dto.synonyms ?? null,
       });

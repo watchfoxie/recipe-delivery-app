@@ -11,10 +11,14 @@ import {
 import { RecipeIngredient } from '../../recipes/entities/recipe-ingredient.entity';
 
 @Entity('ingredient')
+@Index('idx_ingredient_category', ['ingredientCategoryId'])
 @Index('uq_ingredient_name', ['name'], { unique: true })
 export class Ingredient {
   @PrimaryGeneratedColumn({ type: 'int' })
   id!: number;
+
+  @Column({ name: 'ingredient_category_id', type: 'int', nullable: true })
+  ingredientCategoryId?: number | null;
 
   @Column({ type: 'varchar', length: 191, unique: true })
   name!: string;

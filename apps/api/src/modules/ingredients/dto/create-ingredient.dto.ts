@@ -1,8 +1,14 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { i18nValidationMessage } from 'nestjs-i18n';
-import { IsArray, IsOptional, IsString, MaxLength, MinLength } from 'class-validator';
+import { IsArray, IsInt, IsOptional, IsString, MaxLength, Min, MinLength } from 'class-validator';
 
 export class CreateIngredientDto {
+  @ApiProperty({ required: false, example: 1 })
+  @IsOptional()
+  @IsInt({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
+  @Min(1, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
+  ingredientCategoryId?: number | null;
+
   @ApiProperty({ example: 'ingredient' })
   @IsString({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MinLength(2, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })

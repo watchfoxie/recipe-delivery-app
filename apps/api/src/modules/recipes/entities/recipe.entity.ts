@@ -24,7 +24,7 @@ export enum RecipeDifficulty {
 
 @Entity('recipe')
 @Index('uq_recipe_slug', ['slug'], { unique: true })
-@Index('idx_recipe_category', ['categoryId'])
+@Index('idx_recipe_category', ['recipeCategoryId'])
 @Index('idx_recipe_difficulty', ['difficulty'])
 @Index('idx_recipe_total_time', ['totalTimeMin'])
 @Index('idx_recipe_author', ['authorId'])
@@ -59,8 +59,8 @@ export class Recipe {
   @Column({ name: 'author_id', type: 'int' })
   authorId!: number;
 
-  @Column({ name: 'category_id', type: 'int', nullable: true })
-  categoryId?: number | null;
+  @Column({ name: 'recipe_category_id', type: 'int', nullable: true })
+  recipeCategoryId?: number | null;
 
   @ManyToOne(() => User, (user) => user.recipes, { onDelete: 'RESTRICT' })
   @JoinColumn({ name: 'author_id' })

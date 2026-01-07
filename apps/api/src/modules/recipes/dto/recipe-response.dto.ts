@@ -92,7 +92,7 @@ export class RecipeResponseDto {
 
   @ApiProperty({ required: false })
   @Expose()
-  categoryId?: number | null;
+  recipeCategoryId?: number | null;
 
   @ApiProperty({ type: [RecipeStepResponseDto] })
   @Expose()

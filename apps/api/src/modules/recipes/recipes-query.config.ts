@@ -33,8 +33,8 @@ export const RECIPES_FILTER_MAPPING: Record<string, QueryFieldConfig> = {
     type: 'number',
     allowedOperators: ['eq', 'in'],
   },
-  category_id: {
-    column: 'recipe.category_id',
+  recipe_category_id: {
+    column: 'recipe.recipe_category_id',
     type: 'number',
     allowedOperators: ['eq', 'ne', 'in'],
   },

@@ -69,6 +69,11 @@ export class InitCoreTables20251012190000 implements MigrationInterface {
             generationStrategy: 'increment',
           },
           {
+            name: 'ingredient_category_id',
+            type: 'int',
+            isNullable: true,
+          },
+          {
             name: 'name',
             type: 'varchar',
             length: '191',
@@ -160,7 +165,7 @@ export class InitCoreTables20251012190000 implements MigrationInterface {
             isNullable: false,
           },
           {
-            name: 'category_id',
+            name: 'recipe_category_id',
             type: 'int',
             isNullable: true,
           },
@@ -184,8 +189,12 @@ export class InitCoreTables20251012190000 implements MigrationInterface {
       }),
     );
 
+    await queryRunner.createIndices('ingredient', [
+      new TableIndex({ name: 'idx_ingredient_category', columnNames: ['ingredient_category_id'] }),
+    ]);
+
     await queryRunner.createIndices('recipe', [
-      new TableIndex({ name: 'idx_recipe_category', columnNames: ['category_id'] }),
+      new TableIndex({ name: 'idx_recipe_category', columnNames: ['recipe_category_id'] }),
       new TableIndex({ name: 'idx_recipe_difficulty', columnNames: ['difficulty'] }),
       new TableIndex({ name: 'idx_recipe_total_time', columnNames: ['total_time_min'] }),
       new TableIndex({ name: 'idx_recipe_author', columnNames: ['author_id'] }),

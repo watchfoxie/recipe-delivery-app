@@ -6,6 +6,10 @@ export class IngredientResponseDto {
   @Expose()
   id!: number;
 
+  @ApiProperty({ required: false })
+  @Expose()
+  ingredientCategoryId?: number | null;
+
   @ApiProperty()
   @Expose()
   name!: string;

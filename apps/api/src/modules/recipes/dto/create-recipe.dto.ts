@@ -65,11 +65,11 @@ export class CreateRecipeDto {
   @Min(1, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   authorId!: number;
 
-  @ApiProperty({ required: false, example: 2 })
+  @ApiProperty({ required: false, example: 1 })
   @IsOptional()
   @IsInt({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @Min(1, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
-  categoryId?: number | null;
+  recipeCategoryId?: number | null;
 
   @ApiProperty({ type: [RecipeStepDto], required: false })
   @IsOptional()

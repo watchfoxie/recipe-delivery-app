@@ -1,8 +1,6 @@
 # Recipe Delivery App
 
-<div style="display: flex; justify-content: center;">
-    <img src="assets\logo\home-cooking-gitlogo.png" alt="Home Cooking Logo" width="200" height="200" />
-</div>
+![Home Cooking Logo](assets/logo/home-cooking-gitlogo.png "Logotip Culinaria Acasă")
 
 **Recipe Delivery App** este o aplicație web full-stack pentru livrarea rețetelor adaptate unei game largi de gusturi culinare, preferințe alimentare și niveluri de experiență. Aplicația va oferi utilizatorilor instrucțiuni pas cu pas pentru gătit. De asemenea, va include conturi de utilizator, evaluarea rețetelor și funcționalitate de partajare socială.
 

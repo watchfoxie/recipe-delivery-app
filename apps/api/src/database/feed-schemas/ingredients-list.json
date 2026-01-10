@@ -1,0 +1,4977 @@
+{
+    "ingredients_list": [
+        {
+            "ingredientId": 1,
+            "ingredientCategoryId": 6,
+            "name": "carne de pui",
+            "synonyms": [
+                "pulpe pui",
+                "piept pui"
+            ],
+            "quantity": 1000,
+            "unit": "g",
+            "note": "Cubulețe mici pentru textură uniformă."
+        },
+        {
+            "ingredientId": 2,
+            "ingredientCategoryId": 6,
+            "name": "ficăței de pui",
+            "synonyms": [
+                "ficat pui",
+                "organe pui"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Se pot omite dacă nu sunt preferați."
+        },
+        {
+            "ingredientId": 3,
+            "ingredientCategoryId": 2,
+            "name": "ceapă",
+            "synonyms": [
+                "ceapă galbenă",
+                "ceapă albă"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tocată mărunt pentru aromă."
+        },
+        {
+            "ingredientId": 4,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt gras",
+                "unt dulce"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Pentru sotarea cepei și ficatului."
+        },
+        {
+            "ingredientId": 5,
+            "ingredientCategoryId": 8,
+            "name": "ou",
+            "synonyms": [
+                "ou crud",
+                "ou proaspăt"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Leagă compoziția."
+        },
+        {
+            "ingredientId": 6,
+            "ingredientCategoryId": 8,
+            "name": "smântână dulce",
+            "synonyms": [
+                "smântână pentru gătit",
+                "smântână lichidă"
+            ],
+            "quantity": 110,
+            "unit": "g",
+            "note": "Adaugă cremozitate."
+        },
+        {
+            "ingredientId": 7,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fină",
+                "sare de bucătărie"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Se ajustează după gust."
+        },
+        {
+            "ingredientId": 8,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "piper pudră"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurita",
+            "note": "Pentru aromă discretă."
+        },
+        {
+            "ingredientId": 9,
+            "ingredientCategoryId": 3,
+            "name": "cimbru",
+            "synonyms": [
+                "cimbru verde",
+                "cimbru proaspăt"
+            ],
+            "quantity": 1,
+            "unit": "fir",
+            "note": "Se folosește la sotarea cepei."
+        },
+        {
+            "ingredientId": 10,
+            "ingredientCategoryId": 4,
+            "name": "merișoare uscate",
+            "synonyms": [
+                "cranberries",
+                "merișoare"
+            ],
+            "quantity": 25,
+            "unit": "g",
+            "note": "Opțional, pentru gust dulce-acrișor."
+        },
+        {
+            "ingredientId": 11,
+            "ingredientCategoryId": 10,
+            "name": "fistic",
+            "synonyms": [
+                "fistic crud",
+                "fistic decojit"
+            ],
+            "quantity": 25,
+            "unit": "g",
+            "note": "Opțional, pentru textură crocantă."
+        },
+        {
+            "ingredientId": 12,
+            "ingredientCategoryId": 6,
+            "name": "bacon",
+            "synonyms": [
+                "șuncă afumată",
+                "slănină"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Pentru tapetarea tăvii și aromă."
+        },
+        {
+            "ingredientId": 13,
+            "ingredientCategoryId": 6,
+            "name": "pulpe de pui",
+            "synonyms": [
+                "carne de pui",
+                "bucăți de pui"
+            ],
+            "quantity": 2000,
+            "unit": "g",
+            "note": "Folosiți pulpe superioare sau alte bucăți preferate."
+        },
+        {
+            "ingredientId": 14,
+            "ingredientCategoryId": 1,
+            "name": "faina alba",
+            "synonyms": [
+                "faina",
+                "faina de grau"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Pentru acoperirea uniformă a puiului."
+        },
+        {
+            "ingredientId": 15,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fina",
+                "sare de masa"
+            ],
+            "quantity": 5,
+            "unit": "g",
+            "note": "Pentru echilibrarea gustului."
+        },
+        {
+            "ingredientId": 16,
+            "ingredientCategoryId": 3,
+            "name": "boia",
+            "synonyms": [
+                "boia dulce",
+                "boia iute"
+            ],
+            "quantity": 5,
+            "unit": "g",
+            "note": "Adaugă culoare și aromă."
+        },
+        {
+            "ingredientId": 17,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper macinat",
+                "condiment piper"
+            ],
+            "quantity": 2.5,
+            "unit": "g",
+            "note": "Pentru un gust ușor picant."
+        },
+        {
+            "ingredientId": 18,
+            "ingredientCategoryId": 3,
+            "name": "salvie uscata",
+            "synonyms": [
+                "salvie",
+                "condiment salvie"
+            ],
+            "quantity": 2.5,
+            "unit": "g",
+            "note": "Poate fi înlocuită cu oregano sau usturoi uscat."
+        },
+        {
+            "ingredientId": 19,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt nesarat",
+                "grasime unt"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Pentru aromă intensă și textură crocantă."
+        },
+        {
+            "ingredientId": 20,
+            "ingredientCategoryId": 6,
+            "name": "pulpe de pui",
+            "synonyms": [
+                "piept de pui",
+                "carne de pui"
+            ],
+            "quantity": 800,
+            "unit": "g",
+            "note": "Tăiate cuburi de aproximativ 2x2 cm."
+        },
+        {
+            "ingredientId": 21,
+            "ingredientCategoryId": 8,
+            "name": "iaurt",
+            "synonyms": [
+                "iaurt natural",
+                "yogurt"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Folosit pentru marinarea cărnii."
+        },
+        {
+            "ingredientId": 22,
+            "ingredientCategoryId": 2,
+            "name": "ceapă",
+            "synonyms": [
+                "ceapă galbenă",
+                "onion"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tocată mărunt pentru sos."
+        },
+        {
+            "ingredientId": 23,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii de usturoi",
+                "garlic"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Pisat pentru aromă intensă."
+        },
+        {
+            "ingredientId": 24,
+            "ingredientCategoryId": 3,
+            "name": "ghimbir",
+            "synonyms": [
+                "ghimbir ras",
+                "ginger"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Ras proaspăt pentru sos."
+        },
+        {
+            "ingredientId": 25,
+            "ingredientCategoryId": 2,
+            "name": "roșii cubulețe",
+            "synonyms": [
+                "roșii conservă",
+                "tomatoes"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Pentru baza sosului."
+        },
+        {
+            "ingredientId": 26,
+            "ingredientCategoryId": 8,
+            "name": "smântână dulce",
+            "synonyms": [
+                "frișcă lichidă",
+                "cream"
+            ],
+            "quantity": 200,
+            "unit": "ml",
+            "note": "Pentru cremozitatea sosului."
+        },
+        {
+            "ingredientId": 27,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "butter",
+                "margarina"
+            ],
+            "quantity": 70,
+            "unit": "g",
+            "note": "Folosit la prăjire și la final."
+        },
+        {
+            "ingredientId": 28,
+            "ingredientCategoryId": 3,
+            "name": "condimente indiene",
+            "synonyms": [
+                "garam masala",
+                "turmeric",
+                "coriandru"
+            ],
+            "quantity": 7,
+            "unit": "lingurite",
+            "note": "Mix de condimente pentru aromă autentică."
+        },
+        {
+            "ingredientId": 29,
+            "ingredientCategoryId": 1,
+            "name": "paste",
+            "synonyms": [
+                "spaghete",
+                "penne"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Folosiți orice formă preferată de paste."
+        },
+        {
+            "ingredientId": 30,
+            "ingredientCategoryId": 6,
+            "name": "piept de pui",
+            "synonyms": [
+                "carne de pui",
+                "file pui"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tăiat julien, felii subțiri și lungi."
+        },
+        {
+            "ingredientId": 31,
+            "ingredientCategoryId": 3,
+            "name": "sos pesto",
+            "synonyms": [
+                "pesto verde",
+                "sos busuioc"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Poate fi de casă sau cumpărat."
+        },
+        {
+            "ingredientId": 32,
+            "ingredientCategoryId": 8,
+            "name": "smântână dulce",
+            "synonyms": [
+                "smântână lichidă",
+                "smântână pentru gătit"
+            ],
+            "quantity": 250,
+            "unit": "g",
+            "note": "Concentrație 25-32% grăsime."
+        },
+        {
+            "ingredientId": 33,
+            "ingredientCategoryId": 2,
+            "name": "ceapă",
+            "synonyms": [
+                "ceapă albă",
+                "ceapă galbenă"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tocată mărunt pentru sos."
+        },
+        {
+            "ingredientId": 34,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii usturoi",
+                "usturoi alb"
+            ],
+            "quantity": 5,
+            "unit": "buc",
+            "note": "Tocat mărunt și călit scurt."
+        },
+        {
+            "ingredientId": 35,
+            "ingredientCategoryId": 2,
+            "name": "roșii cherry",
+            "synonyms": [
+                "roșii mici",
+                "tomate cherry"
+            ],
+            "quantity": 10,
+            "unit": "buc",
+            "note": "Opțional, tăiate în jumătăți."
+        },
+        {
+            "ingredientId": 36,
+            "ingredientCategoryId": 3,
+            "name": "pătrunjel",
+            "synonyms": [
+                "pătrunjel verde",
+                "frunze pătrunjel"
+            ],
+            "quantity": 3,
+            "unit": "linguri",
+            "note": "Tocat fin, adăugat la final."
+        },
+        {
+            "ingredientId": 37,
+            "ingredientCategoryId": 8,
+            "name": "parmezan",
+            "synonyms": [
+                "brânză parmezan",
+                "parmigiano"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Ras, pentru cremozitate și gust."
+        },
+        {
+            "ingredientId": 38,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "ulei floarea soarelui"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Pentru călirea cepei și usturoiului."
+        },
+        {
+            "ingredientId": 39,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare albă",
+                "sare fină"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "Pentru apă și sos, după gust."
+        },
+        {
+            "ingredientId": 40,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "piper pudră"
+            ],
+            "quantity": 0.25,
+            "unit": "linguriță",
+            "note": "Adăugat la sos pentru aromă."
+        },
+        {
+            "ingredientId": 41,
+            "ingredientCategoryId": 6,
+            "name": "slănină",
+            "synonyms": [
+                "salo",
+                "bacon crud"
+            ],
+            "quantity": 1000,
+            "unit": "g",
+            "note": "Alegeți bucăți groase, cu șorici moale."
+        },
+        {
+            "ingredientId": 42,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare grunjoasă",
+                "sare de murături"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Folosiți sare grunjoasă pentru conservare."
+        },
+        {
+            "ingredientId": 43,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "condiment piper"
+            ],
+            "quantity": 2,
+            "unit": "lingurițe",
+            "note": "Adăugați pentru aromă intensă."
+        },
+        {
+            "ingredientId": 44,
+            "ingredientCategoryId": 3,
+            "name": "condimente opționale",
+            "synonyms": [
+                "coriandru",
+                "boia",
+                "usturoi uscat",
+                "frunze de dafin"
+            ],
+            "quantity": 5,
+            "unit": "g",
+            "note": "Se pot adăuga după preferințe pentru gust variat."
+        },
+        {
+            "ingredientId": 45,
+            "ingredientCategoryId": 7,
+            "name": "Păstrăv proaspăt",
+            "synonyms": [
+                "trout",
+                "pește păstrăv"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Pește eviscerat, curățat de solzi."
+        },
+        {
+            "ingredientId": 46,
+            "ingredientCategoryId": 3,
+            "name": "Sare",
+            "synonyms": [
+                "sare de masă",
+                "sare fină"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "Pentru asezonarea peștelui."
+        },
+        {
+            "ingredientId": 47,
+            "ingredientCategoryId": 3,
+            "name": "Pătrunjel uscat",
+            "synonyms": [
+                "pătrunjel",
+                "verdețuri"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "Poate fi înlocuit cu rozmarin sau ierburi de Provence."
+        },
+        {
+            "ingredientId": 48,
+            "ingredientCategoryId": 9,
+            "name": "Ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "ulei de floarea-soarelui"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Pentru ungerea peștelui și grătarului."
+        },
+        {
+            "ingredientId": 49,
+            "ingredientCategoryId": 1,
+            "name": "foi de plăcintă",
+            "synonyms": [
+                "foi filo",
+                "foi aluat"
+            ],
+            "quantity": 8,
+            "unit": "buc",
+            "note": "Folosiți foi subțiri, decongelate înainte de utilizare."
+        },
+        {
+            "ingredientId": 50,
+            "ingredientCategoryId": 7,
+            "name": "creveți",
+            "synonyms": [
+                "shrimp",
+                "gamberi"
+            ],
+            "quantity": 20,
+            "unit": "buc",
+            "note": "Curățați și tocați creveții după sotare."
+        },
+        {
+            "ingredientId": 51,
+            "ingredientCategoryId": 2,
+            "name": "varză albă",
+            "synonyms": [
+                "varză",
+                "cabbage"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Tăiați fideluță foarte subțire."
+        },
+        {
+            "ingredientId": 52,
+            "ingredientCategoryId": 2,
+            "name": "morcovi",
+            "synonyms": [
+                "carrot",
+                "morcov"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Tăiați fideluță sau dați pe răzătoare."
+        },
+        {
+            "ingredientId": 53,
+            "ingredientCategoryId": 2,
+            "name": "ceapă verde",
+            "synonyms": [
+                "spring onion",
+                "scallion"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Folosiți partea albă pentru sotare."
+        },
+        {
+            "ingredientId": 54,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "garlic",
+                "cățeii de usturoi"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Tocați mărunt pentru aromă intensă."
+        },
+        {
+            "ingredientId": 55,
+            "ingredientCategoryId": 2,
+            "name": "ciuperci shiitake",
+            "synonyms": [
+                "shiitake",
+                "ciuperci uscate"
+            ],
+            "quantity": 7,
+            "unit": "buc",
+            "note": "Înmuiate și feliate subțire."
+        },
+        {
+            "ingredientId": 56,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "oil"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Pentru sotare și prăjire."
+        },
+        {
+            "ingredientId": 57,
+            "ingredientCategoryId": 3,
+            "name": "sos de soia",
+            "synonyms": [
+                "soy sauce",
+                "shoyu"
+            ],
+            "quantity": 5,
+            "unit": "linguri",
+            "note": "Adăugați la umplutură și pentru servire."
+        },
+        {
+            "ingredientId": 58,
+            "ingredientCategoryId": 8,
+            "name": "ou",
+            "synonyms": [
+                "egg",
+                "ou crud"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Folosit pentru sigilarea marginilor."
+        },
+        {
+            "ingredientId": 59,
+            "ingredientCategoryId": 7,
+            "name": "pește",
+            "synonyms": [
+                "crap",
+                "păstrăv",
+                "novac",
+                "biban"
+            ],
+            "quantity": 1000,
+            "unit": "g",
+            "note": "Folosiți pește proaspăt, curățat și porționat."
+        },
+        {
+            "ingredientId": 60,
+            "ingredientCategoryId": 2,
+            "name": "ardei gras",
+            "synonyms": [
+                "ardei",
+                "ardei dulce"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tăiat bucăți medii pentru coacere."
+        },
+        {
+            "ingredientId": 61,
+            "ingredientCategoryId": 2,
+            "name": "ceapă albă",
+            "synonyms": [
+                "ceapă",
+                "ceapă galbenă"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Curățată și tăiată bucăți medii."
+        },
+        {
+            "ingredientId": 62,
+            "ingredientCategoryId": 2,
+            "name": "roșii cubulețe",
+            "synonyms": [
+                "roșii conservă",
+                "roșii tocate"
+            ],
+            "quantity": 400,
+            "unit": "g",
+            "note": "Din conservă sau roșii proaspete."
+        },
+        {
+            "ingredientId": 63,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii de usturoi",
+                "usturoi alb"
+            ],
+            "quantity": 7,
+            "unit": "buc",
+            "note": "Curățat și tăiat bucăți medii."
+        },
+        {
+            "ingredientId": 64,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "ulei de floarea-soarelui"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Turnat peste legume înainte de coacere."
+        },
+        {
+            "ingredientId": 65,
+            "ingredientCategoryId": 11,
+            "name": "vin alb demisec",
+            "synonyms": [
+                "vin alb",
+                "vin de gătit"
+            ],
+            "quantity": 100,
+            "unit": "ml",
+            "note": "Adăugat în sos pentru aromă."
+        },
+        {
+            "ingredientId": 66,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare albă",
+                "sare de masă"
+            ],
+            "quantity": 2,
+            "unit": "lingurițe",
+            "note": "Pentru condimentarea peștelui și legumelor."
+        },
+        {
+            "ingredientId": 67,
+            "ingredientCategoryId": 3,
+            "name": "boia de ardei dulce",
+            "synonyms": [
+                "boia",
+                "paprika"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "Pentru aromă și culoare."
+        },
+        {
+            "ingredientId": 68,
+            "ingredientCategoryId": 3,
+            "name": "piper negru măcinat",
+            "synonyms": [
+                "piper",
+                "piper măcinat"
+            ],
+            "quantity": 0.5,
+            "unit": "linguriță",
+            "note": "Pentru condimentarea peștelui și legumelor."
+        },
+        {
+            "ingredientId": 69,
+            "ingredientCategoryId": 7,
+            "name": "crap",
+            "synonyms": [
+                "pește crap",
+                "carp"
+            ],
+            "quantity": 2000,
+            "unit": "g",
+            "note": "Pește întreg de 1-2 kg, curățat și spălat."
+        },
+        {
+            "ingredientId": 70,
+            "ingredientCategoryId": 4,
+            "name": "lămâie",
+            "synonyms": [
+                "lamaie",
+                "lemon"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Suc proaspăt pentru marinadă."
+        },
+        {
+            "ingredientId": 71,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "catei usturoi",
+                "garlic"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Pisat pentru aromă intensă."
+        },
+        {
+            "ingredientId": 72,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de bucatarie",
+                "salt"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Pentru asezonare uniformă."
+        },
+        {
+            "ingredientId": 73,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei de floarea soarelui",
+                "oil"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Pentru ungerea peștelui."
+        },
+        {
+            "ingredientId": 74,
+            "ingredientCategoryId": 8,
+            "name": "smântână",
+            "synonyms": [
+                "maioneza",
+                "cream"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Pentru strat cremos; se poate omite la post."
+        },
+        {
+            "ingredientId": 75,
+            "ingredientCategoryId": 8,
+            "name": "cașcaval",
+            "synonyms": [
+                "branza tare",
+                "cheese"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Ras fin pentru crustă aurie."
+        },
+        {
+            "ingredientId": 76,
+            "ingredientCategoryId": 3,
+            "name": "verdeata",
+            "synonyms": [
+                "patrunjel",
+                "marar"
+            ],
+            "quantity": 3,
+            "unit": "linguri",
+            "note": "Tocată mărunt pentru decor și aromă."
+        },
+        {
+            "ingredientId": 77,
+            "ingredientCategoryId": 7,
+            "name": "păstrăv proaspăt",
+            "synonyms": [
+                "trout",
+                "peste pastrav"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Pește proaspăt, curățat de solzi și intestine."
+        },
+        {
+            "ingredientId": 78,
+            "ingredientCategoryId": 1,
+            "name": "făină albă",
+            "synonyms": [
+                "faina",
+                "white flour"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Folosită pentru a acoperi fileurile înainte de prăjire."
+        },
+        {
+            "ingredientId": 79,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "salt",
+                "sodium chloride"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Pentru asezonarea făinii și a peștelui."
+        },
+        {
+            "ingredientId": 80,
+            "ingredientCategoryId": 3,
+            "name": "mirodenii uscate",
+            "synonyms": [
+                "condimente",
+                "herbs"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Pătrunjel, busuioc sau alte ierburi aromatice."
+        },
+        {
+            "ingredientId": 81,
+            "ingredientCategoryId": 9,
+            "name": "ulei de floarea-soarelui",
+            "synonyms": [
+                "ulei",
+                "sunflower oil"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Pentru prăjirea fileurilor."
+        },
+        {
+            "ingredientId": 82,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "butter",
+                "unt gras"
+            ],
+            "quantity": 20,
+            "unit": "g",
+            "note": "Opțional, pentru un plus de aromă."
+        },
+        {
+            "ingredientId": 83,
+            "ingredientCategoryId": 2,
+            "name": "morcovi",
+            "synonyms": [
+                "morcov",
+                "carotă"
+            ],
+            "quantity": 5,
+            "unit": "buc",
+            "note": "Se folosesc morcovi proaspeți, rași pe răzătoare medie."
+        },
+        {
+            "ingredientId": 84,
+            "ingredientCategoryId": 8,
+            "name": "cașcaval",
+            "synonyms": [
+                "brânză tare",
+                "cheddar"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Cașcavalul se rade și se amestecă cu morcovii."
+        },
+        {
+            "ingredientId": 85,
+            "ingredientCategoryId": 3,
+            "name": "maioneză",
+            "synonyms": [
+                "sos maioneză",
+                "dressing maioneză"
+            ],
+            "quantity": 4,
+            "unit": "linguri",
+            "note": "Poate fi combinată cu iaurt pentru o variantă mai dietetică."
+        },
+        {
+            "ingredientId": 86,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii de usturoi",
+                "garlic"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Usturoiul se pisează înainte de a fi adăugat."
+        },
+        {
+            "ingredientId": 87,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "sodium chloride"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "Se adaugă după gust pentru echilibrarea aromelor."
+        },
+        {
+            "ingredientId": 88,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "black pepper"
+            ],
+            "quantity": 0.25,
+            "unit": "linguriță",
+            "note": "Se folosește piper negru măcinat pentru aromă."
+        },
+        {
+            "ingredientId": 89,
+            "ingredientCategoryId": 2,
+            "name": "varză albă",
+            "synonyms": [
+                "varza",
+                "cabbage"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Tăiată subțire și frăgezită manual."
+        },
+        {
+            "ingredientId": 90,
+            "ingredientCategoryId": 2,
+            "name": "ceapă verde",
+            "synonyms": [
+                "ceapa",
+                "spring onion"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tocată mărunt pentru aromă."
+        },
+        {
+            "ingredientId": 91,
+            "ingredientCategoryId": 3,
+            "name": "pătrunjel verde",
+            "synonyms": [
+                "patrunjel",
+                "parsley"
+            ],
+            "quantity": 1,
+            "unit": "legatura",
+            "note": "Adăugat proaspăt pentru prospețime."
+        },
+        {
+            "ingredientId": 92,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "catei usturoi",
+                "garlic"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Pisat fin pentru dressing."
+        },
+        {
+            "ingredientId": 93,
+            "ingredientCategoryId": 4,
+            "name": "lămâie",
+            "synonyms": [
+                "lamaie",
+                "lemon"
+            ],
+            "quantity": 0.5,
+            "unit": "buc",
+            "note": "Sucul folosit în dressing."
+        },
+        {
+            "ingredientId": 94,
+            "ingredientCategoryId": 9,
+            "name": "ulei de măsline",
+            "synonyms": [
+                "ulei masline",
+                "olive oil"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Extravirgin pentru gust intens."
+        },
+        {
+            "ingredientId": 95,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sarea",
+                "salt"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurite",
+            "note": "Adăugată după gust."
+        },
+        {
+            "ingredientId": 96,
+            "ingredientCategoryId": 3,
+            "name": "mentă",
+            "synonyms": [
+                "menta uscata",
+                "mint"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Uscată sau proaspătă pentru aromă."
+        },
+        {
+            "ingredientId": 97,
+            "ingredientCategoryId": 2,
+            "name": "varză murată",
+            "synonyms": [
+                "varză acră",
+                "varză fermentată"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Ingredientul principal al salatei, oferă gust acrișor și textură crocantă."
+        },
+        {
+            "ingredientId": 98,
+            "ingredientCategoryId": 3,
+            "name": "castraveți murați",
+            "synonyms": [
+                "castraveți în saramură",
+                "castraveți în oțet"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Adaugă prospețime și crocant la salată."
+        },
+        {
+            "ingredientId": 99,
+            "ingredientCategoryId": 3,
+            "name": "gogoșari murați",
+            "synonyms": [
+                "ardei murați",
+                "ardei în oțet"
+            ],
+            "quantity": 5,
+            "unit": "buc",
+            "note": "Oferă culoare și dulceață echilibrată în salată."
+        },
+        {
+            "ingredientId": 100,
+            "ingredientCategoryId": 2,
+            "name": "gogonele murate",
+            "synonyms": [
+                "roșii verzi murate",
+                "tomate murate"
+            ],
+            "quantity": 4,
+            "unit": "buc",
+            "note": "Completează gustul acrișor și textura variată."
+        },
+        {
+            "ingredientId": 101,
+            "ingredientCategoryId": 2,
+            "name": "ceapă murată",
+            "synonyms": [
+                "ceapă marinată",
+                "ceapă acră"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Adaugă aromă intensă și echilibru gustativ."
+        },
+        {
+            "ingredientId": 102,
+            "ingredientCategoryId": 2,
+            "name": "ceapă albă",
+            "synonyms": [
+                "ceapă crudă",
+                "ceapă proaspătă"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Folosită atât călită cât și crudă pentru contrast de texturi."
+        },
+        {
+            "ingredientId": 103,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei de floarea soarelui",
+                "ulei vegetal"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Folosit la călirea cepei și pentru a lega salata."
+        },
+        {
+            "ingredientId": 104,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "condiment piper"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurițe",
+            "note": "Aduce aromă picantă și intensă."
+        },
+        {
+            "ingredientId": 105,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "sare fină"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurițe",
+            "note": "Se ajustează după gust, echilibrează aromele."
+        },
+        {
+            "ingredientId": 106,
+            "ingredientCategoryId": 3,
+            "name": "mărar verde",
+            "synonyms": [
+                "mărar proaspăt",
+                "frunze de mărar"
+            ],
+            "quantity": 3,
+            "unit": "fire",
+            "note": "Opțional, oferă prospețime și aromă distinctă."
+        },
+        {
+            "ingredientId": 107,
+            "ingredientCategoryId": 2,
+            "name": "varză albă",
+            "synonyms": [
+                "varza",
+                "cabbage"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Se taie fâșii subțiri pentru textură crocantă."
+        },
+        {
+            "ingredientId": 108,
+            "ingredientCategoryId": 2,
+            "name": "morcovi",
+            "synonyms": [
+                "morcov",
+                "carrot"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Se dau pe răzătoare medie pentru consistență fină."
+        },
+        {
+            "ingredientId": 109,
+            "ingredientCategoryId": 2,
+            "name": "sfeclă roșie",
+            "synonyms": [
+                "sfecla",
+                "beetroot"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Se folosește crudă, rasă pentru culoare intensă."
+        },
+        {
+            "ingredientId": 110,
+            "ingredientCategoryId": 2,
+            "name": "rădăcină de țelină",
+            "synonyms": [
+                "telina",
+                "celery-root"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Se adaugă rasă pentru aromă proaspătă."
+        },
+        {
+            "ingredientId": 111,
+            "ingredientCategoryId": 2,
+            "name": "castraveți",
+            "synonyms": [
+                "castravete",
+                "cucumber"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Se taie felii subțiri pentru prospețime."
+        },
+        {
+            "ingredientId": 112,
+            "ingredientCategoryId": 2,
+            "name": "ardei gras roșu",
+            "synonyms": [
+                "ardei rosu",
+                "red-pepper"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Se taie felii pentru gust dulce și culoare."
+        },
+        {
+            "ingredientId": 113,
+            "ingredientCategoryId": 2,
+            "name": "ceapă",
+            "synonyms": [
+                "ceapa",
+                "onion"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Se taie mărunt pentru aromă intensă."
+        },
+        {
+            "ingredientId": 114,
+            "ingredientCategoryId": 9,
+            "name": "ulei de măsline extravirgin",
+            "synonyms": [
+                "ulei masline",
+                "olive-oil"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Adaugă savoare și textură fină salatei."
+        },
+        {
+            "ingredientId": 115,
+            "ingredientCategoryId": 3,
+            "name": "oțet de mere",
+            "synonyms": [
+                "otet",
+                "vinegar"
+            ],
+            "quantity": 3,
+            "unit": "linguri",
+            "note": "Se folosește pentru echilibru acrișor."
+        },
+        {
+            "ingredientId": 116,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sarea",
+                "salt"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Se adaugă după gust pentru intensificarea aromelor."
+        },
+        {
+            "ingredientId": 117,
+            "ingredientCategoryId": 2,
+            "name": "sfeclă roșie",
+            "synonyms": [
+                "sfeclă",
+                "beetroot"
+            ],
+            "quantity": 400,
+            "unit": "g",
+            "note": "Folosiți 3 sfecle medii, coapte sau fierte."
+        },
+        {
+            "ingredientId": 118,
+            "ingredientCategoryId": 2,
+            "name": "fasole albă",
+            "synonyms": [
+                "fasole uscată",
+                "white beans"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Se recomandă înmuierea peste noapte pentru fierbere mai rapidă."
+        },
+        {
+            "ingredientId": 119,
+            "ingredientCategoryId": 4,
+            "name": "prune uscate",
+            "synonyms": [
+                "prune fără sâmburi",
+                "dried plums"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Tăiați prunele în bucăți medii pentru textură uniformă."
+        },
+        {
+            "ingredientId": 120,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii de usturoi",
+                "garlic"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Poate fi înlocuit cu un vârf de linguriță de usturoi praf."
+        },
+        {
+            "ingredientId": 121,
+            "ingredientCategoryId": 9,
+            "name": "ulei floarea-soarelui",
+            "synonyms": [
+                "ulei vegetal",
+                "sunflower oil"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Adăugați pentru gust și consistență."
+        },
+        {
+            "ingredientId": 122,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "salt"
+            ],
+            "quantity": 0.5,
+            "unit": "linguriță",
+            "note": "Reglați cantitatea după gust."
+        },
+        {
+            "ingredientId": 123,
+            "ingredientCategoryId": 3,
+            "name": "piper",
+            "synonyms": [
+                "piper negru",
+                "black pepper"
+            ],
+            "quantity": 0.5,
+            "unit": "linguriță",
+            "note": "Adăugați pentru aromă și intensitate."
+        },
+        {
+            "ingredientId": 124,
+            "ingredientCategoryId": 2,
+            "name": "naut fiert",
+            "synonyms": [
+                "chickpeas",
+                "garbanzo"
+            ],
+            "quantity": 350,
+            "unit": "g",
+            "note": "Folosiți năut fiert, păstrați apa pentru consistență."
+        },
+        {
+            "ingredientId": 125,
+            "ingredientCategoryId": 2,
+            "name": "dovleac",
+            "synonyms": [
+                "pumpkin",
+                "squash"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Curățat de coajă și semințe, tăiat cuburi."
+        },
+        {
+            "ingredientId": 126,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "garlic",
+                "cloves"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Adăugați cățeii cruzi pentru aromă intensă."
+        },
+        {
+            "ingredientId": 127,
+            "ingredientCategoryId": 4,
+            "name": "zeama lamaie",
+            "synonyms": [
+                "lemon juice",
+                "citrus"
+            ],
+            "quantity": 3,
+            "unit": "linguri",
+            "note": "Reglați cantitatea după gustul personal."
+        },
+        {
+            "ingredientId": 128,
+            "ingredientCategoryId": 10,
+            "name": "tahini",
+            "synonyms": [
+                "pasta susan",
+                "sesame paste"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Conferă cremozitate și gust specific."
+        },
+        {
+            "ingredientId": 129,
+            "ingredientCategoryId": 9,
+            "name": "ulei masline",
+            "synonyms": [
+                "olive oil",
+                "extra virgin"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Folosiți pentru coacere și servire."
+        },
+        {
+            "ingredientId": 130,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "salt",
+                "sea salt"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Adăugați după gust."
+        },
+        {
+            "ingredientId": 131,
+            "ingredientCategoryId": 3,
+            "name": "oregano uscat",
+            "synonyms": [
+                "oregano",
+                "herbs"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurita",
+            "note": "Pentru aromă la coacerea dovleacului."
+        },
+        {
+            "ingredientId": 132,
+            "ingredientCategoryId": 2,
+            "name": "usturoi pudra",
+            "synonyms": [
+                "garlic powder",
+                "granulated garlic"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurita",
+            "note": "Folosit la asezonarea dovleacului."
+        },
+        {
+            "ingredientId": 133,
+            "ingredientCategoryId": 10,
+            "name": "seminte susan",
+            "synonyms": [
+                "sesame seeds",
+                "susam"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Opțional, pentru ornat."
+        },
+        {
+            "ingredientId": 134,
+            "ingredientCategoryId": 10,
+            "name": "seminte dovleac",
+            "synonyms": [
+                "pumpkin seeds",
+                "pepitas"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Opțional, pentru ornat."
+        },
+        {
+            "ingredientId": 135,
+            "ingredientCategoryId": 3,
+            "name": "chimion pudra",
+            "synonyms": [
+                "cumin powder",
+                "jeera"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurita",
+            "note": "Foarte puțin, pentru aromă subtilă."
+        },
+        {
+            "ingredientId": 136,
+            "ingredientCategoryId": 3,
+            "name": "boia ardei",
+            "synonyms": [
+                "paprika",
+                "chili powder"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurita",
+            "note": "Dulce sau iute, după preferință."
+        },
+        {
+            "ingredientId": 137,
+            "ingredientCategoryId": 3,
+            "name": "turmeric",
+            "synonyms": [
+                "curcuma",
+                "yellow spice"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurita",
+            "note": "Pentru culoare și aromă."
+        },
+        {
+            "ingredientId": 138,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "ulei floarea-soarelui"
+            ],
+            "quantity": 150,
+            "unit": "ml",
+            "note": "Folosiți ulei neutru pentru prăjire."
+        },
+        {
+            "ingredientId": 139,
+            "ingredientCategoryId": 8,
+            "name": "oua",
+            "synonyms": [
+                "ouă de găină",
+                "ou crud"
+            ],
+            "quantity": 4,
+            "unit": "buc",
+            "note": "Ouă proaspete, de mărime medie."
+        },
+        {
+            "ingredientId": 140,
+            "ingredientCategoryId": 8,
+            "name": "iaurt",
+            "synonyms": [
+                "lapte bătut",
+                "chefir"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Alegeți iaurt natural, fără zahăr."
+        },
+        {
+            "ingredientId": 141,
+            "ingredientCategoryId": 2,
+            "name": "spanac",
+            "synonyms": [
+                "frunze de spanac",
+                "baby spanac"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Spanac proaspăt, bine spălat și scurs."
+        },
+        {
+            "ingredientId": 142,
+            "ingredientCategoryId": 2,
+            "name": "ceapa",
+            "synonyms": [
+                "ceapă albă",
+                "ceapă galbenă"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Ceapă medie, tocată mărunt."
+        },
+        {
+            "ingredientId": 143,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii de usturoi",
+                "usturoi crud"
+            ],
+            "quantity": 4,
+            "unit": "buc",
+            "note": "Cățeii de usturoi tocați fin."
+        },
+        {
+            "ingredientId": 144,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "sare fină"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Ajustați cantitatea în funcție de tipul brânzei."
+        },
+        {
+            "ingredientId": 145,
+            "ingredientCategoryId": 1,
+            "name": "faina alba",
+            "synonyms": [
+                "făină de grâu",
+                "făină albă tip 000"
+            ],
+            "quantity": 270,
+            "unit": "g",
+            "note": "Făină cernută pentru un aluat aerat."
+        },
+        {
+            "ingredientId": 146,
+            "ingredientCategoryId": 3,
+            "name": "praf de copt",
+            "synonyms": [
+                "agent de dospire",
+                "bicarbonat cu acid"
+            ],
+            "quantity": 10,
+            "unit": "g",
+            "note": "Asigură creșterea și textura pufoasă."
+        },
+        {
+            "ingredientId": 147,
+            "ingredientCategoryId": 8,
+            "name": "branza feta",
+            "synonyms": [
+                "telemea",
+                "brânză maturată"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Brânză tăiată cubulețe mici, nu foarte sărată."
+        },
+        {
+            "ingredientId": 148,
+            "ingredientCategoryId": 2,
+            "name": "sparanghel",
+            "synonyms": [
+                "asparagus",
+                "sparanghel verde"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Folosiți tije mai groase pentru un gust mai intens."
+        },
+        {
+            "ingredientId": 149,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "butter",
+                "unt nesărat"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Adaugă aromă și textură cremoasă."
+        },
+        {
+            "ingredientId": 150,
+            "ingredientCategoryId": 9,
+            "name": "ulei de măsline",
+            "synonyms": [
+                "olive oil",
+                "ulei extravirgin"
+            ],
+            "quantity": 30,
+            "unit": "ml",
+            "note": "Previne arderea untului și intensifică aroma."
+        },
+        {
+            "ingredientId": 151,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "salt",
+                "sare de mare"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurite",
+            "note": "Se adaugă la final pentru echilibrarea gustului."
+        },
+        {
+            "ingredientId": 152,
+            "ingredientCategoryId": 2,
+            "name": "cartofi",
+            "synonyms": [
+                "cartofi albi",
+                "cartofi galbeni"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Alegeți cartofi mai mari pentru felii uniforme."
+        },
+        {
+            "ingredientId": 153,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "ulei de floarea-soarelui"
+            ],
+            "quantity": 4,
+            "unit": "linguri",
+            "note": "Folosit pentru a acoperi uniform feliile de cartofi."
+        },
+        {
+            "ingredientId": 154,
+            "ingredientCategoryId": 3,
+            "name": "boia dulce",
+            "synonyms": [
+                "boia ardei",
+                "paprika"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Oferă culoare și aromă plăcută cartofilor."
+        },
+        {
+            "ingredientId": 155,
+            "ingredientCategoryId": 2,
+            "name": "usturoi granulat",
+            "synonyms": [
+                "praf de usturoi",
+                "usturoi pudră"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurita",
+            "note": "Opțional, pentru un plus de aromă."
+        },
+        {
+            "ingredientId": 156,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "sare fină"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurita",
+            "note": "Se adaugă la final pentru a nu întări cartofii."
+        },
+        {
+            "ingredientId": 157,
+            "ingredientCategoryId": 2,
+            "name": "fasole verde",
+            "synonyms": [
+                "păstăi verzi",
+                "fasole păstăi galbenă"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Folosiți păstăi gustoase, bine scurse după fierbere."
+        },
+        {
+            "ingredientId": 158,
+            "ingredientCategoryId": 3,
+            "name": "maioneză",
+            "synonyms": [
+                "maioneză de casă",
+                "maioneză de post"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Pentru un gust complet, preferați maioneza de casă."
+        },
+        {
+            "ingredientId": 159,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii de usturoi",
+                "usturoi pisat"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Reglați cantitatea după preferințe pentru intensitatea gustului."
+        },
+        {
+            "ingredientId": 160,
+            "ingredientCategoryId": 1,
+            "name": "faina alba",
+            "synonyms": [
+                "faina",
+                "faina de grau"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Folosiți făină albă pentru aluat foietat."
+        },
+        {
+            "ingredientId": 161,
+            "ingredientCategoryId": 11,
+            "name": "apa",
+            "synonyms": [
+                "apa plata",
+                "lichid"
+            ],
+            "quantity": 200,
+            "unit": "ml",
+            "note": "Apa la temperatura camerei pentru aluat."
+        },
+        {
+            "ingredientId": 162,
+            "ingredientCategoryId": 9,
+            "name": "ulei masline",
+            "synonyms": [
+                "ulei de masline",
+                "ulei extravirgin"
+            ],
+            "quantity": 200,
+            "unit": "ml",
+            "note": "Ulei de măsline pentru aluat și ungere."
+        },
+        {
+            "ingredientId": 163,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fina",
+                "condiment"
+            ],
+            "quantity": 3,
+            "unit": "lingurite",
+            "note": "Sare pentru aluat și umplutură."
+        },
+        {
+            "ingredientId": 164,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt moale",
+                "grasime"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Unt moale pentru ungerea foilor."
+        },
+        {
+            "ingredientId": 165,
+            "ingredientCategoryId": 2,
+            "name": "spanac verde",
+            "synonyms": [
+                "spanac",
+                "frunze spanac"
+            ],
+            "quantity": 1000,
+            "unit": "g",
+            "note": "Spanac proaspăt pentru umplutură."
+        },
+        {
+            "ingredientId": 166,
+            "ingredientCategoryId": 3,
+            "name": "marar",
+            "synonyms": [
+                "verdeata",
+                "marar proaspat"
+            ],
+            "quantity": 1,
+            "unit": "legatura",
+            "note": "Mărar proaspăt pentru aromă."
+        },
+        {
+            "ingredientId": 167,
+            "ingredientCategoryId": 2,
+            "name": "ceapa verde",
+            "synonyms": [
+                "ceapa",
+                "ceapa proaspata"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Ceapă verde tocată pentru umplutură."
+        },
+        {
+            "ingredientId": 168,
+            "ingredientCategoryId": 3,
+            "name": "menta verde",
+            "synonyms": [
+                "menta",
+                "frunze menta"
+            ],
+            "quantity": 3,
+            "unit": "fire",
+            "note": "Mentă verde pentru aromă subtilă."
+        },
+        {
+            "ingredientId": 169,
+            "ingredientCategoryId": 8,
+            "name": "branza feta",
+            "synonyms": [
+                "feta",
+                "telemea"
+            ],
+            "quantity": 350,
+            "unit": "g",
+            "note": "Brânză feta sau telemea pentru umplutură."
+        },
+        {
+            "ingredientId": 170,
+            "ingredientCategoryId": 8,
+            "name": "oua",
+            "synonyms": [
+                "ou",
+                "oua proaspete"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Ouă pentru legarea umpluturii."
+        },
+        {
+            "ingredientId": 171,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper",
+                "condiment"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurite",
+            "note": "Piper negru măcinat pentru gust."
+        },
+        {
+            "ingredientId": 172,
+            "ingredientCategoryId": 1,
+            "name": "drojdie",
+            "synonyms": [
+                "drojdie uscată",
+                "drojdie proaspătă"
+            ],
+            "quantity": 10,
+            "unit": "g",
+            "note": "Se poate folosi uscată sau proaspătă."
+        },
+        {
+            "ingredientId": 173,
+            "ingredientCategoryId": 5,
+            "name": "zahăr",
+            "synonyms": [
+                "zahăr alb",
+                "zahăr tos"
+            ],
+            "quantity": 2,
+            "unit": "lingurițe",
+            "note": "Ajută la activarea drojdiei."
+        },
+        {
+            "ingredientId": 174,
+            "ingredientCategoryId": 11,
+            "name": "apă",
+            "synonyms": [
+                "apă caldă",
+                "apă plată"
+            ],
+            "quantity": 250,
+            "unit": "ml",
+            "note": "Trebuie să fie călduță pentru drojdie."
+        },
+        {
+            "ingredientId": 175,
+            "ingredientCategoryId": 8,
+            "name": "lapte",
+            "synonyms": [
+                "lapte dulce",
+                "lapte integral"
+            ],
+            "quantity": 125,
+            "unit": "ml",
+            "note": "Îmbogățește textura aluatului."
+        },
+        {
+            "ingredientId": 176,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fină",
+                "sare de bucătărie"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "Pentru gust echilibrat."
+        },
+        {
+            "ingredientId": 177,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei de floarea-soarelui",
+                "ulei vegetal"
+            ],
+            "quantity": 1,
+            "unit": "lingură",
+            "note": "Se adaugă în aluat."
+        },
+        {
+            "ingredientId": 178,
+            "ingredientCategoryId": 1,
+            "name": "făină albă",
+            "synonyms": [
+                "făină de grâu",
+                "făină tip 000"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Poate fi ajustată în funcție de consistență."
+        },
+        {
+            "ingredientId": 179,
+            "ingredientCategoryId": 8,
+            "name": "cașcaval",
+            "synonyms": [
+                "brânză tare",
+                "brânză galbenă"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Pentru umplutură aromată."
+        },
+        {
+            "ingredientId": 180,
+            "ingredientCategoryId": 8,
+            "name": "brânză feta",
+            "synonyms": [
+                "telemea",
+                "brânză sărată"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Se amestecă cu cașcavalul."
+        },
+        {
+            "ingredientId": 181,
+            "ingredientCategoryId": 8,
+            "name": "ouă",
+            "synonyms": [
+                "ou crud",
+                "gălbenuș"
+            ],
+            "quantity": 7,
+            "unit": "buc",
+            "note": "Se folosesc pentru aluat și umplutură."
+        },
+        {
+            "ingredientId": 182,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt nesărat",
+                "unt gras"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Se adaugă la final pentru gust."
+        },
+        {
+            "ingredientId": 183,
+            "ingredientCategoryId": 1,
+            "name": "faina alba",
+            "synonyms": [
+                "faina superioara",
+                "faina de grau"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Folosiți făină albă de calitate superioară."
+        },
+        {
+            "ingredientId": 184,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fina",
+                "clorura de sodiu"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurite",
+            "note": "Adăugați pentru echilibrarea gustului."
+        },
+        {
+            "ingredientId": 185,
+            "ingredientCategoryId": 3,
+            "name": "otet",
+            "synonyms": [
+                "otet alb",
+                "otet de masa"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurite",
+            "note": "Ajută la frăgezirea aluatului."
+        },
+        {
+            "ingredientId": 186,
+            "ingredientCategoryId": 11,
+            "name": "apa calda",
+            "synonyms": [
+                "apa calduta",
+                "apa incalzita"
+            ],
+            "quantity": 250,
+            "unit": "ml",
+            "note": "Folosiți apă călduță pentru aluat."
+        },
+        {
+            "ingredientId": 187,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt gras",
+                "unt moale"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Unt cu 80% grăsime, la temperatura camerei."
+        },
+        {
+            "ingredientId": 188,
+            "ingredientCategoryId": 8,
+            "name": "branza de vaci",
+            "synonyms": [
+                "branza proaspata",
+                "cottage cheese"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Brânză sfărâmicioasă, bine scursă de zer."
+        },
+        {
+            "ingredientId": 189,
+            "ingredientCategoryId": 8,
+            "name": "telemea",
+            "synonyms": [
+                "branza sarata",
+                "feta romaneasca"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Telemea sfărâmată pentru gust echilibrat."
+        },
+        {
+            "ingredientId": 190,
+            "ingredientCategoryId": 8,
+            "name": "ou",
+            "synonyms": [
+                "ou crud",
+                "ou de gaina"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Folosit pentru legarea umpluturii."
+        },
+        {
+            "ingredientId": 191,
+            "ingredientCategoryId": 2,
+            "name": "varză albă",
+            "synonyms": [
+                "varză dulce",
+                "varză proaspătă"
+            ],
+            "quantity": 700,
+            "unit": "g",
+            "note": "Poate fi combinată cu varză murată tocată."
+        },
+        {
+            "ingredientId": 192,
+            "ingredientCategoryId": 2,
+            "name": "ceapă albă",
+            "synonyms": [
+                "ceapă",
+                "ceapă comună"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Se călește până devine aurie."
+        },
+        {
+            "ingredientId": 193,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei de floarea-soarelui",
+                "ulei vegetal"
+            ],
+            "quantity": 175,
+            "unit": "ml",
+            "note": "Folosit pentru călirea verzei și în aluat."
+        },
+        {
+            "ingredientId": 194,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de bucătărie",
+                "sare fină"
+            ],
+            "quantity": 2,
+            "unit": "lingurițe",
+            "note": "Pentru asezonarea verzei."
+        },
+        {
+            "ingredientId": 195,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "piper"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurițe",
+            "note": "Adăugat la final pentru aromă."
+        },
+        {
+            "ingredientId": 196,
+            "ingredientCategoryId": 8,
+            "name": "ouă",
+            "synonyms": [
+                "ou",
+                "ou crud"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Folosit pentru ungerea plăcintelor."
+        },
+        {
+            "ingredientId": 197,
+            "ingredientCategoryId": 8,
+            "name": "lapte bătut",
+            "synonyms": [
+                "iaurt",
+                "chefir"
+            ],
+            "quantity": 250,
+            "unit": "ml",
+            "note": "Pentru frăgezimea aluatului."
+        },
+        {
+            "ingredientId": 198,
+            "ingredientCategoryId": 5,
+            "name": "zahăr",
+            "synonyms": [
+                "zahăr alb",
+                "zahăr tos"
+            ],
+            "quantity": 1,
+            "unit": "lingură",
+            "note": "Pentru activarea drojdiei."
+        },
+        {
+            "ingredientId": 199,
+            "ingredientCategoryId": 1,
+            "name": "drojdie instant",
+            "synonyms": [
+                "drojdie uscată",
+                "drojdie rapidă"
+            ],
+            "quantity": 11,
+            "unit": "g",
+            "note": "Pentru dospirea aluatului."
+        },
+        {
+            "ingredientId": 200,
+            "ingredientCategoryId": 1,
+            "name": "făină albă",
+            "synonyms": [
+                "făină",
+                "făină de grâu"
+            ],
+            "quantity": 450,
+            "unit": "g",
+            "note": "Cantitatea se ajustează în funcție de consistența aluatului."
+        },
+        {
+            "ingredientId": 201,
+            "ingredientCategoryId": 1,
+            "name": "aluat foietaj",
+            "synonyms": [
+                "foietaj",
+                "aluat"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Aluat de casă sau cumpărat, întins subțire."
+        },
+        {
+            "ingredientId": 202,
+            "ingredientCategoryId": 8,
+            "name": "telemea",
+            "synonyms": [
+                "branza telemea",
+                "branza sarata"
+            ],
+            "quantity": 400,
+            "unit": "g",
+            "note": "Sfărâmată cu mâna, bucăți medii."
+        },
+        {
+            "ingredientId": 203,
+            "ingredientCategoryId": 8,
+            "name": "ou",
+            "synonyms": [
+                "ou crud",
+                "ou batut"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Folosit pentru ungerea pateurilor."
+        },
+        {
+            "ingredientId": 204,
+            "ingredientCategoryId": 10,
+            "name": "susan",
+            "synonyms": [
+                "mac",
+                "seminte susan"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Opțional pentru presărare deasupra."
+        },
+        {
+            "ingredientId": 205,
+            "ingredientCategoryId": 1,
+            "name": "aluat de pizza",
+            "synonyms": [
+                "aluat",
+                "bază pizza"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Aluat simplu de pizza, crescut și odihnit."
+        },
+        {
+            "ingredientId": 206,
+            "ingredientCategoryId": 3,
+            "name": "sos pesto",
+            "synonyms": [
+                "pesto verde",
+                "pesto genovese"
+            ],
+            "quantity": 4,
+            "unit": "linguri",
+            "note": "Sos pesto verde, proaspăt sau păstrat la congelator."
+        },
+        {
+            "ingredientId": 207,
+            "ingredientCategoryId": 6,
+            "name": "piept de pui",
+            "synonyms": [
+                "carne de pui",
+                "file pui"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Piept de pui fript la grill, cuptor sau tigaie."
+        },
+        {
+            "ingredientId": 208,
+            "ingredientCategoryId": 8,
+            "name": "mozzarella",
+            "synonyms": [
+                "cașcaval mozzarella",
+                "brânză mozzarella"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Mozzarella rasă pentru pizza."
+        },
+        {
+            "ingredientId": 209,
+            "ingredientCategoryId": 1,
+            "name": "aluat pizza",
+            "synonyms": [
+                "aluat clasic",
+                "aluat italian"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Folosiți orice variantă preferată de aluat."
+        },
+        {
+            "ingredientId": 210,
+            "ingredientCategoryId": 6,
+            "name": "kebab pui",
+            "synonyms": [
+                "carne kebab",
+                "pui kebab"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Felii subțiri de kebab pregătit anterior."
+        },
+        {
+            "ingredientId": 211,
+            "ingredientCategoryId": 3,
+            "name": "sos roșii",
+            "synonyms": [
+                "sos pizza",
+                "sos paste"
+            ],
+            "quantity": 4,
+            "unit": "linguri",
+            "note": "Distribuiți uniform pe aluat."
+        },
+        {
+            "ingredientId": 212,
+            "ingredientCategoryId": 8,
+            "name": "mozzarella",
+            "synonyms": [
+                "cașcaval mozzarella",
+                "brânză mozzarella"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Răzuită sau ruptă bucățele."
+        },
+        {
+            "ingredientId": 213,
+            "ingredientCategoryId": 2,
+            "name": "ardei",
+            "synonyms": [
+                "ardei gras",
+                "ardei iute"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Pentru topping, după preferințe."
+        },
+        {
+            "ingredientId": 214,
+            "ingredientCategoryId": 8,
+            "name": "iaurt cremos",
+            "synonyms": [
+                "iaurt natural",
+                "iaurt gras"
+            ],
+            "quantity": 3,
+            "unit": "linguri",
+            "note": "Pentru sosul de usturoi."
+        },
+        {
+            "ingredientId": 215,
+            "ingredientCategoryId": 3,
+            "name": "maioneză",
+            "synonyms": [
+                "maioneză clasică",
+                "maioneză de casă"
+            ],
+            "quantity": 3,
+            "unit": "linguri",
+            "note": "Pentru sosul de usturoi."
+        },
+        {
+            "ingredientId": 216,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii usturoi",
+                "usturoi pisat"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Pisat pentru sosul de usturoi."
+        },
+        {
+            "ingredientId": 217,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fină",
+                "sare de bucătărie"
+            ],
+            "quantity": 0.5,
+            "unit": "linguriță",
+            "note": "Adăugați după gust."
+        },
+        {
+            "ingredientId": 218,
+            "ingredientCategoryId": 1,
+            "name": "maia de secara",
+            "synonyms": [
+                "starter",
+                "maia naturala"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Folosiți maia matură pentru rezultate optime."
+        },
+        {
+            "ingredientId": 219,
+            "ingredientCategoryId": 11,
+            "name": "apa",
+            "synonyms": [
+                "apa plata",
+                "lichid"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Apa la temperatura camerei pentru fermentare corectă."
+        },
+        {
+            "ingredientId": 220,
+            "ingredientCategoryId": 1,
+            "name": "faina alba",
+            "synonyms": [
+                "faina superioara",
+                "faina de grau"
+            ],
+            "quantity": 850,
+            "unit": "g",
+            "note": "Făină de calitate superioară pentru elasticitate."
+        },
+        {
+            "ingredientId": 221,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fina",
+                "condiment"
+            ],
+            "quantity": 5,
+            "unit": "g",
+            "note": "Se adaugă în timpul frământării."
+        },
+        {
+            "ingredientId": 222,
+            "ingredientCategoryId": 5,
+            "name": "zahar",
+            "synonyms": [
+                "zahar alb",
+                "indulcitor"
+            ],
+            "quantity": 15,
+            "unit": "g",
+            "note": "Ajută la activarea fermentației."
+        },
+        {
+            "ingredientId": 223,
+            "ingredientCategoryId": 9,
+            "name": "ulei de masline",
+            "synonyms": [
+                "ulei extravirgin",
+                "ulei vegetal"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Pentru ungerea aluatului și aromă."
+        },
+        {
+            "ingredientId": 224,
+            "ingredientCategoryId": 8,
+            "name": "cascaval",
+            "synonyms": [
+                "mozzarella",
+                "branza topita"
+            ],
+            "quantity": 600,
+            "unit": "g",
+            "note": "Pentru topping, se poate combina cu alte brânzeturi."
+        },
+        {
+            "ingredientId": 225,
+            "ingredientCategoryId": 3,
+            "name": "sos de rosii",
+            "synonyms": [
+                "sos pizza",
+                "passata"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Se unge blatul înainte de cașcaval și toppinguri."
+        },
+        {
+            "ingredientId": 226,
+            "ingredientCategoryId": 1,
+            "name": "faina alba",
+            "synonyms": [
+                "faina superioara",
+                "faina manitoba"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Folosiți făină cu minim 12% proteine pentru elasticitate."
+        },
+        {
+            "ingredientId": 227,
+            "ingredientCategoryId": 3,
+            "name": "sare fina",
+            "synonyms": [
+                "sare de masa",
+                "sare alimentara"
+            ],
+            "quantity": 5,
+            "unit": "g",
+            "note": "Adăugați pentru gust echilibrat."
+        },
+        {
+            "ingredientId": 228,
+            "ingredientCategoryId": 1,
+            "name": "drojdie uscata",
+            "synonyms": [
+                "drojdie proaspata",
+                "ferment"
+            ],
+            "quantity": 7,
+            "unit": "g",
+            "note": "Activează aluatul pentru creștere."
+        },
+        {
+            "ingredientId": 229,
+            "ingredientCategoryId": 11,
+            "name": "apa calda",
+            "synonyms": [
+                "apa potabila",
+                "apa usor incalzita"
+            ],
+            "quantity": 325,
+            "unit": "ml",
+            "note": "Nu folosiți apă fierbinte pentru a nu distruge drojdia."
+        },
+        {
+            "ingredientId": 230,
+            "ingredientCategoryId": 9,
+            "name": "ulei masline",
+            "synonyms": [
+                "ulei extravirgin",
+                "ulei vegetal"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Pentru aromă și textură fină."
+        },
+        {
+            "ingredientId": 231,
+            "ingredientCategoryId": 3,
+            "name": "sos rosii",
+            "synonyms": [
+                "sos marinara",
+                "sos pizza"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Folosiți sos de roșii preferat."
+        },
+        {
+            "ingredientId": 232,
+            "ingredientCategoryId": 6,
+            "name": "topping pizza",
+            "synonyms": [
+                "sunca",
+                "ciuperci"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Alegeți combinația preferată de ingrediente."
+        },
+        {
+            "ingredientId": 233,
+            "ingredientCategoryId": 8,
+            "name": "mozzarella",
+            "synonyms": [
+                "cascaval",
+                "branza topita"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Pentru textura cremoasă și gust autentic."
+        },
+        {
+            "ingredientId": 234,
+            "ingredientCategoryId": 1,
+            "name": "gris grau",
+            "synonyms": [
+                "gris fin",
+                "gris alimentar"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Opțional, pentru bază crocantă."
+        },
+        {
+            "ingredientId": 235,
+            "ingredientCategoryId": 1,
+            "name": "aluat de pizza",
+            "synonyms": [
+                "blat pizza",
+                "pasta aluat"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Poate fi clasic sau rapid fără drojdie."
+        },
+        {
+            "ingredientId": 236,
+            "ingredientCategoryId": 3,
+            "name": "sos de roșii",
+            "synonyms": [
+                "sos marinara",
+                "sos pizza"
+            ],
+            "quantity": 5,
+            "unit": "linguri",
+            "note": "Folosiți un sos de roșii aromat."
+        },
+        {
+            "ingredientId": 237,
+            "ingredientCategoryId": 8,
+            "name": "cașcaval",
+            "synonyms": [
+                "brânză galbenă",
+                "mozzarella"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Radeți pentru distribuire uniformă."
+        },
+        {
+            "ingredientId": 238,
+            "ingredientCategoryId": 8,
+            "name": "brânză feta",
+            "synonyms": [
+                "feta",
+                "brânză grecească"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Tăiați cubulețe pentru topping."
+        },
+        {
+            "ingredientId": 239,
+            "ingredientCategoryId": 4,
+            "name": "măsline",
+            "synonyms": [
+                "masline negre",
+                "masline verzi"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Adăugați întregi sau feliate."
+        },
+        {
+            "ingredientId": 240,
+            "ingredientCategoryId": 2,
+            "name": "roșii cherry",
+            "synonyms": [
+                "roșii mici",
+                "tomate cherry"
+            ],
+            "quantity": 10,
+            "unit": "buc",
+            "note": "Se pot înlocui cu roșii mari cuburi."
+        },
+        {
+            "ingredientId": 241,
+            "ingredientCategoryId": 9,
+            "name": "ulei de măsline",
+            "synonyms": [
+                "ulei extravirgin",
+                "ulei grecesc"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Stropiți uniform la final."
+        },
+        {
+            "ingredientId": 242,
+            "ingredientCategoryId": 3,
+            "name": "oregano uscat",
+            "synonyms": [
+                "oregano",
+                "condiment oregano"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurițe",
+            "note": "Presărați pentru aromă mediteraneană."
+        },
+        {
+            "ingredientId": 243,
+            "ingredientCategoryId": 6,
+            "name": "carne de porc",
+            "synonyms": [
+                "pulpă porc",
+                "carne porc"
+            ],
+            "quantity": 4000,
+            "unit": "g",
+            "note": "Folosiți pulpă de porc proaspătă"
+        },
+        {
+            "ingredientId": 244,
+            "ingredientCategoryId": 6,
+            "name": "slănină",
+            "synonyms": [
+                "grăsime porc",
+                "slanina"
+            ],
+            "quantity": 1000,
+            "unit": "g",
+            "note": "Adaugă suculență și textură cârnaților"
+        },
+        {
+            "ingredientId": 245,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii usturoi",
+                "usturoi alb"
+            ],
+            "quantity": 40,
+            "unit": "buc",
+            "note": "Aromă intensă, aproximativ 4 căpățâni mari"
+        },
+        {
+            "ingredientId": 246,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare grunjoasă",
+                "sare de bucătărie"
+            ],
+            "quantity": 3,
+            "unit": "linguri",
+            "note": "Pentru asezonarea compoziției"
+        },
+        {
+            "ingredientId": 247,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "piper"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Pentru gust picant și aromă"
+        },
+        {
+            "ingredientId": 248,
+            "ingredientCategoryId": 3,
+            "name": "coriandru",
+            "synonyms": [
+                "semințe coriandru",
+                "coriandru măcinat"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Opțional, dar recomandat pentru aromă"
+        },
+        {
+            "ingredientId": 249,
+            "ingredientCategoryId": 6,
+            "name": "mațe de porc",
+            "synonyms": [
+                "intestine porc",
+                "mațe curățate"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Curățate și hidratate pentru umplere"
+        },
+        {
+            "ingredientId": 250,
+            "ingredientCategoryId": 3,
+            "name": "muștar",
+            "synonyms": [
+                "muștar clasic",
+                "condiment muștar"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Adaugă aromă specifică rețetei ucrainene"
+        },
+        {
+            "ingredientId": 251,
+            "ingredientCategoryId": 2,
+            "name": "ciuperci albe",
+            "synonyms": [
+                "champignon",
+                "ciuperci proaspete"
+            ],
+            "quantity": 1000,
+            "unit": "g",
+            "note": "Se folosesc ciuperci proaspete, bine curățate."
+        },
+        {
+            "ingredientId": 252,
+            "ingredientCategoryId": 6,
+            "name": "carne de pui",
+            "synonyms": [
+                "piept de pui",
+                "carne albă"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Carnea se taie cubulețe și se călește."
+        },
+        {
+            "ingredientId": 253,
+            "ingredientCategoryId": 2,
+            "name": "ceapă albă",
+            "synonyms": [
+                "ceapă",
+                "ceapă comună"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Se taie mediu și se călește."
+        },
+        {
+            "ingredientId": 254,
+            "ingredientCategoryId": 8,
+            "name": "cașcaval clasic",
+            "synonyms": [
+                "brânză tare",
+                "cașcaval ras"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Se rade mărunt și se adaugă în compoziție."
+        },
+        {
+            "ingredientId": 255,
+            "ingredientCategoryId": 3,
+            "name": "pătrunjel verde",
+            "synonyms": [
+                "verdețuri",
+                "pătrunjel proaspăt"
+            ],
+            "quantity": 1,
+            "unit": "leg",
+            "note": "Se toacă mărunt și se adaugă la final."
+        },
+        {
+            "ingredientId": 256,
+            "ingredientCategoryId": 3,
+            "name": "maioneză",
+            "synonyms": [
+                "maioneză de casă",
+                "sos maioneză"
+            ],
+            "quantity": 4,
+            "unit": "linguri",
+            "note": "Se unge deasupra pentru crustă rumenă."
+        },
+        {
+            "ingredientId": 257,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "condiment piper"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurițe",
+            "note": "Se adaugă după gust, un vârf de linguriță."
+        },
+        {
+            "ingredientId": 258,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de bucătărie",
+                "condiment sare"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurițe",
+            "note": "Se adaugă după gust."
+        },
+        {
+            "ingredientId": 259,
+            "ingredientCategoryId": 2,
+            "name": "mazăre verde",
+            "synonyms": [
+                "mazăre la conservă",
+                "mazăre boabe"
+            ],
+            "quantity": 250,
+            "unit": "g",
+            "note": "Folosiți mazăre la conservă, scursă bine de lichid."
+        },
+        {
+            "ingredientId": 260,
+            "ingredientCategoryId": 6,
+            "name": "piept de pui",
+            "synonyms": [
+                "carne de pui fiartă",
+                "pastramă de pui"
+            ],
+            "quantity": 400,
+            "unit": "g",
+            "note": "Carnea trebuie fiartă sau pastramă de casă, tăiată cubulețe."
+        },
+        {
+            "ingredientId": 261,
+            "ingredientCategoryId": 2,
+            "name": "morcovi",
+            "synonyms": [
+                "morcov proaspăt",
+                "legumă rădăcinoasă"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Radeți morcovii și căliți-i ușor pentru un gust dulce."
+        },
+        {
+            "ingredientId": 262,
+            "ingredientCategoryId": 2,
+            "name": "ceapă albă",
+            "synonyms": [
+                "ceapă",
+                "ceapă dulce"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Tăiați julien și marinați cu zahăr și oțet."
+        },
+        {
+            "ingredientId": 263,
+            "ingredientCategoryId": 3,
+            "name": "maioneză",
+            "synonyms": [
+                "sos maioneză",
+                "maioneză clasică"
+            ],
+            "quantity": 200,
+            "unit": "g",
+            "note": "Poate fi înlocuită cu iaurt pentru o variantă mai light."
+        },
+        {
+            "ingredientId": 264,
+            "ingredientCategoryId": 5,
+            "name": "zahăr",
+            "synonyms": [
+                "zahăr alb",
+                "zahăr tos"
+            ],
+            "quantity": 15,
+            "unit": "g",
+            "note": "Folosit pentru marinarea cepei."
+        },
+        {
+            "ingredientId": 265,
+            "ingredientCategoryId": 3,
+            "name": "oțet",
+            "synonyms": [
+                "oțet alb",
+                "oțet de masă"
+            ],
+            "quantity": 60,
+            "unit": "ml",
+            "note": "Se adaugă la ceapă pentru marinare."
+        },
+        {
+            "ingredientId": 266,
+            "ingredientCategoryId": 6,
+            "name": "ceafă de porc",
+            "synonyms": [
+                "carne de porc",
+                "cotlet de porc"
+            ],
+            "quantity": 1500,
+            "unit": "g",
+            "note": "Bucată întreagă sau feliată, fragedă."
+        },
+        {
+            "ingredientId": 267,
+            "ingredientCategoryId": 2,
+            "name": "ceapă",
+            "synonyms": [
+                "ceapă albă",
+                "ceapă galbenă"
+            ],
+            "quantity": 5,
+            "unit": "buc",
+            "note": "Tăiată felii subțiri pentru strat de bază."
+        },
+        {
+            "ingredientId": 268,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "margarina",
+                "grăsime"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Felii subțiri puse pe carne."
+        },
+        {
+            "ingredientId": 269,
+            "ingredientCategoryId": 3,
+            "name": "sos de soia",
+            "synonyms": [
+                "soia",
+                "condiment lichid"
+            ],
+            "quantity": 5,
+            "unit": "linguri",
+            "note": "Amestecat cu oțet pentru marinadă."
+        },
+        {
+            "ingredientId": 270,
+            "ingredientCategoryId": 3,
+            "name": "oțet de mere",
+            "synonyms": [
+                "oțet",
+                "acidifiant"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Folosit în marinadă cu sos de soia."
+        },
+        {
+            "ingredientId": 271,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "sare fină"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Pentru asezonarea cărnii."
+        },
+        {
+            "ingredientId": 272,
+            "ingredientCategoryId": 3,
+            "name": "piper negru măcinat",
+            "synonyms": [
+                "piper",
+                "condiment piper"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Pentru asezonarea cărnii."
+        },
+        {
+            "ingredientId": 273,
+            "ingredientCategoryId": 2,
+            "name": "usturoi granulat",
+            "synonyms": [
+                "usturoi praf",
+                "usturoi pisat"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Pentru aromă intensă."
+        },
+        {
+            "ingredientId": 274,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "ulei de floarea-soarelui"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Pentru ungerea cărnii."
+        },
+        {
+            "ingredientId": 275,
+            "ingredientCategoryId": 8,
+            "name": "ouă",
+            "synonyms": [
+                "ou",
+                "ouă de găină"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Separați albușurile de gălbenușuri"
+        },
+        {
+            "ingredientId": 276,
+            "ingredientCategoryId": 5,
+            "name": "zahăr",
+            "synonyms": [
+                "zahăr alb",
+                "zahăr tos"
+            ],
+            "quantity": 90,
+            "unit": "g",
+            "note": "Pentru aluat și bezea"
+        },
+        {
+            "ingredientId": 277,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt dulce",
+                "unt nesărat"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Moale, la temperatura camerei"
+        },
+        {
+            "ingredientId": 278,
+            "ingredientCategoryId": 8,
+            "name": "iaurt",
+            "synonyms": [
+                "lapte bătut",
+                "chefir"
+            ],
+            "quantity": 60,
+            "unit": "g",
+            "note": "Pentru frăgezimea aluatului"
+        },
+        {
+            "ingredientId": 279,
+            "ingredientCategoryId": 1,
+            "name": "făină albă",
+            "synonyms": [
+                "făină de grâu",
+                "făină tip 000"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Pentru aluat și bezea"
+        },
+        {
+            "ingredientId": 280,
+            "ingredientCategoryId": 3,
+            "name": "esență de vanilie",
+            "synonyms": [
+                "vanilie lichidă",
+                "extract de vanilie"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "Pentru aromă delicată"
+        },
+        {
+            "ingredientId": 281,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fină",
+                "sare de bucătărie"
+            ],
+            "quantity": 0.25,
+            "unit": "linguriță",
+            "note": "Pentru echilibrarea gustului"
+        },
+        {
+            "ingredientId": 282,
+            "ingredientCategoryId": 3,
+            "name": "praf de copt",
+            "synonyms": [
+                "agent de dospire",
+                "bicarbonat cu acid"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "Pentru creșterea aluatului"
+        },
+        {
+            "ingredientId": 283,
+            "ingredientCategoryId": 5,
+            "name": "cacao",
+            "synonyms": [
+                "pudră de cacao",
+                "cacao amară"
+            ],
+            "quantity": 1,
+            "unit": "lingură",
+            "note": "Pentru bezeaua cu aromă intensă"
+        },
+        {
+            "ingredientId": 284,
+            "ingredientCategoryId": 5,
+            "name": "dulceață",
+            "synonyms": [
+                "gem",
+                "marmeladă"
+            ],
+            "quantity": 6,
+            "unit": "linguri",
+            "note": "Pentru umplerea rulourilor"
+        },
+        {
+            "ingredientId": 285,
+            "ingredientCategoryId": 5,
+            "name": "zahăr pudră",
+            "synonyms": [
+                "zahăr farin",
+                "zahăr pudră vanilat"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Pentru decorarea marginilor"
+        },
+        {
+            "ingredientId": 286,
+            "ingredientCategoryId": 6,
+            "name": "carne de porc",
+            "synonyms": [
+                "ceafă porc",
+                "carne tocată porc"
+            ],
+            "quantity": 1000,
+            "unit": "g",
+            "note": "Folosiți carne proaspătă pentru textură fragedă."
+        },
+        {
+            "ingredientId": 287,
+            "ingredientCategoryId": 6,
+            "name": "slănină",
+            "synonyms": [
+                "grăsime porc",
+                "slanina"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Adăugată pentru chiftele moi și suculente."
+        },
+        {
+            "ingredientId": 288,
+            "ingredientCategoryId": 2,
+            "name": "ceapă",
+            "synonyms": [
+                "ceapă albă",
+                "ceapă galbenă"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tocată fin pentru aromă echilibrată."
+        },
+        {
+            "ingredientId": 289,
+            "ingredientCategoryId": 8,
+            "name": "ouă",
+            "synonyms": [
+                "ou crud",
+                "ou proaspăt"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Leagă compoziția și oferă consistență."
+        },
+        {
+            "ingredientId": 290,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "sare fină"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Pentru gust echilibrat."
+        },
+        {
+            "ingredientId": 291,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "piper"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurita",
+            "note": "Adaugă aromă ușor picantă."
+        },
+        {
+            "ingredientId": 292,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt nesărat",
+                "unt de masă"
+            ],
+            "quantity": 20,
+            "unit": "g",
+            "note": "Folosit la prăjire pentru gust bogat."
+        },
+        {
+            "ingredientId": 293,
+            "ingredientCategoryId": 9,
+            "name": "ulei de măsline",
+            "synonyms": [
+                "ulei extravirgin",
+                "ulei masline"
+            ],
+            "quantity": 30,
+            "unit": "ml",
+            "note": "Folosit la prăjire pentru aromă fină."
+        },
+        {
+            "ingredientId": 294,
+            "ingredientCategoryId": 2,
+            "name": "varza alba",
+            "synonyms": [
+                "varza dulce",
+                "frunze de varza"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Se opărește pentru a desprinde frunzele."
+        },
+        {
+            "ingredientId": 295,
+            "ingredientCategoryId": 6,
+            "name": "piept de pui",
+            "synonyms": [
+                "carne de pui",
+                "carne alba"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Se taie cubulețe și se călește ușor."
+        },
+        {
+            "ingredientId": 296,
+            "ingredientCategoryId": 2,
+            "name": "morcovi",
+            "synonyms": [
+                "morcov",
+                "legume dulci"
+            ],
+            "quantity": 4,
+            "unit": "buc",
+            "note": "Se dau pe răzătoare pentru umplutură."
+        },
+        {
+            "ingredientId": 297,
+            "ingredientCategoryId": 2,
+            "name": "ceapa alba",
+            "synonyms": [
+                "ceapa",
+                "ceapa galbena"
+            ],
+            "quantity": 4,
+            "unit": "buc",
+            "note": "Se taie cubulețe mici."
+        },
+        {
+            "ingredientId": 298,
+            "ingredientCategoryId": 2,
+            "name": "pasta de tomate",
+            "synonyms": [
+                "suc de rosii",
+                "rosii cubulete"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Pentru aromă și culoare."
+        },
+        {
+            "ingredientId": 299,
+            "ingredientCategoryId": 1,
+            "name": "orez",
+            "synonyms": [
+                "orez rotund",
+                "orez colosal"
+            ],
+            "quantity": 250,
+            "unit": "g",
+            "note": "Se spală înainte de folosire."
+        },
+        {
+            "ingredientId": 300,
+            "ingredientCategoryId": 3,
+            "name": "marar verde",
+            "synonyms": [
+                "frunze de marar",
+                "verdeata"
+            ],
+            "quantity": 1,
+            "unit": "legatura",
+            "note": "Se adaugă între straturi pentru aromă."
+        },
+        {
+            "ingredientId": 301,
+            "ingredientCategoryId": 9,
+            "name": "ulei floarea-soarelui",
+            "synonyms": [
+                "ulei vegetal",
+                "ulei rafinat"
+            ],
+            "quantity": 100,
+            "unit": "ml",
+            "note": "Pentru călirea cărnii și legumelor."
+        },
+        {
+            "ingredientId": 302,
+            "ingredientCategoryId": 3,
+            "name": "boia dulce",
+            "synonyms": [
+                "boia ardei",
+                "paprika"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Pentru gust și culoare."
+        },
+        {
+            "ingredientId": 303,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper macinat",
+                "condiment piper"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Pentru aromă."
+        },
+        {
+            "ingredientId": 304,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masa",
+                "sare fina"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Pentru gust și conservare."
+        },
+        {
+            "ingredientId": 305,
+            "ingredientCategoryId": 1,
+            "name": "făină albă",
+            "synonyms": [
+                "făină",
+                "manitoba"
+            ],
+            "quantity": 600,
+            "unit": "g",
+            "note": "folosiți făină puternică, cu 14g proteine"
+        },
+        {
+            "ingredientId": 306,
+            "ingredientCategoryId": 8,
+            "name": "lapte",
+            "synonyms": [
+                "lapte integral",
+                "lapte dulce"
+            ],
+            "quantity": 285,
+            "unit": "g",
+            "note": "lapte cu 3.5% grăsime"
+        },
+        {
+            "ingredientId": 307,
+            "ingredientCategoryId": 1,
+            "name": "drojdie proaspătă",
+            "synonyms": [
+                "drojdie",
+                "yeast"
+            ],
+            "quantity": 30,
+            "unit": "g",
+            "note": "pentru dospirea aluatului"
+        },
+        {
+            "ingredientId": 308,
+            "ingredientCategoryId": 5,
+            "name": "zahăr",
+            "synonyms": [
+                "zahăr alb",
+                "dulce"
+            ],
+            "quantity": 483,
+            "unit": "g",
+            "note": "263g pentru aluat, 220g pentru glazură"
+        },
+        {
+            "ingredientId": 309,
+            "ingredientCategoryId": 4,
+            "name": "stafide",
+            "synonyms": [
+                "raisin",
+                "smochine uscate"
+            ],
+            "quantity": 180,
+            "unit": "g",
+            "note": "înmuiați în rom peste noapte"
+        },
+        {
+            "ingredientId": 310,
+            "ingredientCategoryId": 11,
+            "name": "rom",
+            "synonyms": [
+                "alcool rom",
+                "rom brun"
+            ],
+            "quantity": 250,
+            "unit": "ml",
+            "note": "nu esență, ci rom alcool"
+        },
+        {
+            "ingredientId": 311,
+            "ingredientCategoryId": 8,
+            "name": "gălbenușuri",
+            "synonyms": [
+                "ouă",
+                "galbenus"
+            ],
+            "quantity": 180,
+            "unit": "g",
+            "note": "aproximativ 9-10 ouă"
+        },
+        {
+            "ingredientId": 312,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "butter",
+                "unt gras"
+            ],
+            "quantity": 180,
+            "unit": "g",
+            "note": "moale, la temperatura camerei"
+        },
+        {
+            "ingredientId": 313,
+            "ingredientCategoryId": 5,
+            "name": "miere",
+            "synonyms": [
+                "honey",
+                "miere naturală"
+            ],
+            "quantity": 60,
+            "unit": "g",
+            "note": "pentru aromă și dulceață"
+        },
+        {
+            "ingredientId": 314,
+            "ingredientCategoryId": 4,
+            "name": "coajă de portocală confiată",
+            "synonyms": [
+                "portocală confiată",
+                "candied orange"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "se poate combina cu coajă de lămâie"
+        },
+        {
+            "ingredientId": 315,
+            "ingredientCategoryId": 3,
+            "name": "gelatină",
+            "synonyms": [
+                "gelatină pudră",
+                "gelatină alimentară"
+            ],
+            "quantity": 7,
+            "unit": "g",
+            "note": "pentru glazură"
+        },
+        {
+            "ingredientId": 316,
+            "ingredientCategoryId": 4,
+            "name": "suc de portocale",
+            "synonyms": [
+                "juice",
+                "orange juice"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "pentru glazură"
+        },
+        {
+            "ingredientId": 317,
+            "ingredientCategoryId": 8,
+            "name": "lapte",
+            "synonyms": [
+                "milk",
+                "lapte dulce"
+            ],
+            "quantity": 250,
+            "unit": "ml",
+            "note": "Folosiți lapte cald, nu fierbinte."
+        },
+        {
+            "ingredientId": 318,
+            "ingredientCategoryId": 1,
+            "name": "drojdie uscată",
+            "synonyms": [
+                "yeast",
+                "drojdie"
+            ],
+            "quantity": 10,
+            "unit": "g",
+            "note": "Se activează în lapte cald cu zahăr."
+        },
+        {
+            "ingredientId": 319,
+            "ingredientCategoryId": 8,
+            "name": "ouă",
+            "synonyms": [
+                "eggs",
+                "ou"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Ouă proaspete de mărime medie."
+        },
+        {
+            "ingredientId": 320,
+            "ingredientCategoryId": 5,
+            "name": "zahăr",
+            "synonyms": [
+                "sugar",
+                "zahar"
+            ],
+            "quantity": 300,
+            "unit": "g",
+            "note": "Pentru aluat și sirop opțional."
+        },
+        {
+            "ingredientId": 321,
+            "ingredientCategoryId": 2,
+            "name": "piure de dovleac",
+            "synonyms": [
+                "pumpkin puree",
+                "piure dovleac"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Oferă culoare și textură pufoasă."
+        },
+        {
+            "ingredientId": 322,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "butter",
+                "unt gras"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Moale, la temperatura camerei."
+        },
+        {
+            "ingredientId": 323,
+            "ingredientCategoryId": 3,
+            "name": "esență de vanilie",
+            "synonyms": [
+                "vanilla extract",
+                "vanilie"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Pentru aromă intensă."
+        },
+        {
+            "ingredientId": 324,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "salt",
+                "sare fina"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurita",
+            "note": "Pentru echilibrarea gustului."
+        },
+        {
+            "ingredientId": 325,
+            "ingredientCategoryId": 1,
+            "name": "făină albă",
+            "synonyms": [
+                "flour",
+                "faina"
+            ],
+            "quantity": 650,
+            "unit": "g",
+            "note": "Calitate superioară pentru cozonaci pufoși."
+        },
+        {
+            "ingredientId": 326,
+            "ingredientCategoryId": 3,
+            "name": "scorțișoară măcinată",
+            "synonyms": [
+                "cinnamon",
+                "scortisoara"
+            ],
+            "quantity": 3,
+            "unit": "linguri",
+            "note": "Pentru umplutură aromată."
+        },
+        {
+            "ingredientId": 327,
+            "ingredientCategoryId": 10,
+            "name": "nuci tocate",
+            "synonyms": [
+                "nuts",
+                "nuci"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Adaugă textură crocantă."
+        },
+        {
+            "ingredientId": 328,
+            "ingredientCategoryId": 8,
+            "name": "gălbenuș de ou",
+            "synonyms": [
+                "egg yolk",
+                "galbenus"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Pentru uns cozonacii înainte de coacere."
+        },
+        {
+            "ingredientId": 329,
+            "ingredientCategoryId": 1,
+            "name": "faina alba",
+            "synonyms": [
+                "faina de grau",
+                "faina superioara"
+            ],
+            "quantity": 650,
+            "unit": "g",
+            "note": "Folosiți făină albă de calitate superioară pentru un aluat pufos."
+        },
+        {
+            "ingredientId": 330,
+            "ingredientCategoryId": 8,
+            "name": "branza vaci",
+            "synonyms": [
+                "branza dulce",
+                "cottage cheese"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Brânza trebuie să fie bine scursă de zer și mai uscată."
+        },
+        {
+            "ingredientId": 331,
+            "ingredientCategoryId": 8,
+            "name": "oua",
+            "synonyms": [
+                "ou",
+                "ou crud"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Ouăle se folosesc atât pentru aluat cât și pentru umplutură."
+        },
+        {
+            "ingredientId": 332,
+            "ingredientCategoryId": 5,
+            "name": "zahar",
+            "synonyms": [
+                "zahar alb",
+                "dulce"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Zahărul se adaugă în aluat și în umplutura de brânză."
+        },
+        {
+            "ingredientId": 333,
+            "ingredientCategoryId": 8,
+            "name": "lapte",
+            "synonyms": [
+                "lapte dulce",
+                "lapte integral"
+            ],
+            "quantity": 125,
+            "unit": "ml",
+            "note": "Laptele trebuie să fie cald pentru activarea drojdiei."
+        },
+        {
+            "ingredientId": 334,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt topit",
+                "butter"
+            ],
+            "quantity": 80,
+            "unit": "g",
+            "note": "Untul se folosește topit și răcorit pentru aluat."
+        },
+        {
+            "ingredientId": 335,
+            "ingredientCategoryId": 4,
+            "name": "stafide",
+            "synonyms": [
+                "raisins",
+                "merișoare confiate"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Se pot folosi stafide sau merișoare confiate pentru umplutură."
+        },
+        {
+            "ingredientId": 336,
+            "ingredientCategoryId": 2,
+            "name": "conopidă",
+            "synonyms": [
+                "conopida",
+                "varză albă crudă"
+            ],
+            "quantity": 1000,
+            "unit": "g",
+            "note": "Se folosește crudă, mărunțită fin."
+        },
+        {
+            "ingredientId": 337,
+            "ingredientCategoryId": 2,
+            "name": "dovleac",
+            "synonyms": [
+                "pumpkin",
+                "tărtăcuță"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Copt ușor, cuburi crocante."
+        },
+        {
+            "ingredientId": 338,
+            "ingredientCategoryId": 2,
+            "name": "ciuperci albe",
+            "synonyms": [
+                "champignon",
+                "ciuperci proaspete"
+            ],
+            "quantity": 500,
+            "unit": "g",
+            "note": "Călite cu usturoi pentru aromă."
+        },
+        {
+            "ingredientId": 339,
+            "ingredientCategoryId": 2,
+            "name": "ardei gras roșu",
+            "synonyms": [
+                "ardei roșu",
+                "ardei dulce"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tăiat cubulețe mici."
+        },
+        {
+            "ingredientId": 340,
+            "ingredientCategoryId": 2,
+            "name": "spanac",
+            "synonyms": [
+                "baby spanac",
+                "frunze verzi"
+            ],
+            "quantity": 50,
+            "unit": "g",
+            "note": "Spălat și uscat înainte de folosire."
+        },
+        {
+            "ingredientId": 341,
+            "ingredientCategoryId": 3,
+            "name": "pătrunjel verde",
+            "synonyms": [
+                "pătrunjel",
+                "verdețuri"
+            ],
+            "quantity": 1,
+            "unit": "leg",
+            "note": "Tocat mărunt pentru prospețime."
+        },
+        {
+            "ingredientId": 342,
+            "ingredientCategoryId": 2,
+            "name": "ceapă verde",
+            "synonyms": [
+                "ceapă tânără",
+                "ceapă proaspătă"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Tocată mărunt, poate fi înlocuită cu ceapă roșie."
+        },
+        {
+            "ingredientId": 343,
+            "ingredientCategoryId": 10,
+            "name": "semințe de dovleac",
+            "synonyms": [
+                "semințe crude",
+                "semințe prăjite"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Adăugate la final pentru textură crocantă."
+        },
+        {
+            "ingredientId": 344,
+            "ingredientCategoryId": 4,
+            "name": "lămâie",
+            "synonyms": [
+                "zeamă de lămâie",
+                "citrice"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Stoarsă pentru dressing."
+        },
+        {
+            "ingredientId": 345,
+            "ingredientCategoryId": 9,
+            "name": "ulei de măsline",
+            "synonyms": [
+                "ulei extravirgin",
+                "ulei vegetal"
+            ],
+            "quantity": 100,
+            "unit": "ml",
+            "note": "Folosit la copt și la dressing."
+        },
+        {
+            "ingredientId": 346,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii de usturoi",
+                "allium"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Adăugat la ciuperci pentru aromă intensă."
+        },
+        {
+            "ingredientId": 347,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "sare fină"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Pentru asezonare."
+        },
+        {
+            "ingredientId": 348,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "condiment"
+            ],
+            "quantity": 0.5,
+            "unit": "lingurita",
+            "note": "Pentru gust echilibrat."
+        },
+        {
+            "ingredientId": 349,
+            "ingredientCategoryId": 2,
+            "name": "sfecla roșie",
+            "synonyms": [
+                "sfeclă",
+                "beetroot"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Curățată și tăiată cubulețe"
+        },
+        {
+            "ingredientId": 350,
+            "ingredientCategoryId": 2,
+            "name": "morcovi",
+            "synonyms": [
+                "morcov",
+                "carrot"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Tăiați cubulețe mici"
+        },
+        {
+            "ingredientId": 351,
+            "ingredientCategoryId": 2,
+            "name": "ceapă",
+            "synonyms": [
+                "ceapă albă",
+                "onion"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Tăiată cubulețe"
+        },
+        {
+            "ingredientId": 352,
+            "ingredientCategoryId": 2,
+            "name": "fasole roșie",
+            "synonyms": [
+                "fasole la conservă",
+                "red beans"
+            ],
+            "quantity": 400,
+            "unit": "g",
+            "note": "Conservă cu zeamă inclusă"
+        },
+        {
+            "ingredientId": 353,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "oil"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Pentru călirea legumelor"
+        },
+        {
+            "ingredientId": 354,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de bucătărie",
+                "salt"
+            ],
+            "quantity": 1,
+            "unit": "linguriță",
+            "note": "După gust"
+        },
+        {
+            "ingredientId": 355,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "black pepper"
+            ],
+            "quantity": 0.25,
+            "unit": "linguriță",
+            "note": "După gust"
+        },
+        {
+            "ingredientId": 356,
+            "ingredientCategoryId": 1,
+            "name": "făină albă",
+            "synonyms": [
+                "făină de grâu",
+                "făină tip 000"
+            ],
+            "quantity": 770,
+            "unit": "g",
+            "note": "Folosiți făină albă de calitate pentru un miez aerat."
+        },
+        {
+            "ingredientId": 357,
+            "ingredientCategoryId": 1,
+            "name": "drojdie uscată",
+            "synonyms": [
+                "drojdie instant",
+                "drojdie granule"
+            ],
+            "quantity": 2,
+            "unit": "lingurite",
+            "note": "Fermentarea lentă peste noapte intensifică aroma pâinii."
+        },
+        {
+            "ingredientId": 358,
+            "ingredientCategoryId": 11,
+            "name": "apă",
+            "synonyms": [
+                "apă plată",
+                "apă rece"
+            ],
+            "quantity": 500,
+            "unit": "ml",
+            "note": "Apa trebuie să fie la temperatura camerei."
+        },
+        {
+            "ingredientId": 359,
+            "ingredientCategoryId": 9,
+            "name": "ulei de măsline",
+            "synonyms": [
+                "ulei extravirgin",
+                "ulei de măsline presat"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Adăugat pentru textură mai fină și aromă subtilă."
+        },
+        {
+            "ingredientId": 360,
+            "ingredientCategoryId": 1,
+            "name": "malai",
+            "synonyms": [
+                "faina de porumb",
+                "gris de porumb"
+            ],
+            "quantity": 1,
+            "unit": "pahar",
+            "note": "Masurati cu acelasi pahar si apa."
+        },
+        {
+            "ingredientId": 361,
+            "ingredientCategoryId": 11,
+            "name": "apa",
+            "synonyms": [
+                "lichid",
+                "apa potabila"
+            ],
+            "quantity": 3,
+            "unit": "pahar",
+            "note": "Poate fi combinata cu lapte pentru un gust mai bun."
+        },
+        {
+            "ingredientId": 362,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masa",
+                "clorura de sodiu"
+            ],
+            "quantity": 1,
+            "unit": "lingurita",
+            "note": "Se adauga in apa la inceput."
+        },
+        {
+            "ingredientId": 363,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "unt de vaca",
+                "grasime lactata"
+            ],
+            "quantity": 30,
+            "unit": "g",
+            "note": "Optional, se omite in varianta de post."
+        },
+        {
+            "ingredientId": 364,
+            "ingredientCategoryId": 4,
+            "name": "portocale",
+            "synonyms": [
+                "orange",
+                "citrus"
+            ],
+            "quantity": 4,
+            "unit": "buc",
+            "note": "Se folosește atât zeama cât și coaja rasă."
+        },
+        {
+            "ingredientId": 365,
+            "ingredientCategoryId": 4,
+            "name": "lămâie",
+            "synonyms": [
+                "lemon",
+                "citrus"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Se folosește jumătate pentru coajă și suc pentru glazură."
+        },
+        {
+            "ingredientId": 366,
+            "ingredientCategoryId": 5,
+            "name": "zahăr",
+            "synonyms": [
+                "sugar",
+                "dulce"
+            ],
+            "quantity": 150,
+            "unit": "g",
+            "note": "Pentru aluat, oferă dulceața necesară."
+        },
+        {
+            "ingredientId": 367,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "oil",
+                "ulei vegetal"
+            ],
+            "quantity": 80,
+            "unit": "ml",
+            "note": "Pentru frăgezimea aluatului."
+        },
+        {
+            "ingredientId": 368,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "salt",
+                "condiment"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurițe",
+            "note": "Pentru echilibrarea gustului."
+        },
+        {
+            "ingredientId": 369,
+            "ingredientCategoryId": 1,
+            "name": "făină albă",
+            "synonyms": [
+                "flour",
+                "grâu"
+            ],
+            "quantity": 275,
+            "unit": "g",
+            "note": "Baza aluatului, se ajustează consistența."
+        },
+        {
+            "ingredientId": 370,
+            "ingredientCategoryId": 3,
+            "name": "praf de copt",
+            "synonyms": [
+                "baking powder",
+                "agent de creștere"
+            ],
+            "quantity": 10,
+            "unit": "g",
+            "note": "Pentru creșterea și aerarea prăjiturii."
+        },
+        {
+            "ingredientId": 371,
+            "ingredientCategoryId": 5,
+            "name": "zahăr pudră",
+            "synonyms": [
+                "powdered sugar",
+                "icing sugar"
+            ],
+            "quantity": 5,
+            "unit": "linguri",
+            "note": "Pentru glazura de lămâie."
+        },
+        {
+            "ingredientId": 372,
+            "ingredientCategoryId": 7,
+            "name": "macrou",
+            "synonyms": [
+                "scrumbie",
+                "pește oceanic"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Alegeți macrou mare și gras, fără pete sau miros neplăcut."
+        },
+        {
+            "ingredientId": 373,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare grunjoasă",
+                "sare de mare"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Distribuiți uniform pe ambele fileuri."
+        },
+        {
+            "ingredientId": 374,
+            "ingredientCategoryId": 3,
+            "name": "frunză de dafin",
+            "synonyms": [
+                "dafin",
+                "foi de dafin"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Rupeți frunzele în bucăți mici pentru aromă."
+        },
+        {
+            "ingredientId": 375,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "mix piperuri"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurita",
+            "note": "Folosiți mix de piperuri pentru gust intens."
+        },
+        {
+            "ingredientId": 376,
+            "ingredientCategoryId": 3,
+            "name": "coriandru",
+            "synonyms": [
+                "semințe coriandru",
+                "coriandru măcinat"
+            ],
+            "quantity": 5,
+            "unit": "buc",
+            "note": "Boabe sau măcinat, oferă aromă delicată peștelui."
+        },
+        {
+            "ingredientId": 377,
+            "ingredientCategoryId": 2,
+            "name": "dovleac",
+            "synonyms": [
+                "pumpkin",
+                "tărtăcuță"
+            ],
+            "quantity": 700,
+            "unit": "g",
+            "note": "Poate fi înlocuit cu cartofi simpli sau dulci."
+        },
+        {
+            "ingredientId": 378,
+            "ingredientCategoryId": 2,
+            "name": "dovlecel",
+            "synonyms": [
+                "zucchini",
+                "courgette"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Se taie cuburi medii pentru fierbere."
+        },
+        {
+            "ingredientId": 379,
+            "ingredientCategoryId": 2,
+            "name": "ceapă albă",
+            "synonyms": [
+                "ceapă",
+                "onion"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "O ceapă pentru supă, una pentru chifteluțe."
+        },
+        {
+            "ingredientId": 380,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "garlic",
+                "cățeii de usturoi"
+            ],
+            "quantity": 4,
+            "unit": "buc",
+            "note": "Se călește împreună cu ceapa."
+        },
+        {
+            "ingredientId": 381,
+            "ingredientCategoryId": 9,
+            "name": "unt",
+            "synonyms": [
+                "butter",
+                "unt gras"
+            ],
+            "quantity": 30,
+            "unit": "g",
+            "note": "Folosit pentru sotarea legumelor."
+        },
+        {
+            "ingredientId": 382,
+            "ingredientCategoryId": 9,
+            "name": "ulei de măsline",
+            "synonyms": [
+                "olive oil",
+                "ulei extravirgin"
+            ],
+            "quantity": 50,
+            "unit": "ml",
+            "note": "Se combină cu untul pentru sotare."
+        },
+        {
+            "ingredientId": 383,
+            "ingredientCategoryId": 6,
+            "name": "carne de porc/vită",
+            "synonyms": [
+                "meat",
+                "carne tocată"
+            ],
+            "quantity": 600,
+            "unit": "g",
+            "note": "Poate fi înlocuită cu carne de pui sau curcan."
+        },
+        {
+            "ingredientId": 384,
+            "ingredientCategoryId": 8,
+            "name": "ou",
+            "synonyms": [
+                "egg",
+                "ou crud"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Folosit pentru legarea compoziției chifteluțelor."
+        },
+        {
+            "ingredientId": 385,
+            "ingredientCategoryId": 8,
+            "name": "smântână dulce",
+            "synonyms": [
+                "cream",
+                "smântână lichidă"
+            ],
+            "quantity": 200,
+            "unit": "ml",
+            "note": "Se adaugă la final pentru cremozitate."
+        },
+        {
+            "ingredientId": 386,
+            "ingredientCategoryId": 3,
+            "name": "pătrunjel",
+            "synonyms": [
+                "parsley",
+                "verdețuri"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Se adaugă în chifteluțe și la final în supă."
+        },
+        {
+            "ingredientId": 387,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "salt",
+                "sare de bucătărie"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Pentru asezonarea supei și chifteluțelor."
+        },
+        {
+            "ingredientId": 388,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "black pepper",
+                "piper măcinat"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurițe",
+            "note": "Se adaugă la final pentru aromă."
+        },
+        {
+            "ingredientId": 389,
+            "ingredientCategoryId": 10,
+            "name": "semințe de dovleac",
+            "synonyms": [
+                "pumpkin seeds",
+                "semințe prăjite"
+            ],
+            "quantity": 100,
+            "unit": "g",
+            "note": "Opționale, pentru servire și ornare."
+        },
+        {
+            "ingredientId": 390,
+            "ingredientCategoryId": 6,
+            "name": "pulpe de pui",
+            "synonyms": [
+                "carne de pui",
+                "pui dezosat"
+            ],
+            "quantity": 750,
+            "unit": "g",
+            "note": "Folosiți carne dezosată fără piele pentru textură fină."
+        },
+        {
+            "ingredientId": 391,
+            "ingredientCategoryId": 2,
+            "name": "usturoi",
+            "synonyms": [
+                "cățeii de usturoi",
+                "allium sativum"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Adăugați împreună cu carnea la tocat."
+        },
+        {
+            "ingredientId": 392,
+            "ingredientCategoryId": 8,
+            "name": "ouă",
+            "synonyms": [
+                "ou de găină",
+                "ou crud"
+            ],
+            "quantity": 3,
+            "unit": "buc",
+            "note": "Contribuie la legarea compoziției."
+        },
+        {
+            "ingredientId": 393,
+            "ingredientCategoryId": 8,
+            "name": "smântână dulce",
+            "synonyms": [
+                "smântână pentru gătit",
+                "creme fraiche"
+            ],
+            "quantity": 250,
+            "unit": "ml",
+            "note": "Asigură cremozitate și textură elastică."
+        },
+        {
+            "ingredientId": 394,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de bucătărie",
+                "clorură de sodiu"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Pentru gust echilibrat."
+        },
+        {
+            "ingredientId": 395,
+            "ingredientCategoryId": 3,
+            "name": "piper negru",
+            "synonyms": [
+                "piper măcinat",
+                "condiment piper"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurita",
+            "note": "Adaugă aromă subtilă."
+        },
+        {
+            "ingredientId": 396,
+            "ingredientCategoryId": 2,
+            "name": "suc de sfeclă",
+            "synonyms": [
+                "sfeclă roșie",
+                "boia de ardei"
+            ],
+            "quantity": 4,
+            "unit": "linguri",
+            "note": "Pentru culoare rozalie naturală."
+        },
+        {
+            "ingredientId": 397,
+            "ingredientCategoryId": 6,
+            "name": "pui întreg",
+            "synonyms": [
+                "carne de pui",
+                "pui tranșat"
+            ],
+            "quantity": 2000,
+            "unit": "g",
+            "note": "Folosiți pui crescut lent pentru gust complet."
+        },
+        {
+            "ingredientId": 398,
+            "ingredientCategoryId": 8,
+            "name": "ouă",
+            "synonyms": [
+                "ou de găină",
+                "ou crud"
+            ],
+            "quantity": 5,
+            "unit": "buc",
+            "note": "Se bat bine și se transformă în clătite subțiri."
+        },
+        {
+            "ingredientId": 399,
+            "ingredientCategoryId": 2,
+            "name": "țelină",
+            "synonyms": [
+                "rădăcină țelină",
+                "apio"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Adăugată întreagă pentru aromă."
+        },
+        {
+            "ingredientId": 400,
+            "ingredientCategoryId": 2,
+            "name": "ceapă",
+            "synonyms": [
+                "ceapă albă",
+                "ceapă galbenă"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Una întreagă la fiert, alta tocată fin la final."
+        },
+        {
+            "ingredientId": 401,
+            "ingredientCategoryId": 2,
+            "name": "ardei gras",
+            "synonyms": [
+                "ardei dulce",
+                "ardei roșu"
+            ],
+            "quantity": 1,
+            "unit": "buc",
+            "note": "Se adaugă pentru gust și culoare."
+        },
+        {
+            "ingredientId": 402,
+            "ingredientCategoryId": 9,
+            "name": "ulei",
+            "synonyms": [
+                "ulei vegetal",
+                "ulei floarea soarelui"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Pentru prăjirea clătitelor din ou."
+        },
+        {
+            "ingredientId": 403,
+            "ingredientCategoryId": 3,
+            "name": "pătrunjel verde",
+            "synonyms": [
+                "pătrunjel tocat",
+                "frunze pătrunjel"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Adăugat la final pentru prospețime."
+        },
+        {
+            "ingredientId": 404,
+            "ingredientCategoryId": 3,
+            "name": "frunză de dafin",
+            "synonyms": [
+                "dafin",
+                "foi de dafin"
+            ],
+            "quantity": 2,
+            "unit": "buc",
+            "note": "Pentru aromă subtilă."
+        },
+        {
+            "ingredientId": 405,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare de masă",
+                "sare grunjoasă"
+            ],
+            "quantity": 1,
+            "unit": "lingura",
+            "note": "Se potrivește după gust la final."
+        },
+        {
+            "ingredientId": 406,
+            "ingredientCategoryId": 4,
+            "name": "banane",
+            "synonyms": [
+                "banana",
+                "fruct bananier"
+            ],
+            "quantity": 380,
+            "unit": "g",
+            "note": "Folosiți banane bine coapte pentru aromă intensă."
+        },
+        {
+            "ingredientId": 407,
+            "ingredientCategoryId": 9,
+            "name": "ulei de cocos",
+            "synonyms": [
+                "coconut oil",
+                "grăsime de cocos"
+            ],
+            "quantity": 60,
+            "unit": "g",
+            "note": "Topiți uleiul înainte de a-l adăuga în aluat."
+        },
+        {
+            "ingredientId": 408,
+            "ingredientCategoryId": 1,
+            "name": "făină",
+            "synonyms": [
+                "faina alba",
+                "faina de grau"
+            ],
+            "quantity": 190,
+            "unit": "g",
+            "note": "Adăugați treptat pentru a evita cocoloașele."
+        },
+        {
+            "ingredientId": 409,
+            "ingredientCategoryId": 10,
+            "name": "semințe de in",
+            "synonyms": [
+                "in măcinat",
+                "flaxseed"
+            ],
+            "quantity": 40,
+            "unit": "g",
+            "note": "Înlocuiesc ouăle și adaugă nutrienți."
+        },
+        {
+            "ingredientId": 410,
+            "ingredientCategoryId": 3,
+            "name": "praf de copt",
+            "synonyms": [
+                "baking powder",
+                "agent de dospire"
+            ],
+            "quantity": 2,
+            "unit": "lingurite",
+            "note": "Ajută prăjitura să crească uniform."
+        },
+        {
+            "ingredientId": 411,
+            "ingredientCategoryId": 3,
+            "name": "scorțișoară",
+            "synonyms": [
+                "cinnamon",
+                "condiment aromat"
+            ],
+            "quantity": 1.5,
+            "unit": "lingurite",
+            "note": "Oferă aromă caldă și plăcută desertului."
+        },
+        {
+            "ingredientId": 412,
+            "ingredientCategoryId": 5,
+            "name": "zahăr brut",
+            "synonyms": [
+                "zahar brun",
+                "raw sugar"
+            ],
+            "quantity": 2,
+            "unit": "linguri",
+            "note": "Adăugați pentru dulceață moderată."
+        },
+        {
+            "ingredientId": 413,
+            "ingredientCategoryId": 11,
+            "name": "lapte vegan",
+            "synonyms": [
+                "lapte vegetal",
+                "plant milk"
+            ],
+            "quantity": 60,
+            "unit": "ml",
+            "note": "Folosiți lapte de migdale sau soia."
+        },
+        {
+            "ingredientId": 414,
+            "ingredientCategoryId": 3,
+            "name": "sare",
+            "synonyms": [
+                "sare fina",
+                "salt"
+            ],
+            "quantity": 0.25,
+            "unit": "lingurite",
+            "note": "Un vârf de cuțit pentru echilibrarea gustului."
+        }
+    ]
+}

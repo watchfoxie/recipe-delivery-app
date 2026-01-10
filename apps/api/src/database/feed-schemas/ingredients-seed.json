@@ -1,0 +1,3319 @@
+[
+  {
+    "ingredientCategoryId": 6,
+    "name": "carne de pui",
+    "synonyms": [
+      "pulpe pui",
+      "piept pui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "ficăței de pui",
+    "synonyms": [
+      "ficat pui",
+      "organe pui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă",
+    "synonyms": [
+      "ceapă galbenă",
+      "ceapă albă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt gras",
+      "unt dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ou",
+    "synonyms": [
+      "ou crud",
+      "ou proaspăt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "smântână dulce",
+    "synonyms": [
+      "smântână pentru gătit",
+      "smântână lichidă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fină",
+      "sare de bucătărie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "piper pudră"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "cimbru",
+    "synonyms": [
+      "cimbru verde",
+      "cimbru proaspăt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "merișoare uscate",
+    "synonyms": [
+      "cranberries",
+      "merișoare"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "fistic",
+    "synonyms": [
+      "fistic crud",
+      "fistic decojit"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "bacon",
+    "synonyms": [
+      "șuncă afumată",
+      "slănină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "pulpe de pui",
+    "synonyms": [
+      "carne de pui",
+      "bucăți de pui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "faina alba",
+    "synonyms": [
+      "faina",
+      "faina de grau"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fina",
+      "sare de masa"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "boia",
+    "synonyms": [
+      "boia dulce",
+      "boia iute"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper macinat",
+      "condiment piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "salvie uscata",
+    "synonyms": [
+      "salvie",
+      "condiment salvie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt nesarat",
+      "grasime unt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "pulpe de pui",
+    "synonyms": [
+      "piept de pui",
+      "carne de pui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "iaurt",
+    "synonyms": [
+      "iaurt natural",
+      "yogurt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă",
+    "synonyms": [
+      "ceapă galbenă",
+      "onion"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii de usturoi",
+      "garlic"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "ghimbir",
+    "synonyms": [
+      "ghimbir ras",
+      "ginger"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "roșii cubulețe",
+    "synonyms": [
+      "roșii conservă",
+      "tomatoes"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "smântână dulce",
+    "synonyms": [
+      "frișcă lichidă",
+      "cream"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "butter",
+      "margarina"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "condimente indiene",
+    "synonyms": [
+      "garam masala",
+      "turmeric",
+      "coriandru"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "paste",
+    "synonyms": [
+      "spaghete",
+      "penne"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "piept de pui",
+    "synonyms": [
+      "carne de pui",
+      "file pui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sos pesto",
+    "synonyms": [
+      "pesto verde",
+      "sos busuioc"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "smântână dulce",
+    "synonyms": [
+      "smântână lichidă",
+      "smântână pentru gătit"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă",
+    "synonyms": [
+      "ceapă albă",
+      "ceapă galbenă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii usturoi",
+      "usturoi alb"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "roșii cherry",
+    "synonyms": [
+      "roșii mici",
+      "tomate cherry"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "pătrunjel",
+    "synonyms": [
+      "pătrunjel verde",
+      "frunze pătrunjel"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "parmezan",
+    "synonyms": [
+      "brânză parmezan",
+      "parmigiano"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "ulei floarea soarelui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare albă",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "piper pudră"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "slănină",
+    "synonyms": [
+      "salo",
+      "bacon crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare grunjoasă",
+      "sare de murături"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "condiment piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "condimente opționale",
+    "synonyms": [
+      "coriandru",
+      "boia",
+      "usturoi uscat",
+      "frunze de dafin"
+    ]
+  },
+  {
+    "ingredientCategoryId": 7,
+    "name": "Păstrăv proaspăt",
+    "synonyms": [
+      "trout",
+      "pește păstrăv"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "Sare",
+    "synonyms": [
+      "sare de masă",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "Pătrunjel uscat",
+    "synonyms": [
+      "pătrunjel",
+      "verdețuri"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "Ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "ulei de floarea-soarelui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "foi de plăcintă",
+    "synonyms": [
+      "foi filo",
+      "foi aluat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 7,
+    "name": "creveți",
+    "synonyms": [
+      "shrimp",
+      "gamberi"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "varză albă",
+    "synonyms": [
+      "varză",
+      "cabbage"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "morcovi",
+    "synonyms": [
+      "carrot",
+      "morcov"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă verde",
+    "synonyms": [
+      "spring onion",
+      "scallion"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "garlic",
+      "cățeii de usturoi"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ciuperci shiitake",
+    "synonyms": [
+      "shiitake",
+      "ciuperci uscate"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "oil"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sos de soia",
+    "synonyms": [
+      "soy sauce",
+      "shoyu"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ou",
+    "synonyms": [
+      "egg",
+      "ou crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 7,
+    "name": "pește",
+    "synonyms": [
+      "crap",
+      "păstrăv",
+      "novac",
+      "biban"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ardei gras",
+    "synonyms": [
+      "ardei",
+      "ardei dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă albă",
+    "synonyms": [
+      "ceapă",
+      "ceapă galbenă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "roșii cubulețe",
+    "synonyms": [
+      "roșii conservă",
+      "roșii tocate"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii de usturoi",
+      "usturoi alb"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "ulei de floarea-soarelui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "vin alb demisec",
+    "synonyms": [
+      "vin alb",
+      "vin de gătit"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare albă",
+      "sare de masă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "boia de ardei dulce",
+    "synonyms": [
+      "boia",
+      "paprika"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru măcinat",
+    "synonyms": [
+      "piper",
+      "piper măcinat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 7,
+    "name": "crap",
+    "synonyms": [
+      "pește crap",
+      "carp"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "lămâie",
+    "synonyms": [
+      "lamaie",
+      "lemon"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "catei usturoi",
+      "garlic"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de bucatarie",
+      "salt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei de floarea soarelui",
+      "oil"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "smântână",
+    "synonyms": [
+      "maioneza",
+      "cream"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "cașcaval",
+    "synonyms": [
+      "branza tare",
+      "cheese"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "verdeata",
+    "synonyms": [
+      "patrunjel",
+      "marar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 7,
+    "name": "păstrăv proaspăt",
+    "synonyms": [
+      "trout",
+      "peste pastrav"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină albă",
+    "synonyms": [
+      "faina",
+      "white flour"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "salt",
+      "sodium chloride"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "mirodenii uscate",
+    "synonyms": [
+      "condimente",
+      "herbs"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de floarea-soarelui",
+    "synonyms": [
+      "ulei",
+      "sunflower oil"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "butter",
+      "unt gras"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "morcovi",
+    "synonyms": [
+      "morcov",
+      "carotă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "cașcaval",
+    "synonyms": [
+      "brânză tare",
+      "cheddar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "maioneză",
+    "synonyms": [
+      "sos maioneză",
+      "dressing maioneză"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii de usturoi",
+      "garlic"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "sodium chloride"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "black pepper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "varză albă",
+    "synonyms": [
+      "varza",
+      "cabbage"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă verde",
+    "synonyms": [
+      "ceapa",
+      "spring onion"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "pătrunjel verde",
+    "synonyms": [
+      "patrunjel",
+      "parsley"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "catei usturoi",
+      "garlic"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "lămâie",
+    "synonyms": [
+      "lamaie",
+      "lemon"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de măsline",
+    "synonyms": [
+      "ulei masline",
+      "olive oil"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sarea",
+      "salt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "mentă",
+    "synonyms": [
+      "menta uscata",
+      "mint"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "varză murată",
+    "synonyms": [
+      "varză acră",
+      "varză fermentată"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "castraveți murați",
+    "synonyms": [
+      "castraveți în saramură",
+      "castraveți în oțet"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "gogoșari murați",
+    "synonyms": [
+      "ardei murați",
+      "ardei în oțet"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "gogonele murate",
+    "synonyms": [
+      "roșii verzi murate",
+      "tomate murate"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă murată",
+    "synonyms": [
+      "ceapă marinată",
+      "ceapă acră"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă albă",
+    "synonyms": [
+      "ceapă crudă",
+      "ceapă proaspătă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei de floarea soarelui",
+      "ulei vegetal"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "condiment piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "mărar verde",
+    "synonyms": [
+      "mărar proaspăt",
+      "frunze de mărar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "varză albă",
+    "synonyms": [
+      "varza",
+      "cabbage"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "morcovi",
+    "synonyms": [
+      "morcov",
+      "carrot"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "sfeclă roșie",
+    "synonyms": [
+      "sfecla",
+      "beetroot"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "rădăcină de țelină",
+    "synonyms": [
+      "telina",
+      "celery-root"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "castraveți",
+    "synonyms": [
+      "castravete",
+      "cucumber"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ardei gras roșu",
+    "synonyms": [
+      "ardei rosu",
+      "red-pepper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă",
+    "synonyms": [
+      "ceapa",
+      "onion"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de măsline extravirgin",
+    "synonyms": [
+      "ulei masline",
+      "olive-oil"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "oțet de mere",
+    "synonyms": [
+      "otet",
+      "vinegar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sarea",
+      "salt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "sfeclă roșie",
+    "synonyms": [
+      "sfeclă",
+      "beetroot"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "fasole albă",
+    "synonyms": [
+      "fasole uscată",
+      "white beans"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "prune uscate",
+    "synonyms": [
+      "prune fără sâmburi",
+      "dried plums"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii de usturoi",
+      "garlic"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei floarea-soarelui",
+    "synonyms": [
+      "ulei vegetal",
+      "sunflower oil"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "salt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper",
+    "synonyms": [
+      "piper negru",
+      "black pepper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "naut fiert",
+    "synonyms": [
+      "chickpeas",
+      "garbanzo"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "dovleac",
+    "synonyms": [
+      "pumpkin",
+      "squash"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "garlic",
+      "cloves"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "zeama lamaie",
+    "synonyms": [
+      "lemon juice",
+      "citrus"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "tahini",
+    "synonyms": [
+      "pasta susan",
+      "sesame paste"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei masline",
+    "synonyms": [
+      "olive oil",
+      "extra virgin"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "salt",
+      "sea salt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "oregano uscat",
+    "synonyms": [
+      "oregano",
+      "herbs"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi pudra",
+    "synonyms": [
+      "garlic powder",
+      "granulated garlic"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "seminte susan",
+    "synonyms": [
+      "sesame seeds",
+      "susam"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "seminte dovleac",
+    "synonyms": [
+      "pumpkin seeds",
+      "pepitas"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "chimion pudra",
+    "synonyms": [
+      "cumin powder",
+      "jeera"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "boia ardei",
+    "synonyms": [
+      "paprika",
+      "chili powder"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "turmeric",
+    "synonyms": [
+      "curcuma",
+      "yellow spice"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "ulei floarea-soarelui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "oua",
+    "synonyms": [
+      "ouă de găină",
+      "ou crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "iaurt",
+    "synonyms": [
+      "lapte bătut",
+      "chefir"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "spanac",
+    "synonyms": [
+      "frunze de spanac",
+      "baby spanac"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapa",
+    "synonyms": [
+      "ceapă albă",
+      "ceapă galbenă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii de usturoi",
+      "usturoi crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "faina alba",
+    "synonyms": [
+      "făină de grâu",
+      "făină albă tip 000"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "praf de copt",
+    "synonyms": [
+      "agent de dospire",
+      "bicarbonat cu acid"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "branza feta",
+    "synonyms": [
+      "telemea",
+      "brânză maturată"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "sparanghel",
+    "synonyms": [
+      "asparagus",
+      "sparanghel verde"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "butter",
+      "unt nesărat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de măsline",
+    "synonyms": [
+      "olive oil",
+      "ulei extravirgin"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "salt",
+      "sare de mare"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "cartofi",
+    "synonyms": [
+      "cartofi albi",
+      "cartofi galbeni"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "ulei de floarea-soarelui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "boia dulce",
+    "synonyms": [
+      "boia ardei",
+      "paprika"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi granulat",
+    "synonyms": [
+      "praf de usturoi",
+      "usturoi pudră"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "fasole verde",
+    "synonyms": [
+      "păstăi verzi",
+      "fasole păstăi galbenă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "maioneză",
+    "synonyms": [
+      "maioneză de casă",
+      "maioneză de post"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii de usturoi",
+      "usturoi pisat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "faina alba",
+    "synonyms": [
+      "faina",
+      "faina de grau"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "apa",
+    "synonyms": [
+      "apa plata",
+      "lichid"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei masline",
+    "synonyms": [
+      "ulei de masline",
+      "ulei extravirgin"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fina",
+      "condiment"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt moale",
+      "grasime"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "spanac verde",
+    "synonyms": [
+      "spanac",
+      "frunze spanac"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "marar",
+    "synonyms": [
+      "verdeata",
+      "marar proaspat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapa verde",
+    "synonyms": [
+      "ceapa",
+      "ceapa proaspata"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "menta verde",
+    "synonyms": [
+      "menta",
+      "frunze menta"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "branza feta",
+    "synonyms": [
+      "feta",
+      "telemea"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "oua",
+    "synonyms": [
+      "ou",
+      "oua proaspete"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper",
+      "condiment"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "drojdie",
+    "synonyms": [
+      "drojdie uscată",
+      "drojdie proaspătă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr",
+    "synonyms": [
+      "zahăr alb",
+      "zahăr tos"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "apă",
+    "synonyms": [
+      "apă caldă",
+      "apă plată"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "lapte",
+    "synonyms": [
+      "lapte dulce",
+      "lapte integral"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fină",
+      "sare de bucătărie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei de floarea-soarelui",
+      "ulei vegetal"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină albă",
+    "synonyms": [
+      "făină de grâu",
+      "făină tip 000"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "cașcaval",
+    "synonyms": [
+      "brânză tare",
+      "brânză galbenă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "brânză feta",
+    "synonyms": [
+      "telemea",
+      "brânză sărată"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ouă",
+    "synonyms": [
+      "ou crud",
+      "gălbenuș"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt nesărat",
+      "unt gras"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "faina alba",
+    "synonyms": [
+      "faina superioara",
+      "faina de grau"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fina",
+      "clorura de sodiu"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "otet",
+    "synonyms": [
+      "otet alb",
+      "otet de masa"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "apa calda",
+    "synonyms": [
+      "apa calduta",
+      "apa incalzita"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt gras",
+      "unt moale"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "branza de vaci",
+    "synonyms": [
+      "branza proaspata",
+      "cottage cheese"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "telemea",
+    "synonyms": [
+      "branza sarata",
+      "feta romaneasca"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ou",
+    "synonyms": [
+      "ou crud",
+      "ou de gaina"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "varză albă",
+    "synonyms": [
+      "varză dulce",
+      "varză proaspătă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă albă",
+    "synonyms": [
+      "ceapă",
+      "ceapă comună"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei de floarea-soarelui",
+      "ulei vegetal"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de bucătărie",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ouă",
+    "synonyms": [
+      "ou",
+      "ou crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "lapte bătut",
+    "synonyms": [
+      "iaurt",
+      "chefir"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr",
+    "synonyms": [
+      "zahăr alb",
+      "zahăr tos"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "drojdie instant",
+    "synonyms": [
+      "drojdie uscată",
+      "drojdie rapidă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină albă",
+    "synonyms": [
+      "făină",
+      "făină de grâu"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "aluat foietaj",
+    "synonyms": [
+      "foietaj",
+      "aluat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "telemea",
+    "synonyms": [
+      "branza telemea",
+      "branza sarata"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ou",
+    "synonyms": [
+      "ou crud",
+      "ou batut"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "susan",
+    "synonyms": [
+      "mac",
+      "seminte susan"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "aluat de pizza",
+    "synonyms": [
+      "aluat",
+      "bază pizza"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sos pesto",
+    "synonyms": [
+      "pesto verde",
+      "pesto genovese"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "piept de pui",
+    "synonyms": [
+      "carne de pui",
+      "file pui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "mozzarella",
+    "synonyms": [
+      "cașcaval mozzarella",
+      "brânză mozzarella"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "aluat pizza",
+    "synonyms": [
+      "aluat clasic",
+      "aluat italian"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "kebab pui",
+    "synonyms": [
+      "carne kebab",
+      "pui kebab"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sos roșii",
+    "synonyms": [
+      "sos pizza",
+      "sos paste"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "mozzarella",
+    "synonyms": [
+      "cașcaval mozzarella",
+      "brânză mozzarella"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ardei",
+    "synonyms": [
+      "ardei gras",
+      "ardei iute"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "iaurt cremos",
+    "synonyms": [
+      "iaurt natural",
+      "iaurt gras"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "maioneză",
+    "synonyms": [
+      "maioneză clasică",
+      "maioneză de casă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii usturoi",
+      "usturoi pisat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fină",
+      "sare de bucătărie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "maia de secara",
+    "synonyms": [
+      "starter",
+      "maia naturala"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "apa",
+    "synonyms": [
+      "apa plata",
+      "lichid"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "faina alba",
+    "synonyms": [
+      "faina superioara",
+      "faina de grau"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fina",
+      "condiment"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahar",
+    "synonyms": [
+      "zahar alb",
+      "indulcitor"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de masline",
+    "synonyms": [
+      "ulei extravirgin",
+      "ulei vegetal"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "cascaval",
+    "synonyms": [
+      "mozzarella",
+      "branza topita"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sos de rosii",
+    "synonyms": [
+      "sos pizza",
+      "passata"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "faina alba",
+    "synonyms": [
+      "faina superioara",
+      "faina manitoba"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare fina",
+    "synonyms": [
+      "sare de masa",
+      "sare alimentara"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "drojdie uscata",
+    "synonyms": [
+      "drojdie proaspata",
+      "ferment"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "apa calda",
+    "synonyms": [
+      "apa potabila",
+      "apa usor incalzita"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei masline",
+    "synonyms": [
+      "ulei extravirgin",
+      "ulei vegetal"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sos rosii",
+    "synonyms": [
+      "sos marinara",
+      "sos pizza"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "topping pizza",
+    "synonyms": [
+      "sunca",
+      "ciuperci"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "mozzarella",
+    "synonyms": [
+      "cascaval",
+      "branza topita"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "gris grau",
+    "synonyms": [
+      "gris fin",
+      "gris alimentar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "aluat de pizza",
+    "synonyms": [
+      "blat pizza",
+      "pasta aluat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sos de roșii",
+    "synonyms": [
+      "sos marinara",
+      "sos pizza"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "cașcaval",
+    "synonyms": [
+      "brânză galbenă",
+      "mozzarella"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "brânză feta",
+    "synonyms": [
+      "feta",
+      "brânză grecească"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "măsline",
+    "synonyms": [
+      "masline negre",
+      "masline verzi"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "roșii cherry",
+    "synonyms": [
+      "roșii mici",
+      "tomate cherry"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de măsline",
+    "synonyms": [
+      "ulei extravirgin",
+      "ulei grecesc"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "oregano uscat",
+    "synonyms": [
+      "oregano",
+      "condiment oregano"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "carne de porc",
+    "synonyms": [
+      "pulpă porc",
+      "carne porc"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "slănină",
+    "synonyms": [
+      "grăsime porc",
+      "slanina"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii usturoi",
+      "usturoi alb"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare grunjoasă",
+      "sare de bucătărie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "coriandru",
+    "synonyms": [
+      "semințe coriandru",
+      "coriandru măcinat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "mațe de porc",
+    "synonyms": [
+      "intestine porc",
+      "mațe curățate"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "muștar",
+    "synonyms": [
+      "muștar clasic",
+      "condiment muștar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ciuperci albe",
+    "synonyms": [
+      "champignon",
+      "ciuperci proaspete"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "carne de pui",
+    "synonyms": [
+      "piept de pui",
+      "carne albă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă albă",
+    "synonyms": [
+      "ceapă",
+      "ceapă comună"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "cașcaval clasic",
+    "synonyms": [
+      "brânză tare",
+      "cașcaval ras"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "pătrunjel verde",
+    "synonyms": [
+      "verdețuri",
+      "pătrunjel proaspăt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "maioneză",
+    "synonyms": [
+      "maioneză de casă",
+      "sos maioneză"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "condiment piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de bucătărie",
+      "condiment sare"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "mazăre verde",
+    "synonyms": [
+      "mazăre la conservă",
+      "mazăre boabe"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "piept de pui",
+    "synonyms": [
+      "carne de pui fiartă",
+      "pastramă de pui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "morcovi",
+    "synonyms": [
+      "morcov proaspăt",
+      "legumă rădăcinoasă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă albă",
+    "synonyms": [
+      "ceapă",
+      "ceapă dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "maioneză",
+    "synonyms": [
+      "sos maioneză",
+      "maioneză clasică"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr",
+    "synonyms": [
+      "zahăr alb",
+      "zahăr tos"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "oțet",
+    "synonyms": [
+      "oțet alb",
+      "oțet de masă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "ceafă de porc",
+    "synonyms": [
+      "carne de porc",
+      "cotlet de porc"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă",
+    "synonyms": [
+      "ceapă albă",
+      "ceapă galbenă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "margarina",
+      "grăsime"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sos de soia",
+    "synonyms": [
+      "soia",
+      "condiment lichid"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "oțet de mere",
+    "synonyms": [
+      "oțet",
+      "acidifiant"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru măcinat",
+    "synonyms": [
+      "piper",
+      "condiment piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi granulat",
+    "synonyms": [
+      "usturoi praf",
+      "usturoi pisat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "ulei de floarea-soarelui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ouă",
+    "synonyms": [
+      "ou",
+      "ouă de găină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr",
+    "synonyms": [
+      "zahăr alb",
+      "zahăr tos"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt dulce",
+      "unt nesărat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "iaurt",
+    "synonyms": [
+      "lapte bătut",
+      "chefir"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină albă",
+    "synonyms": [
+      "făină de grâu",
+      "făină tip 000"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "esență de vanilie",
+    "synonyms": [
+      "vanilie lichidă",
+      "extract de vanilie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fină",
+      "sare de bucătărie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "praf de copt",
+    "synonyms": [
+      "agent de dospire",
+      "bicarbonat cu acid"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "cacao",
+    "synonyms": [
+      "pudră de cacao",
+      "cacao amară"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "dulceață",
+    "synonyms": [
+      "gem",
+      "marmeladă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr pudră",
+    "synonyms": [
+      "zahăr farin",
+      "zahăr pudră vanilat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "carne de porc",
+    "synonyms": [
+      "ceafă porc",
+      "carne tocată porc"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "slănină",
+    "synonyms": [
+      "grăsime porc",
+      "slanina"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă",
+    "synonyms": [
+      "ceapă albă",
+      "ceapă galbenă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ouă",
+    "synonyms": [
+      "ou crud",
+      "ou proaspăt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt nesărat",
+      "unt de masă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de măsline",
+    "synonyms": [
+      "ulei extravirgin",
+      "ulei masline"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "varza alba",
+    "synonyms": [
+      "varza dulce",
+      "frunze de varza"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "piept de pui",
+    "synonyms": [
+      "carne de pui",
+      "carne alba"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "morcovi",
+    "synonyms": [
+      "morcov",
+      "legume dulci"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapa alba",
+    "synonyms": [
+      "ceapa",
+      "ceapa galbena"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "pasta de tomate",
+    "synonyms": [
+      "suc de rosii",
+      "rosii cubulete"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "orez",
+    "synonyms": [
+      "orez rotund",
+      "orez colosal"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "marar verde",
+    "synonyms": [
+      "frunze de marar",
+      "verdeata"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei floarea-soarelui",
+    "synonyms": [
+      "ulei vegetal",
+      "ulei rafinat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "boia dulce",
+    "synonyms": [
+      "boia ardei",
+      "paprika"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper macinat",
+      "condiment piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masa",
+      "sare fina"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină albă",
+    "synonyms": [
+      "făină",
+      "manitoba"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "lapte",
+    "synonyms": [
+      "lapte integral",
+      "lapte dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "drojdie proaspătă",
+    "synonyms": [
+      "drojdie",
+      "yeast"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr",
+    "synonyms": [
+      "zahăr alb",
+      "dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "stafide",
+    "synonyms": [
+      "raisin",
+      "smochine uscate"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "rom",
+    "synonyms": [
+      "alcool rom",
+      "rom brun"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "gălbenușuri",
+    "synonyms": [
+      "ouă",
+      "galbenus"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "butter",
+      "unt gras"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "miere",
+    "synonyms": [
+      "honey",
+      "miere naturală"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "coajă de portocală confiată",
+    "synonyms": [
+      "portocală confiată",
+      "candied orange"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "gelatină",
+    "synonyms": [
+      "gelatină pudră",
+      "gelatină alimentară"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "suc de portocale",
+    "synonyms": [
+      "juice",
+      "orange juice"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "lapte",
+    "synonyms": [
+      "milk",
+      "lapte dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "drojdie uscată",
+    "synonyms": [
+      "yeast",
+      "drojdie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ouă",
+    "synonyms": [
+      "eggs",
+      "ou"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr",
+    "synonyms": [
+      "sugar",
+      "zahar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "piure de dovleac",
+    "synonyms": [
+      "pumpkin puree",
+      "piure dovleac"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "butter",
+      "unt gras"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "esență de vanilie",
+    "synonyms": [
+      "vanilla extract",
+      "vanilie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "salt",
+      "sare fina"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină albă",
+    "synonyms": [
+      "flour",
+      "faina"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "scorțișoară măcinată",
+    "synonyms": [
+      "cinnamon",
+      "scortisoara"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "nuci tocate",
+    "synonyms": [
+      "nuts",
+      "nuci"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "gălbenuș de ou",
+    "synonyms": [
+      "egg yolk",
+      "galbenus"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "faina alba",
+    "synonyms": [
+      "faina de grau",
+      "faina superioara"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "branza vaci",
+    "synonyms": [
+      "branza dulce",
+      "cottage cheese"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "oua",
+    "synonyms": [
+      "ou",
+      "ou crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahar",
+    "synonyms": [
+      "zahar alb",
+      "dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "lapte",
+    "synonyms": [
+      "lapte dulce",
+      "lapte integral"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt topit",
+      "butter"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "stafide",
+    "synonyms": [
+      "raisins",
+      "merișoare confiate"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "conopidă",
+    "synonyms": [
+      "conopida",
+      "varză albă crudă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "dovleac",
+    "synonyms": [
+      "pumpkin",
+      "tărtăcuță"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ciuperci albe",
+    "synonyms": [
+      "champignon",
+      "ciuperci proaspete"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ardei gras roșu",
+    "synonyms": [
+      "ardei roșu",
+      "ardei dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "spanac",
+    "synonyms": [
+      "baby spanac",
+      "frunze verzi"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "pătrunjel verde",
+    "synonyms": [
+      "pătrunjel",
+      "verdețuri"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă verde",
+    "synonyms": [
+      "ceapă tânără",
+      "ceapă proaspătă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "semințe de dovleac",
+    "synonyms": [
+      "semințe crude",
+      "semințe prăjite"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "lămâie",
+    "synonyms": [
+      "zeamă de lămâie",
+      "citrice"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de măsline",
+    "synonyms": [
+      "ulei extravirgin",
+      "ulei vegetal"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii de usturoi",
+      "allium"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "sare fină"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "condiment"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "sfecla roșie",
+    "synonyms": [
+      "sfeclă",
+      "beetroot"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "morcovi",
+    "synonyms": [
+      "morcov",
+      "carrot"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă",
+    "synonyms": [
+      "ceapă albă",
+      "onion"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "fasole roșie",
+    "synonyms": [
+      "fasole la conservă",
+      "red beans"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "oil"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de bucătărie",
+      "salt"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "black pepper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină albă",
+    "synonyms": [
+      "făină de grâu",
+      "făină tip 000"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "drojdie uscată",
+    "synonyms": [
+      "drojdie instant",
+      "drojdie granule"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "apă",
+    "synonyms": [
+      "apă plată",
+      "apă rece"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de măsline",
+    "synonyms": [
+      "ulei extravirgin",
+      "ulei de măsline presat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "malai",
+    "synonyms": [
+      "faina de porumb",
+      "gris de porumb"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "apa",
+    "synonyms": [
+      "lichid",
+      "apa potabila"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masa",
+      "clorura de sodiu"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "unt de vaca",
+      "grasime lactata"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "portocale",
+    "synonyms": [
+      "orange",
+      "citrus"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "lămâie",
+    "synonyms": [
+      "lemon",
+      "citrus"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr",
+    "synonyms": [
+      "sugar",
+      "dulce"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "oil",
+      "ulei vegetal"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "salt",
+      "condiment"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină albă",
+    "synonyms": [
+      "flour",
+      "grâu"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "praf de copt",
+    "synonyms": [
+      "baking powder",
+      "agent de creștere"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr pudră",
+    "synonyms": [
+      "powdered sugar",
+      "icing sugar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 7,
+    "name": "macrou",
+    "synonyms": [
+      "scrumbie",
+      "pește oceanic"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare grunjoasă",
+      "sare de mare"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "frunză de dafin",
+    "synonyms": [
+      "dafin",
+      "foi de dafin"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "mix piperuri"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "coriandru",
+    "synonyms": [
+      "semințe coriandru",
+      "coriandru măcinat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "dovleac",
+    "synonyms": [
+      "pumpkin",
+      "tărtăcuță"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "dovlecel",
+    "synonyms": [
+      "zucchini",
+      "courgette"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă albă",
+    "synonyms": [
+      "ceapă",
+      "onion"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "garlic",
+      "cățeii de usturoi"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "unt",
+    "synonyms": [
+      "butter",
+      "unt gras"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de măsline",
+    "synonyms": [
+      "olive oil",
+      "ulei extravirgin"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "carne de porc/vită",
+    "synonyms": [
+      "meat",
+      "carne tocată"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ou",
+    "synonyms": [
+      "egg",
+      "ou crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "smântână dulce",
+    "synonyms": [
+      "cream",
+      "smântână lichidă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "pătrunjel",
+    "synonyms": [
+      "parsley",
+      "verdețuri"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "salt",
+      "sare de bucătărie"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "black pepper",
+      "piper măcinat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "semințe de dovleac",
+    "synonyms": [
+      "pumpkin seeds",
+      "semințe prăjite"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "pulpe de pui",
+    "synonyms": [
+      "carne de pui",
+      "pui dezosat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "usturoi",
+    "synonyms": [
+      "cățeii de usturoi",
+      "allium sativum"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ouă",
+    "synonyms": [
+      "ou de găină",
+      "ou crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "smântână dulce",
+    "synonyms": [
+      "smântână pentru gătit",
+      "creme fraiche"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de bucătărie",
+      "clorură de sodiu"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "piper negru",
+    "synonyms": [
+      "piper măcinat",
+      "condiment piper"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "suc de sfeclă",
+    "synonyms": [
+      "sfeclă roșie",
+      "boia de ardei"
+    ]
+  },
+  {
+    "ingredientCategoryId": 6,
+    "name": "pui întreg",
+    "synonyms": [
+      "carne de pui",
+      "pui tranșat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 8,
+    "name": "ouă",
+    "synonyms": [
+      "ou de găină",
+      "ou crud"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "țelină",
+    "synonyms": [
+      "rădăcină țelină",
+      "apio"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ceapă",
+    "synonyms": [
+      "ceapă albă",
+      "ceapă galbenă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 2,
+    "name": "ardei gras",
+    "synonyms": [
+      "ardei dulce",
+      "ardei roșu"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei",
+    "synonyms": [
+      "ulei vegetal",
+      "ulei floarea soarelui"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "pătrunjel verde",
+    "synonyms": [
+      "pătrunjel tocat",
+      "frunze pătrunjel"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "frunză de dafin",
+    "synonyms": [
+      "dafin",
+      "foi de dafin"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare de masă",
+      "sare grunjoasă"
+    ]
+  },
+  {
+    "ingredientCategoryId": 4,
+    "name": "banane",
+    "synonyms": [
+      "banana",
+      "fruct bananier"
+    ]
+  },
+  {
+    "ingredientCategoryId": 9,
+    "name": "ulei de cocos",
+    "synonyms": [
+      "coconut oil",
+      "grăsime de cocos"
+    ]
+  },
+  {
+    "ingredientCategoryId": 1,
+    "name": "făină",
+    "synonyms": [
+      "faina alba",
+      "faina de grau"
+    ]
+  },
+  {
+    "ingredientCategoryId": 10,
+    "name": "semințe de in",
+    "synonyms": [
+      "in măcinat",
+      "flaxseed"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "praf de copt",
+    "synonyms": [
+      "baking powder",
+      "agent de dospire"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "scorțișoară",
+    "synonyms": [
+      "cinnamon",
+      "condiment aromat"
+    ]
+  },
+  {
+    "ingredientCategoryId": 5,
+    "name": "zahăr brut",
+    "synonyms": [
+      "zahar brun",
+      "raw sugar"
+    ]
+  },
+  {
+    "ingredientCategoryId": 11,
+    "name": "lapte vegan",
+    "synonyms": [
+      "lapte vegetal",
+      "plant milk"
+    ]
+  },
+  {
+    "ingredientCategoryId": 3,
+    "name": "sare",
+    "synonyms": [
+      "sare fina",
+      "salt"
+    ]
+  }
+]

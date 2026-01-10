@@ -4,7 +4,6 @@ import { IsArray, IsInt, IsOptional, IsString, MaxLength, Min, MinLength } from 
 
 export class CreateIngredientDto {
   @ApiProperty({ required: false, example: 1 })
-  @IsOptional()
   @IsInt({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @Min(1, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   ingredientCategoryId?: number | null;

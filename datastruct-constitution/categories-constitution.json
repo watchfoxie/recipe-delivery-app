@@ -1,0 +1,100 @@
+{
+    "ingredientCategoryId": [
+        {
+            "id": 1,
+            "category": "Cereale"
+        },
+        {
+            "id": 2,
+            "category": "Legume"
+        },
+        {
+            "id": 3,
+            "category": "Condimente și ierburi"
+        },
+        {
+            "id": 4,
+            "category": "Fructe"
+        },
+        {
+            "id": 5,
+            "category": "Dulciuri și zahăr"
+        },
+        {
+            "id": 6,
+            "category": "Carne"
+        },
+        {
+            "id": 7,
+            "category": "Pește"
+        },
+        {
+            "id": 8,
+            "category": "Lactate și ouă"
+        },
+        {
+            "id": 9,
+            "category": "Grăsimi și uleiuri"
+        },
+        {
+            "id": 10,
+            "category": "Nuci și semințe"
+        },
+        {
+            "id": 11,
+            "category": "Băuturi"
+        }
+    ],
+    "recipeCategoryId": [
+        {
+            "id": 1,
+            "subcategory": "Mâncăruri cu carne",
+            "thematic_category": "Rețete"
+        },
+        {
+            "id": 2,
+            "subcategory": "Mâncăruri cu pește",
+            "thematic_category": "Rețete"
+        },
+        {
+            "id": 3,
+            "subcategory": "Salate",
+            "thematic_category": "Rețete"
+        },
+        {
+            "id": 4,
+            "subcategory": "Mâncăruri cu legume",
+            "thematic_category": "Rețete"
+        },
+        {
+            "id": 5,
+            "subcategory": "Plăcinte",
+            "thematic_category": "Rețete"
+        },
+        {
+            "id": 6,
+            "subcategory": "Pizza",
+            "thematic_category": "Rețete"
+        },
+        {
+            "id": 7,
+            "subcategory": "Mâncăruri de Crăciun",
+            "thematic_category": "Selecții"
+        },
+        {
+            "id": 8,
+            "subcategory": "Mâncăruri de Paști",
+            "thematic_category": "Selecții"
+        },
+        {
+            "id": 9,
+            "subcategory": "Mâncăruri de Post",
+            "thematic_category": "Selecții"
+        },
+        {
+            "id": 10,
+            "subcategory": "Mâncăruri Dietice",
+            "thematic_category": "Selecții"
+        }
+    ]
+}

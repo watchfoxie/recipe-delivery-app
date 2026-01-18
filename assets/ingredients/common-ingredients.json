@@ -1,0 +1,237 @@
+[
+    {
+        "icons_source": "FontAwesome",
+        "icons_pack": "Classic",
+        "icons_plan": "Free Pack",
+        "icons_relevant_categories": [
+            {
+                "category_id": 21,
+                "category_name": "Food + Beverage Icons",
+                "icons_list": [
+                    {
+                        "icon_name": "solid-apple-whole",
+                        "html_code_snippet": "<i class=\"fa-solid fa-apple-whole\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-bacon",
+                        "html_code_snippet": "<i class=\"fa-solid fa-bacon\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-beer-mug-empty",
+                        "html_code_snippet": "<i class=\"fa-solid fa-beer-mug-empty\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-blender",
+                        "html_code_snippet": "<i class=\"fa-solid fa-blender\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-bone",
+                        "html_code_snippet": "<i class=\"fa-solid fa-bone\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-bottle-droplet",
+                        "html_code_snippet": "<i class=\"fa-solid fa-bottle-droplet\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-bottle-water",
+                        "html_code_snippet": "<i class=\"fa-solid fa-bottle-water\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-bowl-food",
+                        "html_code_snippet": "<i class=\"fa-solid fa-bowl-food\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-bowl-rice",
+                        "html_code_snippet": "<i class=\"fa-solid fa-bowl-rice\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-bread-slice",
+                        "html_code_snippet": "<i class=\"fa-solid fa-bread-slice\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-burger",
+                        "html_code_snippet": "<i class=\"fa-solid fa-burger\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-cake-candles",
+                        "html_code_snippet": "<i class=\"fa-solid fa-cake-candles\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-candy-cane",
+                        "html_code_snippet": "<i class=\"fa-solid fa-candy-cane\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-carrot",
+                        "html_code_snippet": "<i class=\"fa-solid fa-carrot\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-champagne-glasses",
+                        "html_code_snippet": "<i class=\"fa-solid fa-champagne-glasses\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-cheese",
+                        "html_code_snippet": "<i class=\"fa-solid fa-cheese\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-cloud-meatball",
+                        "html_code_snippet": "<i class=\"fa-solid fa-cloud-meatball\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-cookie",
+                        "html_code_snippet": "<i class=\"fa-solid fa-cookie\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-cubes-stacked",
+                        "html_code_snippet": "<i class=\"fa-solid fa-cubes-stacked\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-drumstick-bite",
+                        "html_code_snippet": "<i class=\"fa-solid fa-drumstick-bite\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-egg",
+                        "html_code_snippet": "<i class=\"fa-solid fa-egg\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-fish",
+                        "html_code_snippet": "<i class=\"fa-solid fa-fish\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-fish-fins",
+                        "html_code_snippet": "<i class=\"fa-solid fa-fish-fins\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-flask",
+                        "html_code_snippet": "<i class=\"fa-solid fa-flask\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-glass-water",
+                        "html_code_snippet": "<i class=\"fa-solid fa-glass-water\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-glass-water-droplet",
+                        "html_code_snippet": "<i class=\"fa-solid fa-glass-water-droplet\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-hotdog",
+                        "html_code_snippet": "<i class=\"fa-solid fa-hotdog\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-ice-cream",
+                        "html_code_snippet": "<i class=\"fa-solid fa-ice-cream\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-jar",
+                        "html_code_snippet": "<i class=\"fa-solid fa-jar\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-jar-wheat",
+                        "html_code_snippet": "<i class=\"fa-solid fa-jar-wheat\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-lemon",
+                        "html_code_snippet": "<i class=\"fa-solid fa-lemon\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-martini-glass",
+                        "html_code_snippet": "<i class=\"fa-solid fa-martini-glass\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-martini-glass-citrus",
+                        "html_code_snippet": "<i class=\"fa-solid fa-martini-glass-citrus\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-martini-glass-empty",
+                        "html_code_snippet": "<i class=\"fa-solid fa-martini-glass-empty\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-mug-hot",
+                        "html_code_snippet": "<i class=\"fa-solid fa-mug-hot\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-mug-saucer",
+                        "html_code_snippet": "<i class=\"fa-solid fa-mug-saucer\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-pepper-hot",
+                        "html_code_snippet": "<i class=\"fa-solid fa-pepper-hot\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-pizza-slice",
+                        "html_code_snippet": "<i class=\"fa-solid fa-pizza-slice\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-plate-wheat",
+                        "html_code_snippet": "<i class=\"fa-solid fa-plate-wheat\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-seedling",
+                        "html_code_snippet": "<i class=\"fa-solid fa-seedling\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-shrimp",
+                        "html_code_snippet": "<i class=\"fa-solid fa-shrimp\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-stroopwafel",
+                        "html_code_snippet": "<i class=\"fa-solid fa-stroopwafel\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-wheat-awn",
+                        "html_code_snippet": "<i class=\"fa-solid fa-wheat-awn\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-wheat-awn-circle-exclamation",
+                        "html_code_snippet": "<i class=\"fa-solid fa-wheat-awn-circle-exclamation\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-whiskey-glass",
+                        "html_code_snippet": "<i class=\"fa-solid fa-whiskey-glass\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-wine-bottle",
+                        "html_code_snippet": "<i class=\"fa-solid fa-wine-bottle\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-wine-glass",
+                        "html_code_snippet": "<i class=\"fa-solid fa-wine-glass\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-wine-glass-empty",
+                        "html_code_snippet": "<i class=\"fa-solid fa-wine-glass-empty\"></i>"
+                    }
+                ]
+            },
+            {
+                "category_id": 22,
+                "category_name": "Fruits + Vegetables Icons",
+                "icons_list": [
+                    {
+                        "icon_name": "solid-apple-whole",
+                        "html_code_snippet": "<i class=\"fa-solid fa-apple-whole\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-carrot",
+                        "html_code_snippet": "<i class=\"fa-solid fa-carrot\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-leaf",
+                        "html_code_snippet": "<i class=\"fa-solid fa-leaf\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-lemon",
+                        "html_code_snippet": "<i class=\"fa-solid fa-lemon\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-pepper-hot",
+                        "html_code_snippet": "<i class=\"fa-solid fa-pepper-hot\"></i>"
+                    },
+                    {
+                        "icon_name": "solid-seedling",
+                        "html_code_snippet": "<i class=\"fa-solid fa-seedling\"></i>"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "email": "administrator@gmail.com",
+        "password": "administrator2026",
+        "displayName": "Administrator",
+        "preferencesJson": {
+            "theme": "white"
+        }
+    }
+]

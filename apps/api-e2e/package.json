@@ -18,10 +18,14 @@
           "jestConfig": "apps/api-e2e/jest.config.ts",
           "passWithNoTests": true
         },
+        "dependsOn": []
+      },
+      "e2e:ci": {
+        "executor": "nx:noop",
         "dependsOn": [
-          "@recipe-delivery-app/api:build",
-          "@recipe-delivery-app/api:serve"
-        ]
+          "e2e"
+        ],
+        "cache": false
       }
     }
   }

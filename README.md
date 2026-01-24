@@ -1,90 +1,41 @@
-# RecipeDeliveryApp
+# Recipe Delivery App
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+![Home Cooking Logo](assets/logo/home-cooking-gitlogo.png "Logotip Culinaria Acasă")
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+**Recipe Delivery App** este o aplicație web full-stack pentru livrarea rețetelor adaptate unei game largi de gusturi culinare, preferințe alimentare și niveluri de experiență. Aplicația va oferi utilizatorilor instrucțiuni pas cu pas pentru gătit. De asemenea, va include conturi de utilizator, evaluarea rețetelor și funcționalitate de partajare socială.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+Proiectul _Recipe Delivery App_ folosește [Nx](https://nx.dev) pentru a orchestra aplicațiile `api` (NestJS) și `web`, împreună cu testele end-to-end `api-e2e`. Secțiunile de mai jos descriu rulările recomandate și modul în care puteți folosi mecanismul `affected` și graful de dependențe pentru a rula doar ceea ce s-a modificat.
 
-## Finish your CI setup
+## Rulări Nx recomandate
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/c6NzlNbhmp)
+- `nx build @recipe-delivery-app/api` – construiește API-ul NestJS cu Webpack și copiază activele (i18n, assets) în `apps/api/dist`.
+- `nx serve @recipe-delivery-app/api` – pornește API-ul pentru dezvoltare; include `db:migration:run` înainte de start.
+- `nx test @recipe-delivery-app/api` – execută testele unitare Jest ale API-ului.
+- `nx e2e @recipe-delivery-app/api-e2e` – rulează testele contractuale Jest; declanșează `prepare:e2e`, iar apoi așteaptă instanța NestJS disponibilă.
+- `nx run @recipe-delivery-app/api:prepare:e2e` – pregătește baza de date (migrații + seed) pentru rulările e2e.
+- `nx run @recipe-delivery-app/api:db:migration:run` / `...:revert` / `...:generate -- --name=<Name>` / `...:seed` – comenzi utilitare pentru migrații și seed.
+- `nx run @recipe-delivery-app/api-e2e:e2e:ci` – țintă agregată pentru pipeline (build + pregătire DB + e2e).
 
+## Analiză a schimbărilor (`affected`)
 
-## Generate a library
+Folosește `affected` pentru a executa doar țintele afectate de modificări:
 
-```sh
-npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
+```powershell
+nx affected -t build,test,e2e
 ```
 
-## Run tasks
+Puteți explora graful proiectelor cu:
 
-To build the library use:
-
-```sh
-npx nx build pkg1
+```powershell
+nx graph
 ```
 
-To run any task with Nx use:
+## Beneficiile Nx Cloud
 
-```sh
-npx nx <target> <project-name>
-```
+Workspace-ul este conectat la Nx Cloud (`nxCloudId` setat în `nx.json`), permițând cache distribuit și Distributed Task Execution (DTE). Atunci când rulați comenzile de mai sus local sau în CI, rezultatele sunt memorate și re-folosite pentru execuțiile ulterioare, reducând substanțial timpul total de feedback.
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+## Resurse suplimentare
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Versioning and releasing
-
-To version and release the library use
-
-```
-npx nx release
-```
-
-Pass `--dry-run` to see what would happen without actually releasing the library.
-
-[Learn more about Nx release &raquo;](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Keep TypeScript project references up to date
-
-Nx automatically updates TypeScript [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in `tsconfig.json` files to ensure they remain accurate based on your project dependencies (`import` or `require` statements). This sync is automatically done when running tasks such as `build` or `typecheck`, which require updated references to function correctly.
-
-To manually trigger the process to sync the project graph dependencies information to the TypeScript project references, run the following command:
-
-```sh
-npx nx sync
-```
-
-You can enforce that the TypeScript project references are always in the correct state when running in CI by adding a step to your CI job configuration that runs the following command:
-
-```sh
-npx nx sync:check
-```
-
-[Learn more about nx sync](https://nx.dev/reference/nx-commands#sync)
-
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- [Documentația Nx](https://nx.dev)
+- [Nx Console (VS Code / JetBrains)](https://nx.dev/getting-started/editor-setup)
+- [Ghiduri pentru integrarea în CI](https://nx.dev/ci)

@@ -1,1 +1,3 @@
 node_modules
+dist/**/i18n-types.d.ts
+tmp/**/i18n-types.d.ts

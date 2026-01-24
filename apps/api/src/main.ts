@@ -15,6 +15,15 @@ async function bootstrap() {
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
 
+  app.enableCors(
+    APP_CONFIG.cors.allowAllOrigins
+      ? { origin: true }
+      : {
+          origin: APP_CONFIG.cors.origins,
+          credentials: APP_CONFIG.cors.credentials,
+        }
+  );
+
   const dataSource = app.get(DataSource);
   if (!dataSource.isInitialized) {
     await dataSource.initialize();

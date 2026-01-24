@@ -42,12 +42,39 @@ type SeedRecipe = {
   description?: string | null;
   authorId: number;
   recipeCategoryId?: number | null;
+  imageUrl?: string | null;
   steps: SeedRecipeStep[];
   ingredients: SeedRecipeIngredient[];
 };
 
+type SeedRecipeCategory = {
+  id: number;
+  subcategory: string;
+  thematic_category: string;
+};
+
+type SeedIngredientCategory = {
+  id: number;
+  category: string;
+};
+
+type CategoriesConstitution = {
+  ingredientCategoryId: SeedIngredientCategory[];
+  recipeCategoryId: SeedRecipeCategory[];
+};
+
 const PASSWORD_SALT_ROUNDS = 12;
 const FEEDS_DIR = path.join(__dirname, 'feed-schemas');
+const CONSTITUTION_PATH = path.join(__dirname, '../../../../datastruct-constitution/categories-constitution.json');
+
+function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
 
 function serializeJson(value: unknown): string | null {
   if (value === null || value === undefined) {
@@ -72,12 +99,42 @@ async function loadJsonFeed<T>(fileName: string): Promise<T> {
 
 async function truncateTables(queryRunner: QueryRunner): Promise<void> {
   await queryRunner.query('SET FOREIGN_KEY_CHECKS = 0');
+  await queryRunner.query('TRUNCATE TABLE review');
+  await queryRunner.query('TRUNCATE TABLE user_favorite_recipe');
+  await queryRunner.query('TRUNCATE TABLE recipe_comment');
   await queryRunner.query('TRUNCATE TABLE recipe_ingredient');
   await queryRunner.query('TRUNCATE TABLE recipe_step');
   await queryRunner.query('TRUNCATE TABLE recipe');
   await queryRunner.query('TRUNCATE TABLE ingredient');
   await queryRunner.query('TRUNCATE TABLE user');
+  await queryRunner.query('TRUNCATE TABLE recipe_category');
+  await queryRunner.query('TRUNCATE TABLE ingredient_category');
   await queryRunner.query('SET FOREIGN_KEY_CHECKS = 1');
+}
+
+async function seedRecipeCategories(queryRunner: QueryRunner, categories: SeedRecipeCategory[]): Promise<void> {
+  for (let idx = 0; idx < categories.length; idx++) {
+    const cat = categories[idx];
+    await queryRunner.manager.insert('recipe_category', {
+      id: cat.id,
+      name: cat.subcategory,
+      slug: slugify(cat.subcategory),
+      thematic_category: cat.thematic_category,
+      display_order: idx + 1,
+    });
+  }
+}
+
+async function seedIngredientCategories(queryRunner: QueryRunner, categories: SeedIngredientCategory[]): Promise<void> {
+  for (let idx = 0; idx < categories.length; idx++) {
+    const cat = categories[idx];
+    await queryRunner.manager.insert('ingredient_category', {
+      id: cat.id,
+      name: cat.category,
+      slug: slugify(cat.category),
+      display_order: idx + 1,
+    });
+  }
 }
 
 async function seedUsers(queryRunner: QueryRunner, users: SeedUser[]): Promise<void> {
@@ -154,6 +211,8 @@ async function seedRecipes(queryRunner: QueryRunner, recipes: SeedRecipe[], ingr
       description: recipe.description ?? null,
       author_id: recipe.authorId,
       recipe_category_id: recipe.recipeCategoryId ?? null,
+      image_url: recipe.imageUrl ?? null,
+      likes_count: 0,
     });
 
     const recipeId = getInsertedId(recipeInsertResult);
@@ -213,10 +272,11 @@ async function seed(): Promise<void> {
 
   try {
     console.log('Loading feed files...');
-    const [usersFeed, ingredientsFeed, recipesFeed] = await Promise.all([
+    const [usersFeed, ingredientsFeed, recipesFeed, constitution] = await Promise.all([
       loadJsonFeed<SeedUser[]>('user-seed.json'),
       loadJsonFeed<SeedIngredient[]>('ingredients-seed.json'),
       loadJsonFeed<SeedRecipe[]>('recipes-seed.json'),
+      readFile(CONSTITUTION_PATH, 'utf8').then((content) => JSON.parse(content) as CategoriesConstitution),
     ]);
 
     console.log('Truncating tables in dependency-safe order...');
@@ -225,6 +285,8 @@ async function seed(): Promise<void> {
     console.log('Seeding data...');
     await queryRunner.startTransaction();
 
+    await seedRecipeCategories(queryRunner, constitution.recipeCategoryId);
+    await seedIngredientCategories(queryRunner, constitution.ingredientCategoryId);
     await seedUsers(queryRunner, usersFeed);
     const ingredientIdMap = await seedIngredients(queryRunner, ingredientsFeed);
     await seedRecipes(queryRunner, recipesFeed, ingredientIdMap);

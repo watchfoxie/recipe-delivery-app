@@ -1,5 +1,6 @@
 import {
   ConflictException,
+  ForbiddenException,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -158,9 +159,92 @@ export class RecipesService {
     return recipe;
   }
 
-  async update(id: number, dto: UpdateRecipeDto): Promise<Recipe> {
+  async findBySlug(slug: string): Promise<Recipe> {
+    const options = this.buildRelationsOptions({ includeComments: true });
+    const recipe = await this.recipesRepository.findOne({
+      where: { slug },
+      relations: options.relations,
+      order: options.order,
+    });
+    if (!recipe) {
+      throw new NotFoundException(await this.translate('messages.ERROR.RECIPE_NOT_FOUND'));
+    }
+    return recipe;
+  }
+
+  async findAllByAuthor(authorId: number, query: ListRecipesQueryDto): Promise<PaginatedResult<Recipe>> {
+    const page = query.page ?? 1;
+    const limit = query.limit ?? 10;
+
+    const parsed = QueryParserUtil.parse(query, {
+      sortMapping: RECIPES_SORT_MAPPING,
+      filterMapping: RECIPES_FILTER_MAPPING,
+    });
+
+    const baseResponse = {
+      page,
+      limit,
+      sort: parsed.sort.map(({ field, direction }) => ({ field, direction })),
+      filter: parsed.filter.map(({ field, operator, value }) => ({ field, operator, value })),
+    };
+
+    const buildBaseQuery = () =>
+      this.recipesRepository
+        .createQueryBuilder('recipe')
+        .where('recipe.deleted_at IS NULL')
+        .andWhere('recipe.author_id = :authorId', { authorId });
+
+    const totalQuery = buildBaseQuery();
+    QueryParserUtil.applyFilter(totalQuery, parsed.filter);
+    const total = await totalQuery.getCount();
+
+    const idQuery = buildBaseQuery().select('recipe.id', 'id');
+    QueryParserUtil.applyFilter(idQuery, parsed.filter);
+
+    if (parsed.sort.length) {
+      QueryParserUtil.applySort(idQuery, parsed.sort);
+    } else {
+      idQuery.orderBy('recipe.created_at', 'DESC');
+    }
+
+    const rows = await idQuery
+      .skip((page - 1) * limit)
+      .take(limit)
+      .getRawMany<{ id: number }>();
+
+    const recipeIds = rows
+      .map((row) => (typeof row.id === 'string' ? Number(row.id) : row.id))
+      .filter((value): value is number => Number.isFinite(value));
+
+    let items: Recipe[] = [];
+    if (recipeIds.length) {
+      const options = this.buildRelationsOptions({ includeComments: false });
+      const found = await this.recipesRepository.find({
+        where: recipeIds.map((id) => ({ id })),
+        relations: options.relations,
+        order: options.order,
+      });
+
+      const lookup = new Map(found.map((recipe) => [recipe.id, recipe]));
+      items = recipeIds
+        .map((id) => lookup.get(id))
+        .filter((recipe): recipe is Recipe => Boolean(recipe));
+    }
+
+    return {
+      ...baseResponse,
+      items,
+      total,
+    };
+  }
+
+  async update(id: number, dto: UpdateRecipeDto, userId?: number): Promise<Recipe> {
     return this.executeInTransaction(async (manager) => {
       const existing = await this.findOneInternal(manager, id);
+
+      if (userId && existing.authorId !== userId) {
+        throw new ForbiddenException(await this.translate('messages.ERROR.NOT_RECIPE_OWNER'));
+      }
 
       if (dto.slug && dto.slug !== existing.slug) {
         await this.ensureSlugUniqueness(manager, dto.slug, existing.id);
@@ -220,9 +304,14 @@ export class RecipesService {
     }
   }
 
-  async remove(id: number): Promise<void> {
+  async remove(id: number, userId?: number): Promise<void> {
     await this.executeInTransaction(async (manager) => {
       const existing = await this.findOneInternal(manager, id);
+
+      if (userId && existing.authorId !== userId) {
+        throw new ForbiddenException(await this.translate('messages.ERROR.NOT_RECIPE_OWNER'));
+      }
+
       await manager.softRemove(Recipe, existing);
     });
   }

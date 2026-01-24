@@ -74,6 +74,36 @@
       "REPORT_UPDATED": "Raportul a fost actualizat cu succes",
       "REPORT_DELETED": "Raportul a fost șters cu succes"
     },
+    "recipe_category": {
+      "list": "Categoriile de rețete au fost obținute cu succes",
+      "found": "Categoria de rețete a fost găsită",
+      "created": "Categoria de rețete a fost creată cu succes",
+      "updated": "Categoria de rețete a fost actualizată cu succes",
+      "deleted": "Categoria de rețete a fost ștearsă cu succes",
+      "not_found": "Categoria de rețete nu a fost găsită"
+    },
+    "ingredient_category": {
+      "list": "Categoriile de ingrediente au fost obținute cu succes",
+      "found": "Categoria de ingrediente a fost găsită",
+      "created": "Categoria de ingrediente a fost creată cu succes",
+      "updated": "Categoria de ingrediente a fost actualizată cu succes",
+      "deleted": "Categoria de ingrediente a fost ștearsă cu succes",
+      "not_found": "Categoria de ingrediente nu a fost găsită"
+    },
+    "review": {
+      "list": "Recenziile au fost obținute cu succes",
+      "found": "Recenzia a fost găsită",
+      "created": "Recenzia a fost creată cu succes",
+      "updated": "Recenzia a fost actualizată cu succes",
+      "deleted": "Recenzia a fost ștearsă cu succes",
+      "not_found": "Recenzia nu a fost găsită",
+      "not_found_user": "Nu ați lăsat încă o recenzie pentru această rețetă",
+      "already_exists": "Ați lăsat deja o recenzie pentru această rețetă",
+      "stats": "Statisticile rating-ului au fost obținute cu succes"
+    },
+    "recipe": {
+      "not_found": "Rețeta nu a fost găsită"
+    },
     "ERROR": {
       "VALIDATION_FAILED": "Validarea a eșuat",
       "JSON_PARSE_ERROR": "Corpul cererii conține JSON invalid",
@@ -102,6 +132,11 @@
       "RECIPE_NOT_DELETED": "Rețeta nu a putut fi ștearsă",
       "RECIPE_SLUG_EXISTS": "Există deja o rețetă cu acest slug",
       "RECIPE_INGREDIENT_DUPLICATE": "Rețeta conține deja acest ingredient",
+      "NOT_RECIPE_OWNER": "Nu aveți permisiunea de a modifica această rețetă",
+      "INVALID_CURRENT_PASSWORD": "Parola curentă este incorectă",
+      "PASSWORD_CHANGED": "Parola a fost schimbată cu succes",
+      "PROFILE_UPDATED": "Profilul a fost actualizat cu succes",
+      "THEME_UPDATED": "Tema a fost actualizată cu succes",
       "RECIPE_STEP_NOT_FOUND": "Pasul de rețetă solicitat nu există",
       "RECIPE_STEP_NOT_CREATED": "Pasul de rețetă nu a putut fi creat",
       "RECIPE_STEP_NOT_UPDATED": "Pasul de rețetă nu a putut fi actualizat",

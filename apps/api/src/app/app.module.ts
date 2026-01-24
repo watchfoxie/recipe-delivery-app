@@ -21,6 +21,9 @@ import { IngredientsModule } from '../modules/ingredients/ingredients.module';
 import { RecipesModule } from '../modules/recipes/recipes.module';
 import { AuthModule } from '../modules/auth/auth.module';
 import { FavoritesModule } from '../modules/favorites/favorites.module';
+import { RecipeCategoriesModule } from '../modules/recipe-categories/recipe-categories.module';
+import { IngredientCategoriesModule } from '../modules/ingredient-categories/ingredient-categories.module';
+import { ReviewsModule } from '../modules/reviews/reviews.module';
 
 @Module({
   imports: [
@@ -58,6 +61,9 @@ import { FavoritesModule } from '../modules/favorites/favorites.module';
     IngredientsModule,
     RecipesModule,
     FavoritesModule,
+    RecipeCategoriesModule,
+    IngredientCategoriesModule,
+    ReviewsModule,
   ],
   controllers: [AppController],
   providers: [

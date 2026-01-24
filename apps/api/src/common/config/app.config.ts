@@ -1,3 +1,10 @@
+const rawCorsOrigins = process.env.CORS_ORIGINS ?? 'http://localhost:3000';
+const corsOrigins = rawCorsOrigins
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+const allowAllCorsOrigins = corsOrigins.includes('*');
+
 export const APP_CONFIG = {
   swagger: {
     title: 'Recipe Delivery API',
@@ -9,6 +16,11 @@ export const APP_CONFIG = {
   server: {
     port: Number(process.env.NEST_PORT ?? 3001),
     environment: process.env.NODE_ENV ?? 'development',
+  },
+  cors: {
+    origins: allowAllCorsOrigins ? ['*'] : corsOrigins,
+    allowAllOrigins: allowAllCorsOrigins,
+    credentials: !allowAllCorsOrigins,
   },
   validation: {
     whitelist: true,

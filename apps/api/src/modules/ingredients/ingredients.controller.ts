@@ -7,10 +7,12 @@ import {
   ParseIntPipe,
   Post,
   Put,
+  UseGuards,
 } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiTags, ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
 import { plainToInstance } from 'class-transformer';
 import { I18nService } from 'nestjs-i18n';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { ApiStandardResponses } from '../../common/swagger/swagger-responses.util';
 import { translateMessage } from '../../common/utils/i18n.util';
 import { CreateIngredientDto } from './dto/create-ingredient.dto';
@@ -27,6 +29,9 @@ export class IngredientsController {
   ) {}
 
   @Post()
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth('bearer')
+  @ApiOperation({ summary: 'Creare ingredient nou' })
   @ApiStandardResponses(IngredientResponseDto)
   async create(@Body() dto: CreateIngredientDto) {
     const entity = await this.ingredientsService.create(dto);
@@ -59,6 +64,9 @@ export class IngredientsController {
   }
 
   @Put(':id')
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth('bearer')
+  @ApiOperation({ summary: 'Actualizare ingredient' })
   @ApiStandardResponses(IngredientResponseDto)
   async update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdateIngredientDto) {
     const entity = await this.ingredientsService.update(id, dto);
@@ -69,6 +77,9 @@ export class IngredientsController {
   }
 
   @Delete(':id')
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth('bearer')
+  @ApiOperation({ summary: 'Ștergere ingredient' })
   @ApiStandardResponses()
   async remove(@Param('id', ParseIntPipe) id: number) {
     await this.ingredientsService.remove(id);

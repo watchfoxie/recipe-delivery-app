@@ -11,6 +11,12 @@ import {
 import type { Recipe } from '../../recipes/entities/recipe.entity';
 import type { UserFavoriteRecipe } from '../../favorites/entities/user-favorite-recipe.entity';
 import type { Comment } from '../../recipes/entities/recipe-comment.entity';
+import type { Review } from '../../reviews/entities/review.entity';
+
+export enum UserTheme {
+  LIGHT = 'light',
+  DARK = 'dark',
+}
 
 @Entity('user')
 @Index('uq_user_email', ['email'], { unique: true })
@@ -26,6 +32,12 @@ export class User {
 
   @Column({ name: 'display_name', type: 'varchar', length: 191 })
   displayName!: string;
+
+  @Column({ type: 'varchar', length: 255, nullable: true })
+  avatar?: string | null;
+
+  @Column({ type: 'enum', enum: UserTheme, default: UserTheme.LIGHT })
+  theme!: UserTheme;
 
   @Column({ name: 'preferences_json', type: 'json', nullable: true })
   preferencesJson?: Record<string, unknown> | null;
@@ -47,4 +59,7 @@ export class User {
 
   @OneToMany('Comment', 'author')
   comments?: Comment[];
+
+  @OneToMany('Review', 'user')
+  reviews?: Review[];
 }

@@ -12,7 +12,9 @@ import { DataSource, EntityManager, Repository } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { User } from './entities/user.entity';
+import { UpdateProfileDto } from './dto/update-profile.dto';
+import { ChangePasswordDto } from './dto/change-password.dto';
+import { User, UserTheme } from './entities/user.entity';
 
 @Injectable()
 export class UsersService {
@@ -126,6 +128,67 @@ export class UsersService {
     this.logger.log(`User ${normalizedEmail} authenticated successfully`);
 
     return { token, user };
+  }
+
+  async updateProfile(userId: number, dto: UpdateProfileDto): Promise<User> {
+    return this.executeInTransaction(async (manager) => {
+      const existing = await manager.findOne(User, { where: { id: userId } });
+      if (!existing) {
+        throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
+      }
+
+      if (dto.email !== undefined) {
+        existing.email = this.normalizeEmail(dto.email);
+      }
+
+      if (dto.displayName !== undefined) {
+        existing.displayName = dto.displayName;
+      }
+
+      if (dto.avatar !== undefined) {
+        existing.avatar = dto.avatar || null;
+      }
+
+      try {
+        return await manager.save(User, existing);
+      } catch (error) {
+        await this.handleUniqueConstraint(error, 'messages.ERROR.USER_EMAIL_EXISTS');
+        throw error;
+      }
+    });
+  }
+
+  async changePassword(userId: number, dto: ChangePasswordDto): Promise<void> {
+    const user = await this.usersRepository.findOne({ where: { id: userId } });
+    if (!user) {
+      throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
+    }
+
+    const isCurrentPasswordValid = await bcrypt.compare(dto.currentPassword, user.passwordHash);
+    if (!isCurrentPasswordValid) {
+      throw new UnauthorizedException(await this.translate('auth.ERROR.INVALID_CURRENT_PASSWORD'));
+    }
+
+    user.passwordHash = await this.hashPassword(dto.newPassword);
+    await this.usersRepository.save(user);
+  }
+
+  async updateTheme(userId: number, theme: UserTheme): Promise<User> {
+    const user = await this.usersRepository.findOne({ where: { id: userId } });
+    if (!user) {
+      throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
+    }
+
+    user.theme = theme;
+    return this.usersRepository.save(user);
+  }
+
+  async getProfile(userId: number): Promise<User> {
+    const user = await this.usersRepository.findOne({ where: { id: userId } });
+    if (!user) {
+      throw new NotFoundException(await this.translate('messages.ERROR.USER_NOT_FOUND'));
+    }
+    return user;
   }
 
   private async executeInTransaction<T>(work: (manager: EntityManager) => Promise<T>): Promise<T> {

@@ -74,6 +74,36 @@
       "REPORT_UPDATED": "Report updated successfully",
       "REPORT_DELETED": "Report deleted successfully"
     },
+    "recipe_category": {
+      "list": "Recipe categories retrieved successfully",
+      "found": "Recipe category found",
+      "created": "Recipe category created successfully",
+      "updated": "Recipe category updated successfully",
+      "deleted": "Recipe category deleted successfully",
+      "not_found": "Recipe category not found"
+    },
+    "ingredient_category": {
+      "list": "Ingredient categories retrieved successfully",
+      "found": "Ingredient category found",
+      "created": "Ingredient category created successfully",
+      "updated": "Ingredient category updated successfully",
+      "deleted": "Ingredient category deleted successfully",
+      "not_found": "Ingredient category not found"
+    },
+    "review": {
+      "list": "Reviews retrieved successfully",
+      "found": "Review found",
+      "created": "Review created successfully",
+      "updated": "Review updated successfully",
+      "deleted": "Review deleted successfully",
+      "not_found": "Review not found",
+      "not_found_user": "You have not left a review for this recipe yet",
+      "already_exists": "You have already left a review for this recipe",
+      "stats": "Rating statistics retrieved successfully"
+    },
+    "recipe": {
+      "not_found": "Recipe not found"
+    },
     "ERROR": {
       "VALIDATION_FAILED": "Validation failed",
       "JSON_PARSE_ERROR": "Request body contains invalid JSON",
@@ -102,6 +132,11 @@
       "RECIPE_NOT_DELETED": "The recipe could not be deleted",
       "RECIPE_SLUG_EXISTS": "A recipe with this slug already exists",
       "RECIPE_INGREDIENT_DUPLICATE": "The recipe already contains this ingredient",
+      "NOT_RECIPE_OWNER": "You do not have permission to modify this recipe",
+      "INVALID_CURRENT_PASSWORD": "Current password is incorrect",
+      "PASSWORD_CHANGED": "Password changed successfully",
+      "PROFILE_UPDATED": "Profile updated successfully",
+      "THEME_UPDATED": "Theme updated successfully",
       "RECIPE_STEP_NOT_FOUND": "The requested recipe step does not exist",
       "RECIPE_STEP_NOT_CREATED": "The recipe step could not be created",
       "RECIPE_STEP_NOT_UPDATED": "The recipe step could not be updated",

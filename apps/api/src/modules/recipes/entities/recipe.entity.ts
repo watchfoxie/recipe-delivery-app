@@ -15,6 +15,8 @@ import { RecipeIngredient } from './recipe-ingredient.entity';
 import { RecipeStep } from './recipe-step.entity';
 import { UserFavoriteRecipe } from '../../favorites/entities/user-favorite-recipe.entity';
 import { Comment } from './recipe-comment.entity';
+import type { Review } from '../../reviews/entities/review.entity';
+import type { RecipeCategory } from '../../recipe-categories/entities/recipe-category.entity';
 
 export enum RecipeDifficulty {
   EASY = 'usor',
@@ -62,9 +64,19 @@ export class Recipe {
   @Column({ name: 'recipe_category_id', type: 'int', nullable: true })
   recipeCategoryId?: number | null;
 
+  @Column({ name: 'image_url', type: 'varchar', length: 500, nullable: true })
+  imageUrl?: string | null;
+
+  @Column({ name: 'likes_count', type: 'int', default: 0 })
+  likesCount!: number;
+
   @ManyToOne(() => User, (user) => user.recipes, { onDelete: 'RESTRICT' })
   @JoinColumn({ name: 'author_id' })
   author!: User;
+
+  @ManyToOne('RecipeCategory', 'recipes', { onDelete: 'SET NULL' })
+  @JoinColumn({ name: 'recipe_category_id' })
+  category?: RecipeCategory | null;
 
   @OneToMany(() => RecipeStep, (step) => step.recipe, { cascade: false })
   steps?: RecipeStep[];
@@ -77,6 +89,9 @@ export class Recipe {
 
   @OneToMany(() => Comment, (comment) => comment.recipe, { cascade: false })
   comments?: Comment[];
+
+  @OneToMany('Review', 'recipe', { cascade: false })
+  reviews?: Review[];
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt!: Date;

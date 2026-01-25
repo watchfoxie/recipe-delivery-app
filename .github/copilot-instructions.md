@@ -138,9 +138,10 @@ The `/selectii/[selection]` pages use these hardcoded `recipe_category_id` mappi
 3. **Error responses**: Handled by global filters in `common/filters/` – consistent `{ statusCode, message, error }` format
 4. **Naming**: Database uses `snake_case`, TypeScript uses `camelCase` – always set explicit column names
 5. **Enum values**: Recipe difficulty uses Romanian: `'usor'`, `'mediu'`, `'greu'`
-6. **Tailwind CSS**: In `apps/web`, avoid `@apply` with custom class names (use utility lists directly in each class).
-7. **Next.js App Router**: Hooks like `useSearchParams()` must live in a client component wrapped by a `Suspense` boundary in the page.
-8. **Fonts & hydration**: Avoid inline `font-family` styles in `apps/web`. Use CSS variables and classes. The root `<body>` suppresses hydration warnings to tolerate client font extensions that override fonts.
+6. **MySQL DISTINCT**: When using `SELECT DISTINCT`, any `ORDER BY` column must also be selected (use `addSelect` for sort columns or wrap in a subquery).
+7. **Tailwind CSS**: In `apps/web`, avoid `@apply` with custom class names (use utility lists directly in each class).
+8. **Next.js App Router**: Hooks like `useSearchParams()` must live in a client component wrapped by a `Suspense` boundary in the page.
+9. **Fonts & hydration**: Avoid inline `font-family` styles in `apps/web`. Use CSS variables and classes. The root `<body>` suppresses hydration warnings to tolerate client font extensions that override fonts.
 
 ## Frontend Architecture (apps/web)
 
@@ -215,6 +216,7 @@ The web API client must use these exact endpoint paths and DTO structures:
 
 **Recipes:**
 - `GET /recipes` - List all recipes (paginated)
+- `GET /recipes/ingredient` - List recipes filtered by recipe_ingredient fields (paginated)
 - `GET /recipes/:id` - Get recipe by ID
 - `GET /recipes/slug/:slug` - Get recipe by slug
 - `GET /recipes/my` - Get current user's recipes (requires auth)

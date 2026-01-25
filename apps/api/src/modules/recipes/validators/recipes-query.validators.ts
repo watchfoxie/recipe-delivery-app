@@ -2,6 +2,7 @@ import { ValidatorConstraint, ValidatorConstraintInterface } from 'class-validat
 import { FILTER_OPERATORS, type FilterOperator, type QueryFieldConfig } from '../../../common/utils/query-parser.util';
 import {
   RECIPES_ALLOWED_SORT_FIELDS,
+  RECIPES_INGREDIENT_FILTER_MAPPING,
   RECIPES_FILTER_MAPPING,
 } from '../recipes-query.config';
 
@@ -138,6 +139,53 @@ export class RecipesFilterSchemaValidator implements ValidatorConstraintInterfac
 
     for (const expression of expressions) {
       const config = RECIPES_FILTER_MAPPING[expression.field];
+      if (!config) {
+        this.lastErrorKey = 'messages.ERROR.INVALID_FILTER_FIELD';
+        return false;
+      }
+
+      const operator = expression.operator.toLowerCase() as FilterOperator;
+      if (!FILTER_OPERATORS.includes(operator)) {
+        this.lastErrorKey = 'messages.ERROR.INVALID_FILTER_OPERATOR';
+        return false;
+      }
+
+      if (config.allowedOperators && !config.allowedOperators.includes(operator)) {
+        this.lastErrorKey = 'messages.ERROR.INVALID_FILTER_OPERATOR';
+        return false;
+      }
+
+      if (!isValueValid(expression.rawValue, operator, config)) {
+        this.lastErrorKey = 'messages.ERROR.INVALID_FILTER_VALUE';
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  defaultMessage(): string {
+    return this.lastErrorKey ?? 'messages.ERROR.INVALID_FILTER_VALUE';
+  }
+}
+
+@ValidatorConstraint({ name: 'RecipesIngredientFilterSchemaValidator', async: false })
+export class RecipesIngredientFilterSchemaValidator implements ValidatorConstraintInterface {
+  private lastErrorKey?: string;
+
+  validate(value: string | undefined): boolean {
+    this.lastErrorKey = undefined;
+    if (value === undefined) {
+      return true;
+    }
+
+    const expressions = safeParseFilterExpressions(value);
+    if (!expressions) {
+      return true;
+    }
+
+    for (const expression of expressions) {
+      const config = RECIPES_INGREDIENT_FILTER_MAPPING[expression.field];
       if (!config) {
         this.lastErrorKey = 'messages.ERROR.INVALID_FILTER_FIELD';
         return false;

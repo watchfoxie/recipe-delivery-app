@@ -44,3 +44,21 @@ export const RECIPES_FILTER_MAPPING: Record<string, QueryFieldConfig> = {
     allowedOperators: ['like', 'eq', 'ne'],
   },
 };
+
+export const RECIPES_INGREDIENT_FILTER_MAPPING: Record<string, QueryFieldConfig> = {
+  recipe_id: {
+    column: 'recipeIngredient.recipe_id',
+    type: 'number',
+    allowedOperators: ['eq', 'ne', 'in'],
+  },
+  ingredient_id: {
+    column: 'recipeIngredient.ingredient_id',
+    type: 'number',
+    allowedOperators: ['eq', 'ne', 'in'],
+  },
+  quantity: {
+    column: 'recipeIngredient.quantity',
+    type: 'number',
+    allowedOperators: ['eq', 'ne', 'lt', 'gt', 'lte', 'gte', 'in'],
+  },
+};

@@ -28,6 +28,15 @@ const selectionIcons: Record<string, string> = {
   dietice: 'fa-heart',
 };
 
+// Mapping from selection slug to recipe_category_id
+// These IDs correspond to thematic selection categories in the database
+const selectionCategoryIds: Record<string, number> = {
+  craciun: 7,
+  pasti: 8,
+  post: 9,
+  dietice: 10,
+};
+
 const sortOptions = [
   { label: 'Recente (cele mai noi)', value: 'created_at:desc' },
   { label: 'Vechi (cele mai vechi)', value: 'created_at:asc' },
@@ -62,8 +71,16 @@ export default function SelectionPage() {
     const fetchRecipes = async () => {
       setLoading(true);
       try {
+        const categoryId = selectionCategoryIds[selection];
+        if (!categoryId) {
+          console.error(`Unknown selection: ${selection}`);
+          setRecipes([]);
+          setLoading(false);
+          return;
+        }
+        
         const response = await recipesApi.getAll({
-          filter: `selection:eq:${selection}`,
+          filter: `recipe_category_id:eq:${categoryId}`,
           sort: sortBy,
           page,
           limit: 12,

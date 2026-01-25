@@ -6,9 +6,26 @@ import {
 import { InjectRepository } from '@nestjs/typeorm';
 import { I18nContext, I18nService } from 'nestjs-i18n';
 import { DataSource, EntityManager, Repository } from 'typeorm';
+import type { FilterOperator, SortDirection } from '../../common/utils/query-parser.util';
+import { QueryParserUtil } from '../../common/utils/query-parser.util';
 import { CreateIngredientDto } from './dto/create-ingredient.dto';
+import { ListIngredientsQueryDto } from './dto/list-ingredients-query.dto';
 import { UpdateIngredientDto } from './dto/update-ingredient.dto';
 import { Ingredient } from './entities/ingredient.entity';
+import { INGREDIENTS_FILTER_MAPPING, INGREDIENTS_SORT_MAPPING } from './ingredients-query.config';
+
+interface PaginatedResult<T> {
+  items: T[];
+  total: number;
+  page: number;
+  limit: number;
+  sort: Array<{ field: string; direction: SortDirection }>;
+  filter: Array<{
+    field: string;
+    operator: FilterOperator;
+    value: string | number | boolean | Array<string | number | boolean>;
+  }>;
+}
 
 @Injectable()
 export class IngredientsService {
@@ -36,8 +53,66 @@ export class IngredientsService {
     });
   }
 
-  async findAll(): Promise<Ingredient[]> {
-    return this.ingredientsRepository.find({ order: { createdAt: 'DESC' } });
+  async findAll(query: ListIngredientsQueryDto): Promise<PaginatedResult<Ingredient>> {
+    const page = query.page ?? 1;
+    const limit = query.limit ?? 10;
+
+    const parsed = QueryParserUtil.parse(query, {
+      sortMapping: INGREDIENTS_SORT_MAPPING,
+      filterMapping: INGREDIENTS_FILTER_MAPPING,
+    });
+
+    const baseResponse = {
+      page,
+      limit,
+      sort: parsed.sort.map(({ field, direction }) => ({ field, direction })),
+      filter: parsed.filter.map(({ field, operator, value }) => ({ field, operator, value })),
+    };
+
+    const buildBaseQuery = () =>
+      this.ingredientsRepository
+        .createQueryBuilder('ingredient')
+        .where('ingredient.deleted_at IS NULL');
+
+    const totalQuery = buildBaseQuery();
+    QueryParserUtil.applyFilter(totalQuery, parsed.filter);
+    const total = await totalQuery.getCount();
+
+    const idQuery = buildBaseQuery().select('ingredient.id', 'id');
+    QueryParserUtil.applyFilter(idQuery, parsed.filter);
+
+    if (parsed.sort.length) {
+      QueryParserUtil.applySort(idQuery, parsed.sort);
+    } else {
+      idQuery.orderBy('ingredient.created_at', 'DESC');
+    }
+
+    const rows = await idQuery
+      .skip((page - 1) * limit)
+      .take(limit)
+      .getRawMany<{ id: number }>();
+
+    const ingredientIds = rows
+      .map((row) => (typeof row.id === 'string' ? Number(row.id) : row.id))
+      .filter((value): value is number => Number.isFinite(value));
+
+    let items: Ingredient[] = [];
+    if (ingredientIds.length) {
+      const found = await this.ingredientsRepository.find({
+        where: ingredientIds.map((id) => ({ id })),
+      });
+
+      const lookup = new Map(found.map((ingredient) => [ingredient.id, ingredient]));
+      items = ingredientIds
+        .map((id) => lookup.get(id))
+        .filter((ingredient): ingredient is Ingredient => Boolean(ingredient));
+    }
+
+    return {
+      ...baseResponse,
+      items,
+      total,
+    };
   }
 
   async findOne(id: number): Promise<Ingredient> {

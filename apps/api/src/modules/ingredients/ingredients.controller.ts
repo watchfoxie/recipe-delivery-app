@@ -7,9 +7,10 @@ import {
   ParseIntPipe,
   Post,
   Put,
+  Query,
   UseGuards,
 } from '@nestjs/common';
-import { ApiTags, ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
+import { ApiQuery, ApiTags, ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
 import { plainToInstance } from 'class-transformer';
 import { I18nService } from 'nestjs-i18n';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -17,6 +18,7 @@ import { ApiStandardResponses } from '../../common/swagger/swagger-responses.uti
 import { translateMessage } from '../../common/utils/i18n.util';
 import { CreateIngredientDto } from './dto/create-ingredient.dto';
 import { IngredientResponseDto } from './dto/ingredient-response.dto';
+import { ListIngredientsQueryDto } from './dto/list-ingredients-query.dto';
 import { UpdateIngredientDto } from './dto/update-ingredient.dto';
 import { IngredientsService } from './ingredients.service';
 
@@ -42,14 +44,51 @@ export class IngredientsController {
   }
 
   @Get()
-  @ApiStandardResponses(IngredientResponseDto, { isArray: true })
-  async findAll() {
-    const entities = await this.ingredientsService.findAll();
+  @ApiQuery({
+    name: 'page',
+    required: false,
+    type: Number,
+    description: 'Page number (must be a positive integer greater or equal to 1).',
+    example: 1,
+    schema: { minimum: 1 },
+  })
+  @ApiQuery({
+    name: 'limit',
+    required: false,
+    type: Number,
+    description: 'Maximum number of items to return per page (1-100).',
+    example: 10,
+    schema: { minimum: 1, maximum: 100 },
+  })
+  @ApiQuery({
+    name: 'sort',
+    required: false,
+    type: String,
+    description:
+      'Comma separated list of sort expressions (field:direction). Example: created_at:desc,name:asc.',
+  })
+  @ApiQuery({
+    name: 'filter',
+    required: false,
+    type: String,
+    description:
+      'Comma separated list of filters (field:operator:value). Use | as delimiter within IN expressions.',
+  })
+  @ApiStandardResponses(IngredientResponseDto, { isPaginated: true })
+  async findAll(@Query() query: ListIngredientsQueryDto) {
+    const result = await this.ingredientsService.findAll(query);
     return {
       message: await this.translate('messages.SUCCESS.INGREDIENT_LIST'),
-      data: entities.map((entity) =>
-        plainToInstance(IngredientResponseDto, entity, { excludeExtraneousValues: true }),
-      ),
+      data: {
+        items: result.items.map((entity) =>
+          plainToInstance(IngredientResponseDto, entity, { excludeExtraneousValues: true }),
+        ),
+        page: result.page,
+        limit: result.limit,
+        total: result.total,
+        sort: result.sort,
+        filter: result.filter,
+      },
     };
   }
 

@@ -79,6 +79,12 @@ The API uses **snake_case** field names for sorting. The web client must use:
 - Example: `recipe_category_id:eq:5` (NOT `category.slug:eq:supe`)
 - Available filter fields: `difficulty`, `recipe_category_id`, `prep_time`, `author_id`, `rating_avg`, `title`
 
+#### Ingredients Query Parameters
+The `GET /api/ingredients` endpoint supports the same `page`, `limit`, `sort`, and `filter` query parameters.
+- Allowed sort fields: `created_at`, `name`
+- Allowed filter fields: `id`, `ingredient_category_id`, `name`, `slug`
+- Example: `sort=created_at:desc&filter=ingredient_category_id:eq:4,name:like:lapte`
+
 #### Category Filtering Pattern
 When filtering recipes by category slug (from URL), first fetch the category ID:
 ```typescript
@@ -100,6 +106,15 @@ const response = await recipesApi.getAll({
   filter: 'recipe_category_id:eq:5'           // numeric ID, not slug
 });
 ```
+
+#### Thematic Selections Category IDs
+The `/selectii/[selection]` pages use these hardcoded `recipe_category_id` mappings:
+| Selection Slug | Category ID | Display Name |
+|----------------|-------------|--------------|
+| `craciun` | 7 | Mâncăruri de Crăciun |
+| `pasti` | 8 | Mâncăruri de Paști |
+| `post` | 9 | Mâncăruri de Post |
+| `dietice` | 10 | Mâncăruri Dietice |
 
 ## Internationalization (i18n)
 

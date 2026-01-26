@@ -1,8 +1,10 @@
 import { HttpStatus } from '@nestjs/common';
 import { ApiPropertyOptional } from '@nestjs/swagger';
+import { Transform } from 'class-transformer';
 import { IsString, MaxLength, Validate, ValidateIf } from 'class-validator';
 import { i18nValidationMessage } from 'nestjs-i18n';
 import { QueryPaginationDto } from '../../../common/dto/query-pagination.dto';
+import { SafeText, sanitizeText } from '../../../common/validators/safe-text.validator';
 import { RECIPES_ALLOWED_SORT_FIELDS } from '../recipes-query.config';
 import {
   RecipesFilterFormatValidator,
@@ -21,10 +23,18 @@ export class ListRecipesIngredientQueryDto extends QueryPaginationDto {
     type: String,
   })
   @ValidateIf((_, value) => value !== undefined)
+  @Transform(({ value }) => sanitizeText(value))
   @IsString({
     message: i18nValidationMessage('messages.ERROR.SORT_TYPE_STRING'),
     context: { httpStatus: HttpStatus.BAD_REQUEST },
   })
+  @SafeText(
+    { allowNewlines: false },
+    {
+      message: i18nValidationMessage('messages.ERROR.INVALID_SORT_FORMAT'),
+      context: { httpStatus: HttpStatus.BAD_REQUEST },
+    }
+  )
   @MaxLength(255, {
     message: i18nValidationMessage('messages.ERROR.INVALID_SORT_FORMAT'),
     context: { httpStatus: HttpStatus.BAD_REQUEST },
@@ -46,10 +56,18 @@ export class ListRecipesIngredientQueryDto extends QueryPaginationDto {
     type: String,
   })
   @ValidateIf((_, value) => value !== undefined)
+  @Transform(({ value }) => sanitizeText(value))
   @IsString({
     message: i18nValidationMessage('messages.ERROR.FILTER_TYPE_STRING'),
     context: { httpStatus: HttpStatus.BAD_REQUEST },
   })
+  @SafeText(
+    { allowNewlines: false },
+    {
+      message: i18nValidationMessage('messages.ERROR.INVALID_FILTER_FORMAT'),
+      context: { httpStatus: HttpStatus.BAD_REQUEST },
+    }
+  )
   @MaxLength(1024, {
     message: i18nValidationMessage('messages.ERROR.INVALID_FILTER_FORMAT'),
     context: { httpStatus: HttpStatus.BAD_REQUEST },

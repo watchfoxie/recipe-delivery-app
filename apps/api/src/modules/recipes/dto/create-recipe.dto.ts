@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Type } from 'class-transformer';
+import { Transform, Type } from 'class-transformer';
 import { i18nValidationMessage } from 'nestjs-i18n';
 import {
   IsArray,
@@ -11,20 +11,27 @@ import {
   MaxLength,
   Min,
   MinLength,
+  Matches,
   ValidateNested,
 } from 'class-validator';
+import { SafeText, sanitizeText, sanitizeTextArray } from '../../../common/validators/safe-text.validator';
 import { RecipeDifficulty } from '../entities/recipe.entity';
 import { RecipeIngredientDto } from './recipe-ingredient.dto';
 import { RecipeStepDto } from './recipe-step.dto';
 
 export class CreateRecipeDto {
   @ApiProperty({ example: 'recipe-name-identifier' })
+  @Transform(({ value }) => sanitizeText(value))
+  @SafeText({}, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
+  @Matches(/^[a-z0-9-]+$/i, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @IsString({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MinLength(3, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MaxLength(191, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   slug!: string;
 
   @ApiProperty({ example: 'recipe' })
+  @Transform(({ value }) => sanitizeText(value))
+  @SafeText({}, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @IsString({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MinLength(3, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @MaxLength(191, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
@@ -51,12 +58,19 @@ export class CreateRecipeDto {
 
   @ApiProperty({ required: false, type: [String], example: ['tag'] })
   @IsOptional()
+  @Transform(({ value }) => sanitizeTextArray(value))
   @IsArray({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
+  @SafeText({ allowNewlines: false }, {
+    each: true,
+    message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED'),
+  })
   @IsString({ each: true, message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   dietaryTags?: string[];
 
   @ApiProperty({ required: false, type: String, example: 'depiction' })
   @IsOptional()
+  @Transform(({ value }) => sanitizeText(value))
+  @SafeText({ allowNewlines: true }, { message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   @IsString({ message: i18nValidationMessage('messages.ERROR.VALIDATION_FAILED') })
   description?: string | null;
 

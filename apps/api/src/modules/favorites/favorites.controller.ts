@@ -3,12 +3,12 @@ import {
   Delete,
   Get,
   Param,
-  ParseIntPipe,
   Post,
   Query,
   UseGuards,
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { I18nParseIntPipe } from '../../common/pipes';
 import { I18nService } from 'nestjs-i18n';
 import { plainToInstance } from 'class-transformer';
 import { FavoritesService } from './favorites.service';
@@ -31,7 +31,7 @@ export class FavoritesController {
   @Post(':recipeId')
   @ApiStandardResponses(RecipeResponseDto)
   async add(
-    @Param('recipeId', ParseIntPipe) recipeId: number,
+    @Param('recipeId', I18nParseIntPipe) recipeId: number,
     @CurrentUser() user: ActiveUser,
   ) {
     const recipe = await this.favoritesService.addToFavorites(user.userId, recipeId);
@@ -44,7 +44,7 @@ export class FavoritesController {
   @Delete(':recipeId')
   @ApiStandardResponses()
   async remove(
-    @Param('recipeId', ParseIntPipe) recipeId: number,
+    @Param('recipeId', I18nParseIntPipe) recipeId: number,
     @CurrentUser() user: ActiveUser,
   ) {
     await this.favoritesService.removeFromFavorites(user.userId, recipeId);
@@ -80,7 +80,7 @@ export class FavoritesController {
   @Get(':recipeId/status')
   @ApiStandardResponses(FavoriteStatusResponseDto)
   async status(
-    @Param('recipeId', ParseIntPipe) recipeId: number,
+    @Param('recipeId', I18nParseIntPipe) recipeId: number,
     @CurrentUser() user: ActiveUser,
   ) {
     const isFavorite = await this.favoritesService.isFavorite(user.userId, recipeId);

@@ -4,13 +4,13 @@ import {
   Delete,
   Get,
   Param,
-  ParseIntPipe,
   Post,
   Put,
   Query,
   UseGuards,
 } from '@nestjs/common';
 import { ApiQuery, ApiTags, ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
+import { I18nParseIntPipe } from '../../common/pipes';
 import { plainToInstance } from 'class-transformer';
 import { I18nService } from 'nestjs-i18n';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -206,7 +206,7 @@ export class RecipesController {
 
   @Get(':id')
   @ApiStandardResponses(RecipeResponseDto)
-  async findOne(@Param('id', ParseIntPipe) id: number) {
+  async findOne(@Param('id', I18nParseIntPipe) id: number) {
     const recipe = await this.recipesService.findOne(id);
     return {
       message: await this.translate('messages.SUCCESS.RECIPE_FOUND'),
@@ -219,7 +219,7 @@ export class RecipesController {
   @ApiBearerAuth('bearer')
   @ApiOperation({ summary: 'Actualizare rețetă' })
   @ApiStandardResponses(RecipeResponseDto)
-  async update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdateRecipeDto, @CurrentUser() user: User) {
+  async update(@Param('id', I18nParseIntPipe) id: number, @Body() dto: UpdateRecipeDto, @CurrentUser() user: User) {
     const recipe = await this.recipesService.update(id, dto, user.id);
     return {
       message: await this.translate('messages.SUCCESS.RECIPE_UPDATED'),
@@ -232,7 +232,7 @@ export class RecipesController {
   @ApiBearerAuth('bearer')
   @ApiOperation({ summary: 'Ștergere rețetă' })
   @ApiStandardResponses()
-  async remove(@Param('id', ParseIntPipe) id: number, @CurrentUser() user: User) {
+  async remove(@Param('id', I18nParseIntPipe) id: number, @CurrentUser() user: User) {
     await this.recipesService.remove(id, user.id);
     return {
       message: await this.translate('messages.SUCCESS.RECIPE_DELETED'),

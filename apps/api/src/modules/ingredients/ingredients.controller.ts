@@ -4,13 +4,13 @@ import {
   Delete,
   Get,
   Param,
-  ParseIntPipe,
   Post,
   Put,
   Query,
   UseGuards,
 } from '@nestjs/common';
 import { ApiQuery, ApiTags, ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
+import { I18nParseIntPipe } from '../../common/pipes';
 import { plainToInstance } from 'class-transformer';
 import { I18nService } from 'nestjs-i18n';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -94,7 +94,7 @@ export class IngredientsController {
 
   @Get(':id')
   @ApiStandardResponses(IngredientResponseDto)
-  async findOne(@Param('id', ParseIntPipe) id: number) {
+  async findOne(@Param('id', I18nParseIntPipe) id: number) {
     const entity = await this.ingredientsService.findOne(id);
     return {
       message: await this.translate('messages.SUCCESS.INGREDIENT_FOUND'),
@@ -107,7 +107,7 @@ export class IngredientsController {
   @ApiBearerAuth('bearer')
   @ApiOperation({ summary: 'Actualizare ingredient' })
   @ApiStandardResponses(IngredientResponseDto)
-  async update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdateIngredientDto) {
+  async update(@Param('id', I18nParseIntPipe) id: number, @Body() dto: UpdateIngredientDto) {
     const entity = await this.ingredientsService.update(id, dto);
     return {
       message: await this.translate('messages.SUCCESS.INGREDIENT_UPDATED'),
@@ -120,7 +120,7 @@ export class IngredientsController {
   @ApiBearerAuth('bearer')
   @ApiOperation({ summary: 'Ștergere ingredient' })
   @ApiStandardResponses()
-  async remove(@Param('id', ParseIntPipe) id: number) {
+  async remove(@Param('id', I18nParseIntPipe) id: number) {
     await this.ingredientsService.remove(id);
     return {
       message: await this.translate('messages.SUCCESS.INGREDIENT_DELETED'),

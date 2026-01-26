@@ -97,10 +97,21 @@ export class I18nValidationExceptionFilter implements ExceptionFilter {
     if (exception instanceof BadRequestException) {
       const payload = exception.getResponse();
       if (Array.isArray((payload as { message?: unknown }).message)) {
+        const messageArray = (payload as { message: unknown[] }).message ?? [];
+
+        // Check if messages are already in ValidationMessage format { field, message }
+        if (messageArray.length > 0 && this.isValidationMessageArray(messageArray)) {
+          return Promise.all(
+            messageArray.map(async (item) => ({
+              field: item.field,
+              message: await this.resolveConstraint(item.message, lang, i18n),
+            })),
+          );
+        }
+
+        // Otherwise, treat as simple message strings
         const mapped = await Promise.all(
-          ((payload as { message: unknown[] }).message ?? []).map((value) =>
-            this.resolveConstraint(value, lang, i18n),
-          ),
+          messageArray.map((value) => this.resolveConstraint(value, lang, i18n)),
         );
 
         return mapped.map((message) => ({
@@ -329,5 +340,20 @@ export class I18nValidationExceptionFilter implements ExceptionFilter {
       return 1;
     }
     return 0;
+  }
+
+  /**
+   * Check if an array contains ValidationMessage objects with { field, message } structure
+   */
+  private isValidationMessageArray(arr: unknown[]): arr is ValidationMessage[] {
+    return arr.every(
+      (item) =>
+        item !== null &&
+        typeof item === 'object' &&
+        'field' in item &&
+        'message' in item &&
+        typeof (item as ValidationMessage).field === 'string' &&
+        typeof (item as ValidationMessage).message === 'string',
+    );
   }
 }

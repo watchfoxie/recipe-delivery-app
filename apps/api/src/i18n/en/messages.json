@@ -185,6 +185,7 @@
       "INVALID_FILTER_FORMAT": "The filter parameter must follow the format field:operator:value",
       "INVALID_FILTER_FIELD": "Filtering by the requested field is not allowed",
       "INVALID_FILTER_OPERATOR": "The provided filter operator is not supported",
-      "INVALID_FILTER_VALUE": "The filter value provided is invalid"
+      "INVALID_FILTER_VALUE": "The filter value provided is invalid",
+      "INVALID_INTEGER_PARAM": "Parameter {field} must be a valid integer"
     }
 }

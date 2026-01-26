@@ -6,12 +6,12 @@ import {
   Delete,
   Body,
   Param,
-  ParseIntPipe,
   HttpCode,
   HttpStatus,
   UseGuards,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
+import { I18nParseIntPipe } from '../../common/pipes';
 import { plainToInstance } from 'class-transformer';
 import { I18nService } from 'nestjs-i18n';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -35,7 +35,7 @@ export class ReviewsController {
   @ApiOperation({ summary: 'Adăugare review la rețetă' })
   @ApiStandardResponses(ReviewResponseDto)
   async create(
-    @Param('recipeId', ParseIntPipe) recipeId: number,
+    @Param('recipeId', I18nParseIntPipe) recipeId: number,
     @Body() createDto: CreateReviewDto,
     @CurrentUser() user: User,
   ) {
@@ -49,7 +49,7 @@ export class ReviewsController {
   @Get()
   @ApiOperation({ summary: 'Listare review-uri ale rețetei' })
   @ApiStandardResponses(ReviewResponseDto, { isArray: true })
-  async findAll(@Param('recipeId', ParseIntPipe) recipeId: number) {
+  async findAll(@Param('recipeId', I18nParseIntPipe) recipeId: number) {
     const reviews = await this.reviewsService.findAllByRecipe(recipeId);
     return {
       message: this.i18n.t('messages.review.list'),
@@ -63,7 +63,7 @@ export class ReviewsController {
   @ApiOperation({ summary: 'Obținere review-ul propriu pentru rețetă' })
   @ApiStandardResponses(ReviewResponseDto)
   async findMyReview(
-    @Param('recipeId', ParseIntPipe) recipeId: number,
+    @Param('recipeId', I18nParseIntPipe) recipeId: number,
     @CurrentUser() user: User,
   ) {
     const review = await this.reviewsService.findUserReviewForRecipe(recipeId, user.id);
@@ -79,7 +79,7 @@ export class ReviewsController {
 
   @Get('stats')
   @ApiOperation({ summary: 'Statistici rating pentru rețetă' })
-  async getStats(@Param('recipeId', ParseIntPipe) recipeId: number) {
+  async getStats(@Param('recipeId', I18nParseIntPipe) recipeId: number) {
     const stats = await this.reviewsService.getAverageRating(recipeId);
     return {
       message: this.i18n.t('messages.review.stats'),
@@ -93,7 +93,7 @@ export class ReviewsController {
   @ApiOperation({ summary: 'Actualizare review propriu' })
   @ApiStandardResponses(ReviewResponseDto)
   async update(
-    @Param('id', ParseIntPipe) id: number,
+    @Param('id', I18nParseIntPipe) id: number,
     @Body() updateDto: UpdateReviewDto,
     @CurrentUser() user: User,
   ) {
@@ -111,7 +111,7 @@ export class ReviewsController {
   @ApiOperation({ summary: 'Ștergere review propriu' })
   @ApiStandardResponses()
   async remove(
-    @Param('id', ParseIntPipe) id: number,
+    @Param('id', I18nParseIntPipe) id: number,
     @CurrentUser() user: User,
   ) {
     await this.reviewsService.remove(id, user.id);

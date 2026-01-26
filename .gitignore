@@ -44,6 +44,7 @@ Thumbs.db
 .github/instructions/nx.instructions.md
 
 # Custom misc
+.github/copilot-instructions.md
 AGENTS.md
 .env
 .env.example

@@ -185,6 +185,7 @@
       "INVALID_FILTER_FORMAT": "Parametrul filter trebuie să aibă formatul câmp:operator:valoare",
       "INVALID_FILTER_FIELD": "Filtrarea după câmpul solicitat nu este permisă",
       "INVALID_FILTER_OPERATOR": "Operatorul de filtrare nu este suportat",
-      "INVALID_FILTER_VALUE": "Valoarea furnizată pentru filtrare este invalidă"
+      "INVALID_FILTER_VALUE": "Valoarea furnizată pentru filtrare este invalidă",
+      "INVALID_INTEGER_PARAM": "Parametrul {field} trebuie să fie un număr întreg valid"
     }
 }

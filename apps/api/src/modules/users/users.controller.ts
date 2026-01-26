@@ -4,7 +4,6 @@ import {
   Delete,
   Get,
   Param,
-  ParseIntPipe,
   Patch,
   Post,
   Put,
@@ -13,6 +12,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { ApiTags, ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
+import { I18nParseIntPipe } from '../../common/pipes';
 import { I18nService } from 'nestjs-i18n';
 import { plainToInstance } from 'class-transformer';
 import { Throttle } from '@nestjs/throttler';
@@ -136,7 +136,7 @@ export class UsersController {
 
   @Get(':id')
   @ApiStandardResponses(UserResponseDto)
-  async findOne(@Param('id', ParseIntPipe) id: number) {
+  async findOne(@Param('id', I18nParseIntPipe) id: number) {
     const user = await this.usersService.findOne(id);
     return {
       message: await this.translate('messages.SUCCESS.USER_FOUND'),
@@ -148,7 +148,7 @@ export class UsersController {
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth('bearer')
   @ApiStandardResponses(UserResponseDto)
-  async update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdateUserDto) {
+  async update(@Param('id', I18nParseIntPipe) id: number, @Body() dto: UpdateUserDto) {
     const user = await this.usersService.update(id, dto);
     return {
       message: await this.translate('messages.SUCCESS.USER_UPDATED'),
@@ -160,7 +160,7 @@ export class UsersController {
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth('bearer')
   @ApiStandardResponses()
-  async remove(@Param('id', ParseIntPipe) id: number) {
+  async remove(@Param('id', I18nParseIntPipe) id: number) {
     await this.usersService.remove(id);
     return {
       message: await this.translate('messages.SUCCESS.USER_DELETED'),

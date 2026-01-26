@@ -36,10 +36,14 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: false },
     }),
   );
+  // NestJS applies filters in REVERSE order (last registered runs first)
+  // Order: JsonParseExceptionFilter -> I18nValidationExceptionFilter -> HttpExceptionFilter
+  // This ensures I18nValidationExceptionFilter handles BadRequestException with i18n keys
+  // before HttpExceptionFilter catches it
   app.useGlobalFilters(
     new HttpExceptionFilter(),
-    new I18nValidationExceptionFilter(),
     new JsonParseExceptionFilter(),
+    new I18nValidationExceptionFilter(),
   );
   app.useGlobalInterceptors(new LoggingInterceptor());
 

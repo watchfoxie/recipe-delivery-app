@@ -6,11 +6,11 @@ import {
   Delete,
   Body,
   Param,
-  ParseIntPipe,
   HttpCode,
   HttpStatus,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
+import { I18nParseIntPipe } from '../../common/pipes';
 import { plainToInstance } from 'class-transformer';
 import { I18nService } from 'nestjs-i18n';
 import { ApiStandardResponses } from '../../common/swagger/swagger-responses.util';
@@ -54,7 +54,7 @@ export class IngredientCategoriesController {
   @Get(':id')
   @ApiOperation({ summary: 'Obținere categorie ingredient după ID' })
   @ApiStandardResponses(IngredientCategoryResponseDto)
-  async findOne(@Param('id', ParseIntPipe) id: number) {
+  async findOne(@Param('id', I18nParseIntPipe) id: number) {
     const category = await this.ingredientCategoriesService.findOne(id);
     return {
       message: this.i18n.t('messages.ingredient_category.found'),
@@ -77,7 +77,7 @@ export class IngredientCategoriesController {
   @ApiOperation({ summary: 'Actualizare categorie ingredient' })
   @ApiStandardResponses(IngredientCategoryResponseDto)
   async update(
-    @Param('id', ParseIntPipe) id: number,
+    @Param('id', I18nParseIntPipe) id: number,
     @Body() updateDto: UpdateIngredientCategoryDto,
   ) {
     const category = await this.ingredientCategoriesService.update(id, updateDto);
@@ -91,7 +91,7 @@ export class IngredientCategoriesController {
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Ștergere categorie ingredient' })
   @ApiStandardResponses()
-  async remove(@Param('id', ParseIntPipe) id: number) {
+  async remove(@Param('id', I18nParseIntPipe) id: number) {
     await this.ingredientCategoriesService.remove(id);
     return {
       message: this.i18n.t('messages.ingredient_category.deleted'),
